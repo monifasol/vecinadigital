@@ -60,14 +60,19 @@ export default function SobrePage() {
           </p>
 
           <p>
-            Sensible por naturaleza, neurodiversa y apasionada, me gusta lo
-            sencillo y lo auténtico.
+            Sensible por naturaleza, neurodiversa y apasionada, 
+            trabajo mejor cuando las cosas tienen sentido, 
+            están bien pensadas y respetan a las personas que las usan.
           </p>
 
           <p>
-            Trabajo en diseño y desarrollo web desde hace veinte años, con
-            obsesión por lo que no se ve a simple vista: la usabilidad, la
-            accesibilidad, el rendimiento, la sostenibilidad, lo emocional...{" "}
+            Trabajo en diseño y desarrollo web desde hace veinte años. 
+            He trabajado en proyectos grandes y pequeños, 
+            y si algo he aprendido es que lo más importante 
+            casi nunca es lo visible, sino la estructura que lo sostiene.
+            <br />
+            La usabilidad, la accesibilidad, el rendimiento, 
+            la sostenibilidad, lo emocional...{" "}
             <br />
             <em>El cuidado de los detalles</em>: Todo eso que hace que una web
             funcione bien y sea un placer usarla.
@@ -107,12 +112,15 @@ export default function SobrePage() {
 
           <p className="about-article__closing">
             Vecina Digital es una forma muy consciente de estar en el mundo
-            digital <br />
-            sin perder lo humano.
+            digital sin perder lo humano.
+            <br />
+            Porque lo humano no es lo contrario de lo técnico.
+            Es hacerlo con criterio.
+
             <span>
               Esto es quién soy.
               <br />
-              Si te quedas, seguimos.
+              ¿Te quedas?
             </span>
             <span className="leaf" aria-hidden="true" />
           </p>
