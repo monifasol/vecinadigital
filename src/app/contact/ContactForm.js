@@ -49,11 +49,11 @@ export default function ContactForm() {
             {status === "loading" ? "Enviando..." : "Enviar"}
         </button>
 
-        {status === "error" && (
+        {status === "success" && (
             <p className="form__notice form__notice--success">Gracias 💛 Te he enviado una copia y te respondo pronto.</p>
         )}
 
-        {status === "success" && (
+        {status === "error" && (
         <div className="form__notice form__notice--error">
             Algo no ha salido bien.  
             Si quieres, escríbeme por <a href="https://wa.me/34622210151">WhatsApp</a> mientras lo reviso.
