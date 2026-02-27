@@ -87,20 +87,20 @@ export default function SobrePage() {
             <br />
             Nace de una forma de ser: de la sensibilidad, de la necesidad de
             conexiones humanas a pesar de lo técnico, y muy consciente de que,
-            cuando hablamos de una web, en realidad hablamos de personas. Y de
-            sus vidas, y de aquello que les importa.
+            cuando hablamos de una web, en realidad hablamos de personas. De
+            sus vidas y de aquello que les importa.
           </p>
 
           <p>
             En todo este tiempo, he visto demasiadas webs hechas con prisa, y
-            demasiado lenguaje que excluye, demasiada tecnología que complica, y
-            demasiada gente pensando que Internet no es para ellas.
+            demasiado lenguaje que excluye, tecnología que complica, y
+            gente pensando que Internet no es para ellas.
           </p>
 
           <p>
             Vecina Digital aparece justo desde ahí. Es una manera de decir:{" "}
-            <em>esto se puede hacer de otra manera, desde lo humano</em>. De
-            personas para personas, como una conversación con tu vecina.
+            <em>esto se puede hacer de otra manera: desde lo humano</em>.
+            De personas para personas, como una conversación con tu vecina.
           </p>
 
           <p>
@@ -112,9 +112,12 @@ export default function SobrePage() {
 
           <p className="about-article__closing">
             Vecina Digital es una forma muy consciente de estar en el mundo
-            digital sin perder lo humano.
+            digital
+            <br />
+            sin perder lo humano.
             <br />
             Porque lo humano no es lo contrario de lo técnico.
+            <br />
             Es hacerlo con criterio.
 
             <span>
