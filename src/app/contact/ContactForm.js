@@ -46,7 +46,7 @@ export default function ContactForm() {
         </label>
 
         <button className="btn" type="submit" disabled={status === "loading"}>
-            {status === "loading" ? "Enviando..." : "Enviar"}
+            {status === "loading" ? "Enviando..." : "Escríbeme"}
         </button>
 
         {status === "success" && (

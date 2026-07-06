@@ -1,9 +1,10 @@
+import Link from "next/link";
 import ContactForm from "./contact/ContactForm";
 
 export const metadata = {
-  title: "Sobre Vecina Digital",
+  title: "Vecina Digital",
   description:
-    "Diseño y presencia digital humana y cercana",
+    "Para que tu negocio se vea tan bien como lo cuidas cada día. Webs claras y humanas para pequeños negocios.",
 }
 
 export default function Home() {
@@ -18,23 +19,25 @@ export default function Home() {
 
           <h1 className="hero__title">
             Diseño y presencia digital<br />
-            <span className="hero__title-accent">humana y cercana</span><br />
+            <span className="hero__title-accent">humana y cercana</span>
           </h1>
 
-          <p className="hero__subtitle">
-            Para negocios con valores que quieren orden, claridad… y clientes.
+          <p className="hero__slogan">
+            Para que tu negocio se vea tan bien como lo cuidas cada día.
           </p>
 
-          <p className="hero__manifesto">
-            Webs claras y humanas<br />
-            Que crecen contigo<br />
-            Y que cuidan tu marca digital.<br />
-            Para que te entiendan en segundos y te contacten con confianza.
+          <p className="hero__subtitle">
+            Porque el cariño que pones en tu negocio también debería verse en Internet.
+          </p>
+
+          <p className="hero__lead">
+            Ayudo a pequeños negocios (tiendas, cafeterías, talleres, casas rurales y más)
+            a tener una web clara y útil, sin complicaciones ni tecnicismos.
           </p>
 
           <div className="hero__cta">
-            <a className="btn" href="contact.html">Cuéntame tu proyecto</a>
-            <a className="btn btn--ghost" href="plans.html">¿Cómo te puedo ayudar?</a>
+            <Link className="btn" href="/contact">Cuéntame tu negocio</Link>
+            <Link className="btn btn--ghost" href="/plans">Cuéntame qué necesitas</Link>
           </div>
         </div>
 
@@ -101,16 +104,17 @@ export default function Home() {
             </div>
 
             <div className="service__body">
-              <h3>Empezar en Internet</h3>
+              <h3>Quiero una web sencilla</h3>
               <p>
-                Para empezar a existir online. Te hago una página sencilla y bonita para que la gente sepa quién eres,
-                qué haces y pueda contactarte en un clic.
+                Para quien no tiene web o necesita una página clara para explicar qué hace
+                y recibir contactos.
               </p>
               <ul className="service__bullets">
-                <li>Una página clara</li>
-                <li>Textos fáciles</li>
-                <li>Perfecta en el móvil</li>
-                <li>Contacto via WhatsApp o email</li>
+                <li>Una página clara y bonita</li>
+                <li>Textos sencillos</li>
+                <li>Adaptada a móvil</li>
+                <li>Botón de WhatsApp o email</li>
+                <li>Google básico</li>
               </ul>
             </div>
           </article>
@@ -118,21 +122,20 @@ export default function Home() {
           <article className="service">
             <div className="service__meta" aria-hidden="true">
               <img src="assets/icon-ordenar.png" alt="" className="service__icon"/>
-              <span className="service__tag">Ordenar</span>
+              <span className="service__tag">Arreglar</span>
             </div>
 
             <div className="service__body">
-              <h3>Una web que explique bien lo que haces</h3>
+              <h3>Ya tengo web, pero…</h3>
               <p>
-                Ordenamos tu web para que cualquier persona entienda en pocos segundos
-                qué ofreces, cómo trabajas, y sepa qué hacer después.
+                Para quien ya tiene web, pero no se entiende, se ve antigua, va lenta
+                o no consigue contactos.
               </p>
               <ul className="service__bullets">
-                <li>Secciones, estructura clara</li>
-                <li>Mejora de textos y contenido</li>
-                <li>Servicios / precios / contacto</li>
-                <li>SEO (posicionamiento en Google)</li>
-                <li>Mobile perfecto</li>
+                <li>Revisión y mejora de textos</li>
+                <li>Más clara en móvil</li>
+                <li>Botones para que te llamen o escriban</li>
+                <li>Para que te encuentren mejor en Google</li>
               </ul>
             </div>
           </article>
@@ -140,19 +143,20 @@ export default function Home() {
           <article className="service">
             <div className="service__meta" aria-hidden="true">
               <img src="assets/icon-cuidar.png" alt="" className="service__icon"/>
-              <span className="service__tag">Cuidar</span>
+              <span className="service__tag">Acompañar</span>
             </div>
 
             <div className="service__body">
-              <h3>Que todo se vea cuidado</h3>
+              <h3>Quiero que me acompañes cada mes</h3>
               <p>
-                Ajustamos colores, tipografía y detalles para que tu negocio se vea bonito,
-                coherente y con personalidad. Para que tu marca se sienta profesional sin perder alma.
+                Para negocios que necesitan pequeños cambios, mantenimiento
+                o ayuda digital continua.
               </p>
               <ul className="service__bullets">
-                <li>Paleta de colores, estilo, tipografía</li>
-                <li>Detalles visuales, iconos, ilustraciones</li>
-                <li>Consistencia visual</li>
+                <li>Cambios pequeños cada mes</li>
+                <li>Soporte cercano</li>
+                <li>Revisión de textos, imágenes o secciones</li>
+                <li>Tranquilidad técnica</li>
               </ul>
             </div>
           </article>
@@ -160,11 +164,11 @@ export default function Home() {
 
         <div className="services-cta">
           <p className="services-cta__text">
-            ¿Cómo te puedo ayudar?
+            ¿No sabes por dónde empezar?
           </p>
-          <a className="btn" href="plans.html">
-            Ver los planes con calma
-          </a>
+          <Link className="btn" href="/plans">
+            Ver las opciones
+          </Link>
         </div>
 
       </section>
@@ -179,12 +183,11 @@ export default function Home() {
             <p className="pro-band__text">
               No todos los proyectos son iguales, hay proyectos que necesitan algo más.
               <br/>
-              Algunos necesitan una base técnica sólida:
-              estructura clara, rendimiento real y cero parches.
+              Algunos necesitan una base técnica sólida: estructura clara, que vaya bien de verdad y cero parches.
             </p>
 
             <p className="pro-band__text pro-band__text--soft">
-              Aquí entra mi perfil más senior. Te ayudo con un enfoque más avanzado,
+              Aquí es donde aporto más experiencia. Te ayudo con un enfoque más avanzado,
               pero igual de humano. 
               Construimos bien desde abajo para que tu web sea 
               rápida, estable y fácil de mantener. 
@@ -192,46 +195,39 @@ export default function Home() {
 
             <ul className="pro-band__list">
               <li>
-                <strong>Rendimiento:</strong>
-                carga rápida y una experiencia fluida
+                <strong>Que cargue rápido:</strong> una experiencia fluida, sin esperas innecesarias
               </li>
 
               <li>
-                <strong>SEO (que Google te entienda):</strong>
-                estructura clara, textos entendibles y una base sólida
+                <strong>Para que te encuentren en Google:</strong> estructura clara, textos entendibles y una base sólida
               </li>
 
               <li>
-                <strong>Responsive:</strong>
-                se ve y se lee bien en móvil, tablet y ordenador
+                <strong>En el móvil y en el ordenador:</strong> se ve y se lee bien en cualquier pantalla
               </li>
 
               <li>
-                <strong>Arquitectura y UX complejas:</strong>
-                flujos claros, jerarquía y decisiones cuidadas
+                <strong>Que sea fácil de entender y usar:</strong> flujos claros, jerarquía y decisiones cuidadas
               </li>
 
               <li>
-                <strong>Funcionalidades avanzadas:</strong>
-                formularios complejos, e-commerce, áreas privadas o integraciones
+                <strong>Funcionalidades avanzadas:</strong> formularios complejos, tienda online, áreas privadas o integraciones
               </li>
 
               <li>
-                <strong>Calidad técnica:</strong>
-                orden, accesibilidad y detalles bien rematados
+                <strong>Calidad técnica:</strong> orden, accesibilidad y detalles bien rematados
               </li>
 
               <li>
-                <strong>Mantenimiento sencillo:</strong>
-                incluso en proyectos complejos, puedes actualizarla tú misma
+                <strong>Mantenimiento sencillo:</strong> incluso en proyectos complejos, puedes actualizarla tú misma
               </li>
             </ul>
 
             <div className="pro-band__cta">
-              <a className="btn" href="contact.html">Cuéntame tu caso</a>
-              <a className="btn" href="plans.html">
-                Esto me encaja → Ver planes
-              </a>
+              <Link className="btn" href="/contact">Cuéntame tu caso</Link>
+              <Link className="btn btn--ghost" href="/plans">
+                Lo vemos juntas
+              </Link>
             </div>
 
           </div>

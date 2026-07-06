@@ -12,13 +12,9 @@ export default function SobrePage() {
       <article className="about-article">
         <header className="about-article__header">
           <h1 className="about-article__title">
-            Un estudio digital
+            Detrás de esta puerta
             <br />
-            con intención
-            <br />
-            desde un lugar
-            <br />
-            muy humano.
+            hay una persona.
           </h1>
         </header>
 
@@ -51,8 +47,13 @@ export default function SobrePage() {
             Quién está detrás de esa puerta
           </h2>
 
+          <p className="about-article__intro">
+            Hola, soy Mónica. Vivo en Villablino y ayudo a pequeños negocios a tener
+            una presencia online sencilla, bonita y útil, sin complicaciones ni tecnicismos.
+          </p>
+
           <p>
-            Soy Mónica, mamá de Len y Dahlia. <br />
+            Mamá de Len y Dahlia. <br />
             Amante de la calma, del café, de la naturaleza, de las personas, de la
             diversidad, de escuchar y aprender, y de una forma más humana de
             estar en el mundo.
@@ -74,7 +75,7 @@ export default function SobrePage() {
             La usabilidad, la accesibilidad, el rendimiento, 
             la sostenibilidad, lo emocional...{" "}
             <br />
-            <em>El cuidado de los detalles</em>: Todo eso que hace que una web
+            <em>El cuidado de los detalles</em>: todo eso que hace que una web
             funcione bien y sea un placer usarla.
           </p>
 

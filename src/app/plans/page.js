@@ -2,7 +2,8 @@ import Link from "next/link"
 
 export const metadata = {
   title: "Cómo te puedo ayudar | Vecina Digital",
-  description: "Elige tu punto de partida. Yo me encargo de todo lo demás.",
+  description:
+    "Tres caminos claros para tu negocio: una web sencilla, arreglar la que ya tienes, o acompañamiento cada mes.",
 }
 
 export default function PlansPage() {
@@ -14,182 +15,106 @@ export default function PlansPage() {
             Cómo te puedo ayudar
           </h1>
           <p className="plans__intro">
-            Elige tu punto de partida. Yo me encargo de todo lo demás.
+            Elige el camino que más se parece a tu situación. Sin líos ni presión.
           </p>
         </header>
 
         <div className="plans__grid">
-          {/* Plan 1 */}
-          <article className="plan plan--start" aria-labelledby="plan-start-title">
+          <article className="plan plan--start" aria-labelledby="plan-simple-title">
             <div className="plan__top">
-              <p className="plan__kicker">Empezar</p>
-              <h2 className="plan__title" id="plan-start-title">
-                Empezar en Internet
+              <h2 className="plan__title" id="plan-simple-title">
+                Quiero una web sencilla
               </h2>
               <p className="plan__lead">
-                Para existir online con una página sencilla y preciosa. Sin líos.
+                Para quien no tiene web o necesita una página clara para explicar qué hace y recibir contactos.
               </p>
             </div>
 
             <ul className="plan__list">
-              <li>1 página clara (landing)</li>
-              <li>Diseño cuidado + móvil perfecto</li>
-              <li>WhatsApp + email + SEO base</li>
+              <li>Una página clara y bonita</li>
+              <li>Textos sencillos</li>
+              <li>Adaptada a móvil</li>
+              <li>Botón de WhatsApp o email</li>
+              <li>Google básico</li>
             </ul>
+
+            <p className="plan__price">Desde 600–900€</p>
 
             <div className="plan__cta">
               <Link className="btn" href="/contact">
-                Me encaja
+                Cuéntame tu negocio
               </Link>
             </div>
           </article>
 
-          {/* Plan 2 */}
-          <article className="plan plan--order plan--featured" aria-labelledby="plan-order-title">
+          <article
+            className="plan plan--order plan--featured"
+            aria-labelledby="plan-fix-title"
+          >
             <span className="plan__badge">La más elegida</span>
             <div className="plan__top">
-              <p className="plan__kicker">Ordenar</p>
-              <h2 className="plan__title" id="plan-order-title">
-                Que se entienda lo que haces
+              <h2 className="plan__title" id="plan-fix-title">
+                Ya tengo web, pero no me convence
               </h2>
               <p className="plan__lead">
-                Para webs que existen… pero no explican bien. Lo ordenamos juntas.
+                Para quien ya tiene web, pero no se entiende, se ve antigua, va lenta o no consigue contactos.
               </p>
             </div>
 
             <ul className="plan__list">
-              <li>Estructura y jerarquía (qué va primero)</li>
-              <li>Mejora de textos (claridad y tono)</li>
-              <li>CTAs (llamadas a la acción)</li>
-              <li>SEO on-page + revisión móvil</li>
+              <li>Revisión completa</li>
+              <li>Mejorar estructura y textos</li>
+              <li>Hacerla más clara en móvil</li>
+              <li>Mejorar botones para que puedan llamarte o escribirte</li>
+              <li>Para que te encuentren mejor en Google</li>
             </ul>
+
+            <p className="plan__price">Desde 500–1.200€</p>
 
             <div className="plan__cta">
               <Link className="btn" href="/contact">
-                Lo necesito
+                Cuéntame qué necesitas
               </Link>
             </div>
           </article>
 
-          {/* Plan 3 */}
-          <article className="plan plan--care" aria-labelledby="plan-care-title">
+          <article className="plan plan--monthly" aria-labelledby="plan-monthly-title">
             <div className="plan__top">
-              <p className="plan__kicker">Cuidar</p>
-              <h2 className="plan__title" id="plan-care-title">
-                Que tu marca respire
+              <h2 className="plan__title" id="plan-monthly-title">
+                Quiero que me acompañes cada mes
               </h2>
               <p className="plan__lead">
-                Para que todo se vea coherente, bonito y con personalidad.
+                Para negocios que necesitan pequeños cambios, mantenimiento, campañas o ayuda digital continua.
               </p>
             </div>
 
             <ul className="plan__list">
-              <li>Paleta, tipografías y estilo</li>
-              <li>Consistencia visual + refinado UI</li>
-              <li>Iconos/ilustraciones coherentes</li>
-              <li>Sistema base para mantenerlo</li>
+              <li>Cambios pequeños cada mes</li>
+              <li>Soporte cercano</li>
+              <li>Revisión de textos, imágenes o secciones</li>
+              <li>Tranquilidad técnica</li>
             </ul>
+
+            <p className="plan__price">Desde 40–90€/mes</p>
 
             <div className="plan__cta">
               <Link className="btn" href="/contact">
-                Quiero esto
-              </Link>
-            </div>
-          </article>
-
-          {/* Plan 4 */}
-          <article className="plan plan--pro" aria-labelledby="plan-pro-title">
-            <div className="plan__top">
-              <p className="plan__kicker">Vecina PRO</p>
-              <h2 className="plan__title" id="plan-pro-title">
-                Para proyectos más complejos
-              </h2>
-              <p className="plan__lead">
-                Si necesitas base técnica sólida: rendimiento, SEO, estructura y cero parches.
-              </p>
-            </div>
-
-            <ul className="plan__list">
-              <li>Rendimiento + SEO técnico</li>
-              <li>Arquitectura + estructura + accesibilidad</li>
-              <li>Integraciones + formularios complejos</li>
-            </ul>
-
-            <div className="plan__cta">
-              <Link className="btn" href="/contact">
-                Hablemos
+                Lo vemos juntas
               </Link>
             </div>
           </article>
         </div>
 
-        {/* Pricing */}
-        <section className="plans__pricing" aria-labelledby="pricing-title">
-          <h2 className="plans__pricing-title" id="pricing-title">Precios</h2>
-
-          <p className="plans__pricing-intro">
-            Precios orientativos (desde). Si tu caso necesita algo más (más páginas, idiomas,
-            e-commerce, integraciones…), te paso un presupuesto claro antes de empezar.
+        <section className="plans__bigger" aria-labelledby="plans-bigger-title">
+          <h2 className="plans__bigger-title" id="plans-bigger-title">
+            ¿Tu proyecto es más grande?
+          </h2>
+          <p className="plans__bigger-text">
+            Si necesitas tienda online, reservas, varias páginas, idiomas, formularios complejos o algo más a medida, lo vemos juntas y te preparo un presupuesto claro.
           </p>
-
-          <div className="pricing-table" role="region" aria-label="Tabla de precios">
-            <table className="pricing-table__table">
-              <thead>
-                <tr>
-                  <th scope="col">Plan</th>
-                  <th scope="col">Ideal si...</th>
-                  <th scope="col">Incluye (resumen)</th>
-                  <th scope="col">Precio desde</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <th scope="row">Empezar</th>
-                  <td>...quieres existir online con una página sencilla y preciosa.</td>
-                  <td>1 landing + ajustes de copy + WhatsApp + SEO base</td>
-                  <td>900€</td>
-                </tr>
-
-                <tr>
-                  <th scope="row">Ordenar</th>
-                  <td>...tu web existe, pero no explica bien lo que haces, no se entiende, o no convierte.</td>
-                  <td>auditoría + reestructura + copy + SEO on-page</td>
-                  <td>1.400€</td>
-                </tr>
-
-                <tr>
-                  <th scope="row">Cuidar</th>
-                  <td>... quieres que tu marca se vea profesional y coherente.</td>
-                  <td>sistema visual + refinado UI + consistencia + assets</td>
-                  <td>1.100€</td>
-                </tr>
-
-                <tr>
-                  <th scope="row">Vecina PRO</th>
-                  <td>...necesitas una base técnica sólida o funcionalidades más complejas.</td>
-                  <td>arquitectura + performance + SEO técnico + integraciones</td>
-                  <td>2.200€</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="plans__maintenance" aria-labelledby="maintenance-title">
-            <h3 className="plans__maintenance-title" id="maintenance-title">
-              Mantenimiento (opcional)
-            </h3>
-
-            <p className="plans__maintenance-intro">
-              Para que todo siga funcionando, esté al día y puedas pedir cambios sin líos.
-            </p>
-
-            <ul className="plans__maintenance-list">
-              <li><strong>Empezar:</strong> desde 25€/mes</li>
-              <li><strong>Ordenar / Cuidar:</strong> desde 60€/mes</li>
-              <li><strong>Vecina PRO:</strong> desde 95€/mes</li>
-            </ul>
-          </div>
+          <Link className="btn" href="/contact">
+            Cuéntame tu caso
+          </Link>
         </section>
 
         <aside className="plans__help" aria-labelledby="plans-help-title">
@@ -197,7 +122,7 @@ export default function PlansPage() {
             Si no sabes cuál elegir
           </h2>
           <p className="plans__help-text">
-            Escríbeme 2-3 líneas y te digo cuál encaja. Sin compromiso.
+            Es normal. Escríbeme dos líneas sobre tu negocio y te digo qué opción encaja mejor, sin compromiso.
           </p>
 
           <div className="plans__help-cta">
@@ -214,7 +139,7 @@ export default function PlansPage() {
             </a>
 
             <Link className="btn" href="/contact">
-              O cuéntame tu caso aquí
+              Lo vemos juntas
             </Link>
           </div>
         </aside>

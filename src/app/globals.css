@@ -276,6 +276,26 @@ a:hover{ text-decoration: underline; }
   margin: 0 0 12px;
   color: var(--muted);
   max-width: 52ch;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.hero__slogan{
+  margin: 16px 0 8px;
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.8vw, 30px);
+  line-height: 1.25;
+  font-weight: 600;
+  color: rgba(43,38,34,0.92);
+  max-width: 28ch;
+}
+
+.hero__lead{
+  margin: 0;
+  color: var(--muted);
+  max-width: 52ch;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .hero__manifesto{
@@ -903,6 +923,13 @@ a.emphasis:hover{
   color: rgba(43,38,34,0.92);
 }
 
+.about-article__intro{
+  margin: 0 0 18px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(43,38,34,0.88);
+}
+
 .about-article__content p{
   margin: 0 0 18px;
   font-size: 17px;
@@ -1150,10 +1177,10 @@ a.emphasis:hover{
   margin-top: 36px;
 }
 
-/* 👉 Desktop: 2 columns */
+/* 👉 Desktop: 3 columns */
 @media (min-width: 1024px){
   .plans__grid{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -1243,6 +1270,23 @@ a.emphasis:hover{
   align-items: flex-start;
 }
 
+.plan__price{
+  margin: 4px 0 0;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(43,38,34,0.9);
+}
+
+/* Subtle differentiation for monthly */
+.plan--monthly{
+  background: linear-gradient(
+    180deg,
+    rgba(111,127,92,0.08),
+    rgba(255,255,255,0.22)
+  );
+}
+
 /* Subtle differentiation for PRO */
 .plan--pro{
   background: linear-gradient(
@@ -1250,6 +1294,34 @@ a.emphasis:hover{
     rgba(111,127,92,0.10),
     rgba(197,106,58,0.08)
   );
+}
+
+/* Bigger projects block */
+.plans__bigger{
+  margin-top: 48px;
+  padding: 28px 24px;
+  border-radius: calc(var(--radius) + 6px);
+  background: linear-gradient(
+    180deg,
+    rgba(111,127,92,0.10),
+    rgba(197,106,58,0.06)
+  );
+  border: 1px solid rgba(43,38,34,0.10);
+  max-width: 720px;
+}
+
+.plans__bigger-title{
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-size: 22px;
+}
+
+.plans__bigger-text{
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 58ch;
 }
 
 /* Help block */
