@@ -35,7 +35,7 @@ export default function SobrePage() {
 
           <div className="about-illustration" aria-hidden="true">
             <Image
-              src="/assets/door.png"
+              src="/assets/monica-behind-door.png"
               alt=""
               width={320}
               height={320}
@@ -43,7 +43,7 @@ export default function SobrePage() {
             />
           </div>
 
-          <h2 className="about-article__subtitle h2-leaf">
+          <h2 className="about-article__subtitle">
             Quién está detrás de esa puerta
           </h2>
 
@@ -79,7 +79,7 @@ export default function SobrePage() {
             funcione bien y sea un placer usarla.
           </p>
 
-          <h2 className="about-article__subtitle h2-leaf">
+          <h2 className="about-article__subtitle">
             Por qué existe Vecina Digital
           </h2>
 
@@ -126,7 +126,6 @@ export default function SobrePage() {
               <br />
               ¿Te quedas?
             </span>
-            <span className="leaf" aria-hidden="true" />
           </p>
         </div>
       </article>

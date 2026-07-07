@@ -11,7 +11,6 @@ export default function ContactPage() {
     <main>
       <section id="contacto" className="section contact">
         <div className="contact__copy">
-          <p className="kicker">Contacto</p>
 
           <h1 className="hero__title">
             Estás en casa.

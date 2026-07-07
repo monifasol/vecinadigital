@@ -14,37 +14,35 @@ export default function Home() {
 
       <section className="hero">
         <div className="hero__content">
-          <p className="kicker">Vecina Digital</p>
-
 
           <h1 className="hero__title">
-            Diseño y presencia digital<br />
-            <span className="hero__title-accent">humana y cercana</span>
+            Diseño web
+            <br />
+            <span className="hero__title-accent">humano y cercano.</span>
           </h1>
 
           <p className="hero__slogan">
-            Para que tu negocio se vea tan bien como lo cuidas cada día.
-          </p>
-
-          <p className="hero__subtitle">
-            Porque el cariño que pones en tu negocio también debería verse en Internet.
+            Para que tu negocio se vea tan bien como tú lo cuidas cada día.
           </p>
 
           <p className="hero__lead">
-            Ayudo a pequeños negocios (tiendas, cafeterías, talleres, casas rurales y más)
-            a tener una web clara y útil, sin complicaciones ni tecnicismos.
+            Ayudo a pequeños negocios
+            a tener una web clara y útil,
+            sin complicaciones ni tecnicismos.
+            {/* Ayudo a pequeños negocios (tiendas, cafeterías, talleres, casas rurales y más)
+            a tener una web clara y útil, sin complicaciones ni tecnicismos. */}
           </p>
 
           <div className="hero__cta">
             <Link className="btn" href="/contact">Cuéntame tu negocio</Link>
-            <Link className="btn btn--ghost" href="/plans">Cuéntame qué necesitas</Link>
+            <Link className="btn btn--ghost" href="/plans">Cómo te puedo ayudar</Link>
           </div>
         </div>
 
         <div className="hero__visual" aria-hidden="true">
           <img
-            className="hero__character"
-            src="assets/avatar-pc.png"
+            className="hero__image"
+            src="assets/casita.png"
             alt=""
             loading="eager"
             decoding="async"
@@ -53,7 +51,7 @@ export default function Home() {
       </section>
 
       <section className="section" aria-labelledby="work-title">
-        <h2 className="h2-leaf" id="work-title">Cómo trabajo</h2>
+        <h2 id="work-title">Cómo trabajo</h2>
 
         <ol className="workline">
           <li className="workline__item">
@@ -94,7 +92,7 @@ export default function Home() {
       </section>
 
       <section id="servicios" className="section" aria-labelledby="servicios-title">
-        <h2 className="h2-leaf" id="servicios-title">Elige tu punto de partida</h2>
+        <h2 id="servicios-title">Elige tu punto de partida</h2>
 
         <div className="services">
           <article className="service">
@@ -280,7 +278,7 @@ export default function Home() {
         </div>
 
         <div className="contact__art" aria-hidden="true">
-          <img src="assets/casita.png" alt="" />
+          <img src="assets/door.png" alt="" />
         </div>
       </section>
 

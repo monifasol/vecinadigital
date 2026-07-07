@@ -46,7 +46,7 @@ export default function Header() {
       <Link className="brand" href="/" onClick={() => setIsOpen(false)}>
         <img
           className="brand__logo"
-          src="/assets/logo-vecina-digital.png"
+          src="/assets/vecina-hero-logo.png"
           alt="Vecina Digital"
         />
       </Link>
