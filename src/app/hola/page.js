@@ -22,20 +22,19 @@ export default function HolaPage() {
         </div>
 
         <h1 className="hola-hero__title" id="hola-title">
-          🚪 ¡Hola!
+          ¡Hola!
         </h1>
 
         <div className="hola-hero__text">
-          <p>Qué alegría que hayas entrado!</p>
-          <p>Gracias por guardar esta tarjeta.</p>
-          <p className="hola-hero__name">Soy Mónica.</p>
-          <p>No hace falta que sepas nada de páginas web.</p>
-          <p>Solo cuéntame cómo es tu negocio.</p>
           <p className="hola-hero__name">Soy Mónica.</p>
           <p className="hola-hero__aside">
             Si has llegado hasta aquí, probablemente nos hemos conocido en
             persona.
           </p>
+
+
+          <p>Gracias por guardar esta tarjeta.</p>
+          <p>Qué alegría que hayas entrado!</p>
         </div>
       </section>
 
@@ -46,8 +45,11 @@ export default function HolaPage() {
           claridad.
         </p>
         <p>
-          Si crees que puedo ayudarte, me encantaría conocer tu negocio.
+          Si crees que puedo ayudarte, me encantaría conocer tu negocio. 
+          No hace falta que sepas nada de páginas web.
+          Solo cuéntame cómo es tu negocio.
         </p>
+
       </section>
 
       <section className="hola-cta" aria-label="Cómo contactar">

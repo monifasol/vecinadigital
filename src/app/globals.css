@@ -1620,3 +1620,28 @@ a.emphasis:hover{
   line-height: 1.6;
   color: rgba(43, 38, 34, 0.58);
 }
+
+/* Minimal footer — QR landing only */
+.hola-footer {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 24px 40px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+.hola-footer__link {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.hola-footer__link:hover {
+  text-decoration: underline;
+}
+
+.hola-footer__meta {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: rgba(43, 38, 34, 0.45);
+}
