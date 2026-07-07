@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 export const metadata = {
@@ -99,23 +100,34 @@ export default function PlansPage() {
 
             <div className="plan__cta">
               <Link className="btn" href="/contact">
-                Lo vemos juntas
+                Lo vemos juntos
               </Link>
             </div>
           </article>
         </div>
 
-        <section className="plans__bigger" aria-labelledby="plans-bigger-title">
-          <h2 className="plans__bigger-title" id="plans-bigger-title">
-            ¿Tu proyecto es más grande?
-          </h2>
-          <p className="plans__bigger-text">
-            Si necesitas tienda online, reservas, varias páginas, idiomas, formularios complejos o algo más a medida, lo vemos juntas y te preparo un presupuesto claro.
-          </p>
-          <Link className="btn" href="/contact">
-            Cuéntame tu caso
-          </Link>
-        </section>
+        <div className="plans__bigger-wrap">
+          <section className="plans__bigger" aria-labelledby="plans-bigger-title">
+            <h2 className="plans__bigger-title" id="plans-bigger-title">
+              ¿Tu proyecto es más grande?
+            </h2>
+            <p className="plans__bigger-text">
+              Si necesitas tienda online, reservas, varias páginas, idiomas, formularios complejos o algo más a medida, lo vemos juntos y te preparo un presupuesto claro.
+            </p>
+            <Link className="btn" href="/contact">
+              Cuéntame tu caso
+            </Link>
+          </section>
+
+          <figure className="plans__bigger-avatar" aria-hidden="true">
+            <Image
+              src="/assets/robot.png"
+              alt=""
+              width={400}
+              height={520}
+            />
+          </figure>
+        </div>
 
         <aside className="plans__help" aria-labelledby="plans-help-title">
           <h2 className="plans__help-title" id="plans-help-title">
@@ -133,13 +145,13 @@ export default function PlansPage() {
               rel="noopener noreferrer"
             >
               <span className="wa-link__icon" aria-hidden="true">
-                <img src="/assets/whatsapp-vecina-olive.png" alt="" />
+                <img src="/assets/whatsapp-vecina.png" alt="" />
               </span>
               <span className="wa-link__label">Escríbeme por WhatsApp</span>
             </a>
 
             <Link className="btn" href="/contact">
-              Lo vemos juntas
+              Lo vemos juntos
             </Link>
           </div>
         </aside>

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link";
 import ContactForm from "./contact/ContactForm";
 
@@ -40,12 +41,13 @@ export default function Home() {
         </div>
 
         <div className="hero__visual" aria-hidden="true">
-          <img
+          <Image
             className="hero__image"
-            src="assets/casita.png"
+            src="/assets/casita.png"
             alt=""
-            loading="eager"
-            decoding="async"
+            width={1122}
+            height={1002}
+            priority
           />
         </div>
       </section>
@@ -80,104 +82,76 @@ export default function Home() {
         </ol>
       </section>
 
-      <section className="motto">
-        <p className="motto__eyebrow">Lo importante · hecho con mimo</p>
-        <h2 className="motto__title">Una web clara, segura y con resultados</h2>
-
-        <p className="motto__text">
-          Preparada para crecer contigo.<br />
-          Pensada para cargar rápido.<br />
-          Muy bonita en móvil.
+      <section className="manifest" aria-labelledby="manifest-title">
+        <p className="manifest__kicker" id="manifest-title">
+          ¿Qué hace Vecina Digital?
         </p>
+
+        <p className="manifest__lead">Abre puertas.</p>
+
+        <figure className="manifest__door" aria-hidden="true">
+          <Image
+            src="/assets/vecina-micro-mark.png"
+            alt=""
+            width={56}
+            height={56}
+          />
+        </figure>
+
+        <div className="manifest__lines">
+          <p>A tu negocio local.</p>
+          <p>A las personas.</p>
+          <p>A que Internet sea más fácil.</p>
+          <p>A quien te busca.</p>
+          <p>A quien tiene miedo de la tecnología.</p>
+          <p>A la confianza.</p>
+        </div>
       </section>
 
-      <section id="servicios" className="section" aria-labelledby="servicios-title">
-        <h2 id="servicios-title">Elige tu punto de partida</h2>
+      <section id="servicios" className="section paths-teaser" aria-labelledby="servicios-title">
+        <h2 id="servicios-title">¿Cuál te encaja?</h2>
 
-        <div className="services">
-          <article className="service">
-            <div className="service__meta" aria-hidden="true">
-              <img src="assets/icon-empezar.png" alt="" className="service__icon"/>
-              <span className="service__tag">Empezar</span>
-            </div>
+        <div className="paths-teaser__grid">
+          <Link className="path-card" href="/plans">
+            <h3 className="path-card__title">Quiero una web sencilla</h3>
+            <p className="path-card__text">
+              Para quien no tiene web o necesita una página clara para explicar qué hace
+              y recibir contactos.
+            </p>
+          </Link>
 
-            <div className="service__body">
-              <h3>Quiero una web sencilla</h3>
-              <p>
-                Para quien no tiene web o necesita una página clara para explicar qué hace
-                y recibir contactos.
-              </p>
-              <ul className="service__bullets">
-                <li>Una página clara y bonita</li>
-                <li>Textos sencillos</li>
-                <li>Adaptada a móvil</li>
-                <li>Botón de WhatsApp o email</li>
-                <li>Google básico</li>
-              </ul>
-            </div>
-          </article>
+          <Link className="path-card" href="/plans">
+            <h3 className="path-card__title">Ya tengo web, pero…</h3>
+            <p className="path-card__text">
+              Para quien ya tiene web, pero no se entiende, se ve antigua, va lenta
+              o no consigue contactos.
+            </p>
+          </Link>
 
-          <article className="service">
-            <div className="service__meta" aria-hidden="true">
-              <img src="assets/icon-ordenar.png" alt="" className="service__icon"/>
-              <span className="service__tag">Arreglar</span>
-            </div>
-
-            <div className="service__body">
-              <h3>Ya tengo web, pero…</h3>
-              <p>
-                Para quien ya tiene web, pero no se entiende, se ve antigua, va lenta
-                o no consigue contactos.
-              </p>
-              <ul className="service__bullets">
-                <li>Revisión y mejora de textos</li>
-                <li>Más clara en móvil</li>
-                <li>Botones para que te llamen o escriban</li>
-                <li>Para que te encuentren mejor en Google</li>
-              </ul>
-            </div>
-          </article>
-
-          <article className="service">
-            <div className="service__meta" aria-hidden="true">
-              <img src="assets/icon-cuidar.png" alt="" className="service__icon"/>
-              <span className="service__tag">Acompañar</span>
-            </div>
-
-            <div className="service__body">
-              <h3>Quiero que me acompañes cada mes</h3>
-              <p>
-                Para negocios que necesitan pequeños cambios, mantenimiento
-                o ayuda digital continua.
-              </p>
-              <ul className="service__bullets">
-                <li>Cambios pequeños cada mes</li>
-                <li>Soporte cercano</li>
-                <li>Revisión de textos, imágenes o secciones</li>
-                <li>Tranquilidad técnica</li>
-              </ul>
-            </div>
-          </article>
+          <Link className="path-card" href="/plans">
+            <h3 className="path-card__title">Quiero que me acompañes cada mes</h3>
+            <p className="path-card__text">
+              Para negocios que necesitan pequeños cambios, mantenimiento
+              o ayuda digital continua.
+            </p>
+          </Link>
         </div>
 
-        <div className="services-cta">
-          <p className="services-cta__text">
+        <div className="paths-teaser__cta">
+          <p className="paths-teaser__cta-text">
             ¿No sabes por dónde empezar?
           </p>
           <Link className="btn" href="/plans">
             Ver las opciones
           </Link>
         </div>
-
       </section>
 
       <section className="pro-band" aria-labelledby="pro-title">
+        <h2 id="pro-title">Para proyectos más complejos</h2>
+
         <div className="pro-band__inner">
           <div className="pro-band__copy">
-            <p className="pro-band__badge">Vecina PRO</p>
-
-            <h2 id="pro-title" className="pro-band__title">Para proyectos más complejos</h2>
-
             <p className="pro-band__text">
               No todos los proyectos son iguales, hay proyectos que necesitan algo más.
               <br/>
@@ -224,7 +198,7 @@ export default function Home() {
             <div className="pro-band__cta">
               <Link className="btn" href="/contact">Cuéntame tu caso</Link>
               <Link className="btn btn--ghost" href="/plans">
-                Lo vemos juntas
+                Lo vemos juntos
               </Link>
             </div>
 
@@ -236,18 +210,10 @@ export default function Home() {
             <div className="worries">
               <span className="worry worry--left">“Mi web va lenta”</span>
               <span className="worry worry--right">“En el móvil se ve regular”</span>
-
-              <span className="worry worry--left">“Dependo siempre de alguien para cualquier cambio”</span>
-              <span className="worry worry--right">“Google no me encuentra”</span>
-
-              <span className="worry worry--left">“No sé por dónde empezar”</span>
-              <span className="worry worry--right">“Cada cambio es un lío”</span>
-
+              <span className="worry worry--left">“Google no me encuentra”</span>
+              <span className="worry worry--right">“Mi web no me representa”</span>
               <span className="worry worry--left">“Me da miedo tocar algo y romperlo”</span>
-              <span className="worry worry--right">“Sé que algo falla, pero no sé qué”</span>
-
-              <span className="worry worry--left">“Mi web no crece conmigo, no me representa.”</span>
-              <span className="worry worry--right">“No sé si estoy haciendo las cosas bien”</span>
+              <span className="worry worry--right">“La tecnología no es para mí”</span>
             </div>
 
           </div>
@@ -259,14 +225,14 @@ export default function Home() {
           <h2>Contacto</h2>
 
           <p className="contact__lead">
-            Estás en casa. Escríbeme y lo vemos juntas.
+            Estás en casa. Escríbeme y lo vemos.
           </p>
 
           <div className="contact__aside">
 
             <a className="wa-link" href="https://wa.me/34622210151" target="_blank" rel="noopener">
               <span className="wa-link__icon" aria-hidden="true">
-                <img src="assets/whatsapp-vecina-olive.png" alt="" />
+                <img src="/assets/whatsapp-vecina.png" alt="" />
               </span>
               <span className="wa-link__label">Escríbeme por WhatsApp</span>
             </a>

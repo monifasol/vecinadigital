@@ -103,7 +103,7 @@ Nunca desde la superioridad.
 - claro
 - sencillo
 - ayudarte
-- juntas
+- juntos
 - tranquilidad
 - cuidar
 - acompañar

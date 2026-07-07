@@ -48,6 +48,8 @@ Every object feels like it knows the others.
 
 Nothing exists in isolation.
 
+Every icon belongs to the neighbourhood.
+
 ---
 
 # Living Objects
