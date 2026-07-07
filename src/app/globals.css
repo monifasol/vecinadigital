@@ -1477,3 +1477,171 @@ a.emphasis:hover{
 .plans__maintenance-list li {
   margin: 0.35rem 0;
 }
+
+
+/* =========================
+   HOLA — QR landing page
+   ========================= */
+
+.hola {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+  text-align: center;
+  animation: holaFadeIn 600ms ease forwards;
+}
+
+@keyframes holaFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hola {
+    animation: none;
+  }
+}
+
+/* Hero */
+.hola-hero {
+  margin-bottom: 56px;
+}
+
+.hola-hero__door {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.hola-hero__door img {
+  width: 120px;
+  height: auto;
+  opacity: 0.88;
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.08));
+}
+
+.hola-hero__title {
+  margin: 0 0 28px;
+  font-family: var(--serif);
+  font-size: clamp(32px, 5vw, 42px);
+  font-weight: 600;
+  line-height: 1.15;
+  color: rgba(43, 38, 34, 0.92);
+}
+
+.hola-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hola-hero__text p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.hola-hero__name {
+  font-family: var(--serif);
+  font-size: 19px !important;
+  color: rgba(43, 38, 34, 0.88) !important;
+}
+
+.hola-hero__aside {
+  margin-top: 8px !important;
+  font-size: 15px !important;
+  color: rgba(43, 38, 34, 0.62) !important;
+  font-style: italic;
+}
+
+/* Body */
+.hola-body {
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hola-body p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(19px, 2.8vw, 22px);
+  line-height: 1.55;
+  color: rgba(43, 38, 34, 0.88);
+}
+
+/* CTA */
+.hola-cta {
+  margin-bottom: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Gift */
+.hola-gift {
+  margin-bottom: 56px;
+  padding: 32px 28px;
+  border-radius: calc(var(--radius) + 6px);
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(43, 38, 34, 0.10);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.04);
+}
+
+.hola-gift__title {
+  margin: 0 0 14px;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(43, 38, 34, 0.9);
+}
+
+.hola-gift__text {
+  margin: 0 0 22px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 46ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Closing */
+.hola-closing {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(43, 38, 34, 0.58);
+}
+
+/* Minimal footer — QR landing only */
+.hola-footer {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 24px 40px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+.hola-footer__link {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.hola-footer__link:hover {
+  text-decoration: underline;
+}
+
+.hola-footer__meta {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: rgba(43, 38, 34, 0.45);
+}
