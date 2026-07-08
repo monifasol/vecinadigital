@@ -33,10 +33,10 @@ export default function PlansPage() {
 
             <ul className="plan__list">
               <li>Una página clara y bonita</li>
-              <li>Textos sencillos</li>
+              <li>Todo el texto y contenidos que necesites</li>
               <li>Adaptada a móvil</li>
-              <li>Botón de WhatsApp o email</li>
-              <li>Google básico</li>
+              <li>Contacto por WhatsApp o email</li>
+              <li>Posicionamiento en Google</li>
             </ul>
 
             <p className="plan__price">Desde 600–900€</p>
@@ -64,9 +64,9 @@ export default function PlansPage() {
 
             <ul className="plan__list">
               <li>Revisión completa</li>
-              <li>Mejorar estructura y textos</li>
-              <li>Hacerla más clara en móvil</li>
-              <li>Mejorar botones para que puedan llamarte o escribirte</li>
+              <li>Mejorar estructura, textos, contenido</li>
+              <li>Hacerla más clara y útil en móvil</li>
+              <li>Mejorar contacto para que puedan llamarte o escribirte</li>
               <li>Para que te encuentren mejor en Google</li>
             </ul>
 
@@ -91,9 +91,9 @@ export default function PlansPage() {
 
             <ul className="plan__list">
               <li>Cambios pequeños cada mes</li>
-              <li>Soporte cercano</li>
-              <li>Revisión de textos, imágenes o secciones</li>
-              <li>Tranquilidad técnica</li>
+              <li>Soporte muy cercano</li>
+              <li>Revisión de textos, secciones, contenido</li>
+              <li>Mantenimiento siempre, tranquilidad técnica</li>
             </ul>
 
             <p className="plan__price">Desde 40–90€/mes</p>

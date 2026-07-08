@@ -116,6 +116,7 @@ a:hover{ text-decoration: underline; }
   display: block;
   filter: drop-shadow(0 8px 18px rgba(43, 38, 34, 0.1));
   transition: filter 160ms ease;
+  opacity: 0.85;
 }
 
 .nav-toggle:hover .nav-toggle__art{
@@ -283,6 +284,7 @@ a:hover{ text-decoration: underline; }
     flex-shrink: 0;
     object-fit: contain;
     display: block;
+    margin-bottom: 8px;
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -1194,7 +1196,7 @@ a.emphasis:hover{
 .contact__aside{
   margin: 14px 0 18px;
   display: grid;
-  gap: 8px;
+  gap: 16px;
   align-items: start;
   background-color: var(--paper-2);
   padding: 20px 18px;
@@ -1226,8 +1228,8 @@ a.emphasis:hover{
 }
 
 .wa-link__icon{
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
   flex: 0 0 auto;
