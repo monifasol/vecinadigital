@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 export const metadata = {
-  title: "Cómo te puedo ayudar | Vecina Digital",
+  title: "Caminos para tu negocio | Vecina Digital",
   description:
     "Tres caminos claros para tu negocio: una web sencilla, arreglar la que ya tienes, o acompañamiento cada mes.",
 }
@@ -13,10 +13,10 @@ export default function PlansPage() {
       <section className="section plans" aria-labelledby="plans-title">
         <header className="plans__header">
           <h1 className="plans__title" id="plans-title">
-            Cómo te puedo ayudar
+            Caminos para tu negocio
           </h1>
           <p className="plans__intro">
-            Elige el camino que más se parece a tu situación. Sin líos ni presión.
+            Elige el que más se parece a tu situación.
           </p>
         </header>
 
