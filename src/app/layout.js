@@ -17,14 +17,16 @@ const serif = Cormorant_Garamond({
 export const metadata = {
   metadataBase: new URL("https://www.vecinadigital.com"),
   title: "Vecina Digital",
-  description: "Webs bonitas, profesionales y humanas para personas reales.",
+  description:
+    "Para que tu negocio se vea tan bien como lo cuidas cada día. Webs claras y humanas para pequeños negocios.",
   icons: {
     icon: "/assets/vecina-micro-mark.png",
     apple: "/assets/vecina-micro-mark.png",
   },
   openGraph: {
     title: "Vecina Digital",
-    description: "Webs bonitas, profesionales y humanas para personas reales.",
+    description:
+      "Para que tu negocio se vea tan bien como lo cuidas cada día. Webs claras y humanas para pequeños negocios.",
     url: "https://www.vecinadigital.com",
     siteName: "Vecina Digital",
     locale: "es_ES",
@@ -41,7 +43,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Vecina Digital",
-    description: "Webs bonitas, profesionales y humanas para personas reales.",
+    description:
+      "Para que tu negocio se vea tan bien como lo cuidas cada día. Webs claras y humanas para pequeños negocios.",
     images: ["/assets/vecina-hero-logo.png"],
   },
 }
