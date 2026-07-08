@@ -100,8 +100,8 @@ a:hover{ text-decoration: underline; }
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   margin-top: 6px;
   padding: 0;
   border: none;
@@ -110,8 +110,8 @@ a:hover{ text-decoration: underline; }
 }
 
 .nav-toggle__art{
-  width: 42px;
-  height: 42px;
+  height: 46px;
+  width: auto;
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 8px 18px rgba(43, 38, 34, 0.1));
