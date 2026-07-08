@@ -24,33 +24,33 @@ export default function SobrePage() {
           </p>
 
           <p>
-            Nació como una necesidad de bajar el ritmo.
-            <br />
-            De trabajar de otra manera.
-            <br />
-            De volver a sentir que lo que hago tiene sentido
-            <br />
-            y está conectado con la vida que quiero vivir.
+            Hubo un momento en que sentí que iba demasiado deprisa.
+            No quería dejar de trabajar en esto.
+            Solo quería hacerlo con más calma, con más sentido,
+            y de una forma que encajara mejor con mi vida.
           </p>
 
-          <div className="about-illustration" aria-hidden="true">
-            <Image
-              src="/assets/door.png"
-              alt=""
-              width={320}
-              height={320}
-              aria-hidden="true"
-            />
+          <div className="about-reveal">
+            <figure className="about-reveal__figure" aria-hidden="true">
+              <Image
+                src="/assets/monica-behind-door.png"
+                alt=""
+                width={320}
+                height={400}
+              />
+            </figure>
+
+            <div className="about-reveal__copy">
+              <h2 className="about-article__subtitle">
+                ¡Hola! Soy Mónica.
+              </h2>
+
+              <p className="about-article__intro">
+                Vivo en Villablino y ayudo a pequeños negocios a tener
+                una presencia online sencilla, bonita y útil, sin complicaciones ni tecnicismos.
+              </p>
+            </div>
           </div>
-
-          <h2 className="about-article__subtitle h2-leaf">
-            Quién está detrás de esa puerta
-          </h2>
-
-          <p className="about-article__intro">
-            Hola, soy Mónica. Vivo en Villablino y ayudo a pequeños negocios a tener
-            una presencia online sencilla, bonita y útil, sin complicaciones ni tecnicismos.
-          </p>
 
           <p>
             Mamá de Len y Dahlia. <br />
@@ -79,7 +79,7 @@ export default function SobrePage() {
             funcione bien y sea un placer usarla.
           </p>
 
-          <h2 className="about-article__subtitle h2-leaf">
+          <h2 className="about-article__subtitle">
             Por qué existe Vecina Digital
           </h2>
 
@@ -126,7 +126,6 @@ export default function SobrePage() {
               <br />
               ¿Te quedas?
             </span>
-            <span className="leaf" aria-hidden="true" />
           </p>
         </div>
       </article>

@@ -15,8 +15,8 @@ export default function HolaPage() {
           <Image
             src="/assets/door.png"
             alt=""
-            width={140}
-            height={140}
+            width={160}
+            height={160}
             priority
           />
         </div>
@@ -34,7 +34,7 @@ export default function HolaPage() {
 
 
           <p>Gracias por guardar esta tarjeta.</p>
-          <p>Qué alegría que hayas entrado!</p>
+          <p>¡Qué alegría que hayas entrado!</p>
         </div>
       </section>
 
@@ -65,6 +65,11 @@ export default function HolaPage() {
           Escribirme por WhatsApp
         </a>
       </section>
+
+      <p className="hola-web-invite">
+        Si te apetece,{" "}
+        <Link href="/">echa un vistazo a la web</Link>.
+      </p>
 
       <section className="hola-gift" aria-labelledby="hola-gift-title">
         <h2 className="hola-gift__title" id="hola-gift-title">

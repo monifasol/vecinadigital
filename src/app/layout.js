@@ -17,6 +17,10 @@ const serif = Cormorant_Garamond({
 export const metadata = {
   title: "Vecina Digital",
   description: "Webs bonitas, profesionales y humanas para personas reales.",
+  icons: {
+    icon: "/assets/vecina-micro-mark.png",
+    apple: "/assets/vecina-micro-mark.png",
+  },
 }
 
 export default function RootLayout({ children }) {

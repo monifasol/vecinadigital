@@ -2,7 +2,7 @@ import ContactForm from "./ContactForm"
 
 export const metadata = {
   title: "Contacto · Vecina Digital",
-  description: "Estás en casa. Escríbeme y lo vemos juntas.",
+  description: "Estás en casa. Escríbeme y lo vemos juntos.",
 }
 
 export default function ContactPage() {
@@ -11,7 +11,6 @@ export default function ContactPage() {
     <main>
       <section id="contacto" className="section contact">
         <div className="contact__copy">
-          <p className="kicker">Contacto</p>
 
           <h1 className="hero__title">
             Estás en casa.
@@ -32,7 +31,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
             >
               <span className="wa-link__icon" aria-hidden="true">
-                <img src="/assets/whatsapp-vecina-olive.png" alt="" />
+                <img src="/assets/whatsapp-vecina.png" alt="" />
               </span>
               <span className="wa-link__label">Escríbeme por WhatsApp</span>
             </a>

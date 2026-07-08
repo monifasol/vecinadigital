@@ -9,6 +9,8 @@ export default function Header() {
   const headerRef = useRef(null)
   const pathname = usePathname()
 
+  const whatsappUrl = "https://wa.me/34622210151"
+
   const navItems = [
     { href: "/", label: "Inicio" },
     { href: "/plans", label: "Cómo te puedo ayudar" },
@@ -46,20 +48,26 @@ export default function Header() {
       <Link className="brand" href="/" onClick={() => setIsOpen(false)}>
         <img
           className="brand__logo"
-          src="/assets/logo-vecina-digital.png"
+          src="/assets/vecina-hero-logo.png"
           alt="Vecina Digital"
         />
       </Link>
 
       <button
-        className="nav-toggle"
+        className={`nav-toggle${isOpen ? " is-open" : ""}`}
         type="button"
         aria-controls="site-nav"
         aria-expanded={isOpen}
+        aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
         onClick={() => setIsOpen((v) => !v)}
       >
-        <span className="nav-toggle__label">{isOpen ? "Cerrar" : "Menu"}</span>
-        <span className="nav-toggle__icon" aria-hidden="true" />
+        <img
+          className="nav-toggle__art"
+          src="/assets/icons/icon-menu.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <span className="nav-toggle__close" aria-hidden="true" />
       </button>
 
       <nav
@@ -80,6 +88,24 @@ export default function Header() {
               </Link>
             </li>
           ))}
+
+          <li className="site-nav__item-wa">
+            <a
+              className="site-nav__wa"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+            >
+              <img
+                className="site-nav__wa-icon"
+                src="/assets/whatsapp-vecina.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span>Escríbeme por WhatsApp</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
