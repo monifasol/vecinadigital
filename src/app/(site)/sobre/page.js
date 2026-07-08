@@ -113,14 +113,7 @@ export default function SobrePage() {
 
           <p className="about-article__closing">
             Vecina Digital es una forma muy consciente de estar en el mundo
-            digital
-            <br />
-            sin perder lo humano.
-            <br />
-            Porque lo humano no es lo contrario de lo técnico.
-            <br />
-            Es hacerlo con criterio.
-
+            digital sin perder lo humano. 
             <span>
               Esto es quién soy.
               <br />

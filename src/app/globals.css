@@ -199,6 +199,11 @@ a:hover{ text-decoration: underline; }
 
   .nav-toggle{ display: inline-flex; }
 
+  /* En móvil, logo más discreto para que no compita con el menú */
+  .brand__logo{
+    height: 120px;
+  }
+
   /* Hide desktop nav until opened */
   .site-nav{
     position: absolute;
@@ -428,7 +433,7 @@ a:hover{ text-decoration: underline; }
   .hero{
     grid-template-columns: 1fr;
     gap: 24px;
-    margin-top: 28px;
+    margin-top: 12px;
   }
 
   .hero__visual{
@@ -652,10 +657,89 @@ input:focus, textarea:focus{
 }
 
 @media (max-width: 768px){
+  /* Como trabajo: carrusel horizontal */
   .workline{
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 18px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 6px;
   }
+
+  .workline::-webkit-scrollbar{
+    height: 0;
+  }
+
+  .workline__item{
+    flex: 0 0 min(80vw, 320px);
+    width: min(80vw, 320px);
+    min-height: 0;
+    scroll-snap-align: start;
+    text-align: center;
+    padding: 16px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .workline__dot{
+    margin: 0 0 10px;
+  }
+
+  .workline__content h3{
+    font-size: 20px;
+  }
+
+  .workline__content p{
+    font-size: 15px;
+  }
+
   .workline__item::after{ display: none; }
+
+  /* ¿Cuál te encaja?: carrusel horizontal */
+  .paths-teaser__grid{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 18px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 6px;
+  }
+
+  .paths-teaser__grid::-webkit-scrollbar{
+    height: 0;
+  }
+
+  .path-card{
+    flex: 0 0 min(80vw, 320px);
+    width: min(80vw, 320px);
+    scroll-snap-align: start;
+    padding: 16px 16px 18px;
+    text-align: center;
+  }
+
+  .path-card__title{
+    font-size: 22px;
+  }
+
+  .path-card__text{
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .paths-teaser__grid .path-card:hover{
+    transform: none;
+  }
 }
 
 
@@ -938,7 +1022,7 @@ a.emphasis:hover{
 
 .about-article__title{
   font-family: var(--serif);
-  font-size: clamp(36px, 5vw, 56px);
+  font-size: clamp(34px, 4vw, 44px);
   line-height: 1.05;
   font-weight: 600;
 }
@@ -1012,6 +1096,9 @@ a.emphasis:hover{
 
 /* responsive */
 @media (max-width: 720px){
+  .about-article {
+    margin-top: 12px;
+  }
   .about-reveal{
     grid-template-columns: 1fr;
     gap: 20px;
@@ -1117,10 +1204,10 @@ a.emphasis:hover{
   display: block;
 }
 
-
 /* Mobile */
 @media (max-width: 720px){
   .contact{
+    margin-top: 0px;
     grid-template-columns: 1fr;
     text-align: center;
   }
@@ -1191,6 +1278,12 @@ a.emphasis:hover{
 
 .plans{
   margin-top: 36px;
+}
+
+@media (max-width: 720px){
+  .plans{
+    margin-top: 0px;
+  }
 }
 
 /* Header */
