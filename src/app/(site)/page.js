@@ -232,7 +232,7 @@ export default function Home() {
 
             <a className="wa-link" href="https://wa.me/34622210151" target="_blank" rel="noopener">
               <span className="wa-link__icon" aria-hidden="true">
-                <img src="/assets/whatsapp-vecina.png" alt="" />
+                <img src="/assets/icons/icon-whatsapp-.png" alt="" />
               </span>
               <span className="wa-link__label">Escríbeme por WhatsApp</span>
             </a>
