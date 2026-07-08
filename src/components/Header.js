@@ -13,7 +13,7 @@ export default function Header() {
 
   const navItems = [
     { href: "/", label: "Inicio" },
-    { href: "/plans", label: "Cómo te puedo ayudar" },
+    { href: "/plans", label: "Caminos" },
     { href: "/sobre", label: "Sobre" },
     { href: "/contact", label: "Contacto" },
   ]
@@ -79,7 +79,7 @@ export default function Header() {
         className="site-nav"
         id="site-nav"
         aria-label="Navegación principal"
-        hidden={!isOpen && typeof window !== "undefined" && window.innerWidth <= 920}
+        hidden={!isOpen && typeof window !== "undefined" && window.innerWidth <= 768}
       >
         <ul className="site-nav__list">
           {navItems.map(({ href, label }) => (

@@ -178,7 +178,7 @@ a:hover{ text-decoration: underline; }
 }
 
 /* --- Mobile: dropdown “paper note” --- */
-@media (max-width: 920px){
+@media (max-width: 768px){
   .site-header{
     z-index: 51;
   }
@@ -1125,8 +1125,43 @@ a.emphasis:hover{
   align-items: center;
 }
 
+/* Contact page: la ilustración va dentro del copy */
+.contact:not(:has(> .contact__art)){
+  grid-template-columns: 1fr;
+}
+
 .contact__copy{
   min-width: 0; /* evita desbordes raros en grid */
+}
+
+/* Contact page: texto a la izquierda, casita a la derecha */
+@media (min-width: 769px){
+  .contact:not(:has(> .contact__art)) .contact__copy{
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .contact:not(:has(> .contact__art)) .contact__intro,
+  .contact:not(:has(> .contact__art)) .contact__actions{
+    grid-column: 1;
+  }
+
+  .contact:not(:has(> .contact__art)) .contact__intro{
+    grid-row: 1;
+  }
+
+  .contact:not(:has(> .contact__art)) .contact__actions{
+    grid-row: 2;
+  }
+
+  .contact:not(:has(> .contact__art)) .contact__copy .contact__art{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+    margin: 0;
+  }
 }
 
 .contact__copy h2{
@@ -1205,7 +1240,7 @@ a.emphasis:hover{
 }
 
 /* Mobile */
-@media (max-width: 720px){
+@media (max-width: 768px){
   .contact{
     margin-top: 0px;
     grid-template-columns: 1fr;
@@ -1218,10 +1253,11 @@ a.emphasis:hover{
   .contact__lead{
     max-width: none;
   }
-  .contact__art{
-    order: -1; /* casita arriba */
-    justify-content: start;
+
+  .contact__copy .contact__art{
+    margin: 8px 0 20px;
   }
+
   .contact__art img{
     width: min(280px, 90%);
   }

@@ -36,7 +36,7 @@ export default function Home() {
 
           <div className="hero__cta">
             <Link className="btn" href="/contact">Cuéntame tu negocio</Link>
-            <Link className="btn btn--ghost" href="/plans">Cómo te puedo ayudar</Link>
+            <Link className="btn btn--ghost" href="/plans">Caminos</Link>
           </div>
         </div>
 
