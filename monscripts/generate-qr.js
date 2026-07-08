@@ -49,12 +49,12 @@ const CONFIG = {
 
   /**
    * Centre door icon as a fraction of the QR width.
-   * ~14 % is safe with level H and still scans reliably on phones.
+   * ~17 % is safe with level H and still scans reliably on phones.
    */
-  iconScale: 0.14,
+  iconScale: 0.17,
 
   /** Extra padding behind the icon so modules do not show through. */
-  iconPadScale: 0.2,
+  iconPadScale: 0.22,
 
   outputDir: path.join(__dirname, "..", "public", "qr"),
   doorPath: path.join(__dirname, "..", "public", "assets", "door.png"),
