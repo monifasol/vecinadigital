@@ -31,7 +31,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
             >
               <span className="wa-link__icon" aria-hidden="true">
-                <img src="/assets/whatsapp-vecina.png" alt="" />
+                <img src="/assets/icons/icon-whatsapp.png" alt="" />
               </span>
               <span className="wa-link__label">Escríbeme por WhatsApp</span>
             </a>

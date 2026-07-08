@@ -62,12 +62,17 @@ export default function Header() {
         onClick={() => setIsOpen((v) => !v)}
       >
         <img
-          className="nav-toggle__art"
+          className="nav-toggle__art nav-toggle__art--open"
           src="/assets/icons/icon-menu.png"
           alt=""
           aria-hidden="true"
         />
-        <span className="nav-toggle__close" aria-hidden="true" />
+        <img
+          className="nav-toggle__art nav-toggle__art--close"
+          src="/assets/icons/icon-close-menu.png"
+          alt=""
+          aria-hidden="true"
+        />
       </button>
 
       <nav
@@ -99,7 +104,7 @@ export default function Header() {
             >
               <img
                 className="site-nav__wa-icon"
-                src="/assets/whatsapp-vecina.png"
+                src="/assets/icons/icon-whatsapp.png"
                 alt=""
                 aria-hidden="true"
               />
