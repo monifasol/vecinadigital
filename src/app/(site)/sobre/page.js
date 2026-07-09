@@ -111,7 +111,7 @@ export default function SobrePage() {
             sienta acompañado.
           </p>
 
-          <p className="about-article__closing">
+          {/* <p className="about-article__closing">
             Vecina Digital es una forma muy consciente de estar en el mundo
             digital sin perder lo humano. 
             <span>
@@ -119,7 +119,7 @@ export default function SobrePage() {
               <br />
               ¿Te quedas?
             </span>
-          </p>
+          </p> */}
         </div>
       </article>
     </main>

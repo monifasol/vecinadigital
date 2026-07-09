@@ -48,7 +48,7 @@ const CONFIG = {
   lightColor: "#F8F4EE",
 
   /**
-   * Centre door icon as a fraction of the QR width.
+   * Centre icon as a fraction of the QR width.
    * ~17 % is safe with level H and still scans reliably on phones.
    */
   iconScale: 0.17,
@@ -57,7 +57,7 @@ const CONFIG = {
   iconPadScale: 0.22,
 
   outputDir: path.join(__dirname, "..", "public", "qr"),
-  doorPath: path.join(__dirname, "..", "public", "assets", "door.png"),
+  iconPath: path.join(__dirname, "..", "public", "assets", "vecina-micro-mark.png"),
 
   pngFile: "vecina-hola-qr.png",
   svgFile: "vecina-hola-qr.svg",
@@ -111,7 +111,7 @@ function extractQrSvgParts(qrSvg) {
   }
 }
 
-function buildCompositeSvg({ qrInner, qrViewBox, doorBase64 }) {
+function buildCompositeSvg({ qrInner, qrViewBox, iconBase64 }) {
   const { iconSize, padSize, iconX, iconY, padX, padY, padRadius } = iconLayout()
   const size = CONFIG.qrSize
 
@@ -132,7 +132,7 @@ function buildCompositeSvg({ qrInner, qrViewBox, doorBase64 }) {
         rx="${padRadius}" ry="${padRadius}"
         fill="${CONFIG.lightColor}"/>
 
-  <image href="data:image/png;base64,${doorBase64}"
+  <image href="data:image/png;base64,${iconBase64}"
          x="${iconX}" y="${iconY}"
          width="${iconSize}" height="${iconSize}"
          preserveAspectRatio="xMidYMid meet"/>
@@ -140,7 +140,7 @@ function buildCompositeSvg({ qrInner, qrViewBox, doorBase64 }) {
 `
 }
 
-async function compositeQrPng(doorBuffer) {
+async function compositeQrPng(iconBuffer) {
   const qrBuffer = await QRCode.toBuffer(CONFIG.url, {
     type: "png",
     errorCorrectionLevel: CONFIG.errorCorrectionLevel,
@@ -154,7 +154,7 @@ async function compositeQrPng(doorBuffer) {
 
   const { iconSize, padSize, padX, padY, padRadius } = iconLayout()
 
-  const paddedIcon = await sharp(doorBuffer)
+  const paddedIcon = await sharp(iconBuffer)
     .resize(iconSize, iconSize, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .png()
     .toBuffer()
@@ -188,15 +188,15 @@ async function main() {
 
   await ensureOutputDir()
 
-  const doorBuffer = await fs.readFile(CONFIG.doorPath)
-  const doorBase64 = doorBuffer.toString("base64")
+  const iconBuffer = await fs.readFile(CONFIG.iconPath)
+  const iconBase64 = iconBuffer.toString("base64")
 
   const qrSvg = await generateQrSvgString()
   const { viewBox, inner } = extractQrSvgParts(qrSvg)
   const compositeSvg = buildCompositeSvg({
     qrInner: inner,
     qrViewBox: viewBox,
-    doorBase64,
+    iconBase64,
   })
 
   const svgPath = path.join(CONFIG.outputDir, CONFIG.svgFile)
@@ -204,7 +204,7 @@ async function main() {
 
   await fs.writeFile(svgPath, compositeSvg, "utf8")
 
-  const pngBuffer = await compositeQrPng(doorBuffer)
+  const pngBuffer = await compositeQrPng(iconBuffer)
   await fs.writeFile(pngPath, pngBuffer)
 
   console.log("")
