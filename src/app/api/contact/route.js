@@ -4,14 +4,19 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY is missing")
+      return Response.json({ success: false, error: "not_configured" }, { status: 500 })
+    }
+
     const { email, message } = await request.json()
 
     if (!email || !message) {
-      return Response.json({ success: false }, { status: 400 })
+      return Response.json({ success: false, error: "invalid_input" }, { status: 400 })
     }
 
-    // 1. Email para mí 
-    await resend.emails.send({
+    // 1. Email para mí
+    const toMe = await resend.emails.send({
       from: "Vecina Digital <hola@vecinadigital.com>",
       to: "monism@gmail.com",
       replyTo: email,
@@ -24,8 +29,13 @@ export async function POST(request) {
       `,
     })
 
+    if (toMe.error) {
+      console.error("Resend error (to me):", toMe.error)
+      return Response.json({ success: false, error: toMe.error }, { status: 502 })
+    }
+
     // 2. Copia para el usuario
-    await resend.emails.send({
+    const toUser = await resend.emails.send({
       from: "Vecina Digital <hola@vecinadigital.com>",
       to: email,
       replyTo: "monism@gmail.com",
@@ -38,8 +48,14 @@ export async function POST(request) {
       `,
     })
 
-    return Response.json({ success: true })
+    if (toUser.error) {
+      console.error("Resend error (to user):", toUser.error)
+      return Response.json({ success: false, error: toUser.error }, { status: 502 })
+    }
+
+    return Response.json({ success: true, id: toMe.data?.id })
   } catch (error) {
-    return Response.json({ success: false }, { status: 500 })
+    console.error("Contact API error:", error)
+    return Response.json({ success: false, error: "server_error" }, { status: 500 })
   }
 }
