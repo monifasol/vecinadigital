@@ -1,61 +1,80 @@
-import { Resend } from "resend"
+import { Resend } from "resend";
+import {
+  visitorConfirmationEmail,
+  ownerNotificationEmail,
+  logoAttachment,
+  casitaAttachment,
+} from "@/lib/contactEmails";
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
     if (!process.env.RESEND_API_KEY) {
-      console.error("RESEND_API_KEY is missing")
-      return Response.json({ success: false, error: "not_configured" }, { status: 500 })
+      console.error("RESEND_API_KEY is missing");
+      return Response.json(
+        { success: false, error: "not_configured" },
+        { status: 500 }
+      );
     }
 
-    const { email, message } = await request.json()
+    const body = await request.json();
+    const email = String(body?.email || "").trim();
+    const message = String(body?.message || "").trim();
 
     if (!email || !message) {
-      return Response.json({ success: false, error: "invalid_input" }, { status: 400 })
+      return Response.json(
+        { success: false, error: "invalid_input" },
+        { status: 400 }
+      );
     }
+
+    const to = process.env.CONTACT_TO_EMAIL || "monism@gmail.com";
+    const from =
+      process.env.CONTACT_FROM_EMAIL ||
+      "Vecina Digital <hola@vecinadigital.com>";
+    const logo = logoAttachment();
+    const casita = casitaAttachment();
 
     // 1. Email para mí
     const toMe = await resend.emails.send({
-      from: "Vecina Digital <hola@vecinadigital.com>",
-      to: "monism@gmail.com",
+      from,
+      to,
       replyTo: email,
       subject: "Nuevo mensaje desde Vecina Digital",
-      html: `
-        <h2>Nuevo mensaje</h2>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Mensaje:</strong></p>
-        <p>${message}</p>
-      `,
-    })
+      html: ownerNotificationEmail({ email, message }),
+      attachments: [logo],
+    });
 
     if (toMe.error) {
-      console.error("Resend error (to me):", toMe.error)
-      return Response.json({ success: false, error: toMe.error }, { status: 502 })
+      console.error("Resend error (to me):", toMe.error);
+      return Response.json({ success: false, error: toMe.error }, { status: 502 });
     }
 
-    // 2. Copia para el usuario
+    // 2. Copia para quien escribe
     const toUser = await resend.emails.send({
-      from: "Vecina Digital <hola@vecinadigital.com>",
+      from,
       to: email,
-      replyTo: "monism@gmail.com",
+      replyTo: to,
       subject: "He recibido tu mensaje · Vecina Digital",
-      html: `
-        <h2>Gracias por escribir 💛</h2>
-        <p>Este es el mensaje que me has enviado:</p>
-        <p>${message}</p>
-        <p>Te respondo muy pronto con claridad y luego tú decides.</p>
-      `,
-    })
+      html: visitorConfirmationEmail({ message }),
+      attachments: [logo, casita],
+    });
 
     if (toUser.error) {
-      console.error("Resend error (to user):", toUser.error)
-      return Response.json({ success: false, error: toUser.error }, { status: 502 })
+      console.error("Resend error (to user):", toUser.error);
+      return Response.json(
+        { success: false, error: toUser.error },
+        { status: 502 }
+      );
     }
 
-    return Response.json({ success: true, id: toMe.data?.id })
+    return Response.json({ success: true, id: toMe.data?.id });
   } catch (error) {
-    console.error("Contact API error:", error)
-    return Response.json({ success: false, error: "server_error" }, { status: 500 })
+    console.error("Contact API error:", error);
+    return Response.json(
+      { success: false, error: "server_error" },
+      { status: 500 }
+    );
   }
 }

@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+/tmp/
 
 # local assets (not for repo)
 public/assets/old illus/
