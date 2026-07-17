@@ -30,6 +30,13 @@ export default function SobrePage() {
             y de una forma que encajara mejor con mi vida.
           </p>
 
+          <p>
+            Vecina Digital no nació porque quisiera crear una empresa.
+          </p>
+          <p>
+            Nació porque quería que los pequeños negocios del lugar donde vivo tuvieran la oportunidad de ser encontrados, crecer y seguir formando parte de la vida del pueblo.
+          </p>
+
           <div className="about-reveal">
             <figure className="about-reveal__figure" aria-hidden="true">
               <Image
@@ -100,8 +107,8 @@ export default function SobrePage() {
 
           <p>
             Vecina Digital aparece justo desde ahí. Es una manera de decir:{" "}
-            <em>esto se puede hacer de otra manera: desde lo humano</em>.
-            De personas para personas, como una conversación con tu vecina.
+            esto se puede hacer de otra manera, desde lo humano,
+            de personas para personas, como una conversación con tu vecina.
           </p>
 
           <p>
@@ -111,15 +118,11 @@ export default function SobrePage() {
             sienta acompañado.
           </p>
 
-          {/* <p className="about-article__closing">
-            Vecina Digital es una forma muy consciente de estar en el mundo
-            digital sin perder lo humano. 
-            <span>
-              Esto es quién soy.
-              <br />
-              ¿Te quedas?
-            </span>
-          </p> */}
+          <p className="about-article__closing">
+            Estoy aquí para ayudarte a que tu negocio sea encontrado, 
+            crezca y siga formando parte de la vida de tu comunidad.
+            Y estoy deseando conocerte y conocer tu proyecto!
+          </p>
         </div>
       </article>
     </main>

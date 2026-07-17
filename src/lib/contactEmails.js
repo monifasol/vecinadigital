@@ -38,7 +38,7 @@ export function casitaAttachment() {
   };
 }
 
-function logoBlock({ width = 168 } = {}) {
+function logoBlock({ width = 220 } = {}) {
   return `
               <a href="${SITE_URL}" style="display:inline-block;text-decoration:none;">
                 <img
@@ -83,7 +83,7 @@ export function visitorConfirmationEmail({ message }) {
           <tr>
             <td style="padding:36px 32px 28px;font-family:Georgia,'Times New Roman',serif;color:#2b2622;">
               <div style="margin:0 0 22px;">
-${logoBlock({ width: 176 })}
+${logoBlock({ width: 220 })}
               </div>
               <h1 style="margin:0 0 18px;font-size:28px;line-height:1.25;font-weight:600;color:#2b2622;">
                 Gracias por escribir
@@ -153,7 +153,7 @@ export function ownerNotificationEmail({ email, message }) {
           <tr>
             <td style="padding:32px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#2b2622;">
               <div style="margin:0 0 18px;">
-${logoBlock({ width: 148 })}
+${logoBlock({ width: 180 })}
               </div>
               <h1 style="margin:0 0 20px;font-family:Georgia,'Times New Roman',serif;font-size:24px;line-height:1.3;font-weight:600;">
                 Nuevo mensaje
