@@ -380,6 +380,10 @@ He simply keeps it open.
 
 # Brand Hierarchy
 
+The door is the promise.
+
+The robot is the welcome.
+
 The door always comes first.
 
 The robot exists to support the world around the door, never to replace it.
