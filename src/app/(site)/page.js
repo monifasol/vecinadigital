@@ -33,8 +33,7 @@ export default function Home() {
           </p>
 
           <p className="hero__lead">
-            Diseño de páginas web, identidades digitales y soluciones tecnológicas
-            para negocios que quieren crecer.
+            Webs, identidad digital y lo que tu negocio necesite para crecer.
           </p>
 
           <div className="hero__cta">

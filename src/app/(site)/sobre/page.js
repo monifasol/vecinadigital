@@ -116,14 +116,14 @@ export default function SobrePage() {
           </h2>
 
           <p>
-            Aspiro a ayudar a abrir puertas para que el talento de nuestros pueblos pueda ser encontrado.
+            Quiero abrir puertas para que el talento de nuestros pueblos pueda ser encontrado.
           </p>
           <p>
-            Así que stoy aquí para ayudarte a que tu negocio sea encontrado, 
+            Así que estoy aquí para ayudarte a que tu negocio sea encontrado,
             crezca y siga formando parte de la vida de tu comunidad.
           </p>
           <p>
-            Y estoy deseando conocerte y conocer tu proyecto!
+            ¡Y estoy deseando conocerte y conocer tu proyecto!
           </p>
         </div>
       </article>
