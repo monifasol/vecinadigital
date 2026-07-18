@@ -17,7 +17,7 @@ export default function Home() {
         <div className="hero__content">
 
           <h1 className="hero__title">
-            Diseño web
+            Diseño y desarrollo web
             <br />
             <span className="hero__title-accent">humano y cercano.</span>
           </h1>
@@ -30,8 +30,11 @@ export default function Home() {
             Ayudo a pequeños negocios
             a tener una web clara y útil,
             sin complicaciones ni tecnicismos.
-            {/* Ayudo a pequeños negocios (tiendas, cafeterías, talleres, casas rurales y más)
-            a tener una web clara y útil, sin complicaciones ni tecnicismos. */}
+          </p>
+
+          <p className="hero__lead">
+            Diseño de páginas web, identidades digitales y soluciones tecnológicas
+            para negocios que quieren crecer.
           </p>
 
           <div className="hero__cta">

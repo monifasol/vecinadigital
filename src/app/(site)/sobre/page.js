@@ -20,10 +20,6 @@ export default function SobrePage() {
 
         <div className="about-article__content">
           <p>
-            <strong>Vecina Digital no nació como una idea de negocio.</strong>
-          </p>
-
-          <p>
             Hubo un momento en que sentí que iba demasiado deprisa.
             No quería dejar de trabajar en esto.
             Solo quería hacerlo con más calma, con más sentido,
@@ -32,10 +28,9 @@ export default function SobrePage() {
 
           <p>
             Vecina Digital no nació porque quisiera crear una empresa.
-          </p>
-          <p>
             Nació porque quería que los pequeños negocios del lugar donde vivo tuvieran la oportunidad de ser encontrados, crecer y seguir formando parte de la vida del pueblo.
           </p>
+
 
           <div className="about-reveal">
             <figure className="about-reveal__figure" aria-hidden="true">
@@ -91,12 +86,10 @@ export default function SobrePage() {
           </h2>
 
           <p>
-            Este proyecto no nace solo de lo técnico.
-            <br />
-            Nace de una forma de ser: de la sensibilidad, de la necesidad de
+            Este proyecto nace de una forma de ser: de la sensibilidad, de la necesidad de
             conexiones humanas a pesar de lo técnico, y muy consciente de que,
-            cuando hablamos de una web, en realidad hablamos de personas. De
-            sus vidas y de aquello que les importa.
+            cuando hablamos de una web, en realidad hablamos de personas, 
+            de sus vidas y de aquello que les importa.
           </p>
 
           <p>
@@ -117,10 +110,19 @@ export default function SobrePage() {
             proyecto, pero sobre todo me importa que quien está al otro lado se
             sienta acompañado.
           </p>
+                      
+          <h2 className="about-article__subtitle">
+            El "para qué"
+          </h2>
 
-          <p className="about-article__closing">
-            Estoy aquí para ayudarte a que tu negocio sea encontrado, 
+          <p>
+            Aspiro a ayudar a abrir puertas para que el talento de nuestros pueblos pueda ser encontrado.
+          </p>
+          <p>
+            Así que stoy aquí para ayudarte a que tu negocio sea encontrado, 
             crezca y siga formando parte de la vida de tu comunidad.
+          </p>
+          <p>
             Y estoy deseando conocerte y conocer tu proyecto!
           </p>
         </div>
