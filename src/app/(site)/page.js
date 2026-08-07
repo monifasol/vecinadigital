@@ -17,9 +17,9 @@ export default function Home() {
         <div className="hero__content">
 
           <h1 className="hero__title">
-            Diseño y desarrollo web
+            Tu puerta a internet,
             <br />
-            <span className="hero__title-accent">humano y cercano.</span>
+            <span className="hero__title-accent">humana y cercana.</span>
           </h1>
 
           <p className="hero__slogan">

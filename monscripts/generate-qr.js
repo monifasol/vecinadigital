@@ -33,7 +33,7 @@ const sharp = require("sharp")
 
 const CONFIG = {
   /** Destination URL encoded in the QR code. Change this when the landing page moves. */
-  url: "https://vecinadigital.es/hola",
+  url: "https://www.vecinadigital.com/hola",
 
   /** QR code width and height in pixels (print resolution). */
   qrSize: 1200,
