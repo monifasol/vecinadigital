@@ -71,13 +71,13 @@ export default function UnaPreguntaMuyBuenaPage() {
 
           <p>
             Por eso creo que la IA ha venido a regalarnos algo muy valioso: tiempo.
-            Tiempo que antes dedicabamos a ejecutar y que ahora podemos dedicar a pensar
+            El que antes dedicabamos a ejecutar y que ahora podemos dedicar a pensar
             mejor, a hacer más preguntas, a cuidar más los detalles y a
             diseñar proyectos con mucha más intención.
           </p>
 
           <p>
-            Hay una frase que resume bastante bien cómo vivo todo esto:
+            Hay una frase que resume bastante bien cómo vivo yo todo esto:
           </p>
 
           <blockquote className="about-article__pullquote">
@@ -92,9 +92,8 @@ export default function UnaPreguntaMuyBuenaPage() {
             Siempre ha sido así.
             Un piano no compone una canción.
             Una cámara no cuenta una historia.
-            Un pincel no decide qué merece ser pintado ni tiene criterio.
-            Las herramientas amplían nuestras capacidades, pero siguen
-            necesitando una mirada que les dé dirección.
+            Un pincel no decide ni tiene criterio.
+            Las herramientas siguen necesitando una mirada que les dé dirección.
           </p>
 
           <p>
@@ -105,11 +104,11 @@ export default function UnaPreguntaMuyBuenaPage() {
             las ideas, el criterio y la capacidad de entender a las personas.
           </p>
 
-          <div className="about-article__coda">
-            <p>Nunca me enamoré de las páginas web.</p>
-            <p>Me enamoré de las ideas y del propósito detrás de ellas.</p>
-            <p>La tecnología es solo el idioma que utilizo para darles forma.</p>
-          </div>
+          <p>
+            Nunca me enamoré de las páginas web.
+            Me enamoré de las ideas y del propósito detrás de ellas.
+            La tecnología es solo el idioma que utilizo para darles forma.
+          </p>
         </div>
 
         <footer className="about-article__footer">
