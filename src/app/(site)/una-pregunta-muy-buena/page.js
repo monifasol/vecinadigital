@@ -11,69 +11,100 @@ export default function UnaPreguntaMuyBuenaPage() {
     <main>
       <article className="about-article">
         <header className="about-article__header">
-          <h1 className="about-article__title">Una pregunta muy buena.</h1>
+          <h1 className="about-article__title">Una empresa de una persona.</h1>
         </header>
 
         <div className="about-article__content">
+
           <p>
-            Hace unos días alguien me dijo una frase que, cuanto más la
-            pienso, más convencida estoy de que merece una respuesta:
+            Vecina Digital es una empresa de una persona. Pero no es una empresa sin equipo.
           </p>
 
           <p>
-            <i>
-            “¿Pero para qué contratar a alguien para hacer una web?
-            <br/>Si la inteligencia artificial te la hace en un momento.”
-            </i>
+            Soy ingeniera informática y trabajo con inteligencia artificial todos los días. La utilizo para investigar, 
+            explorar posibilidades, programar, diseñar sistemas, probar soluciones y automatizar procesos. Tareas que hasta 
+            hace muy poco habrían necesitado distintas personas, perfiles especializados y muchas horas de coordinación 
+            hoy pueden reunirse en unas mismas manos. En este caso, las mías.
           </p>
 
           <p>
-            Podría haber intentado convencerle de que estaba equivocada.
-            Sin embargo, me fui a casa y le di vueltas. 
-            No porque creyera que mi trabajo no tuviera sentido, 
-            sino porque comprendí que probablemente muchas personas piensan
-            lo mismo. Así que creo que merece la pena explicarlo.
+            La inteligencia artificial ha hecho posible algo extraordinario: que una sola persona pueda levantar proyectos 
+            que antes exigían montar una empresa entera.
           </p>
 
           <p>
-            La IA puede hacer una página web.
-            Puede escribir textos, generar imágenes, aplicaciones o
-            resolver tareas que hace unos años costaban muchas más horas de
-            trabajo. 
-            Todos los desarrolladores la usamos todos los días,
-            es una herramienta extraordinaria.
+            No porque el trabajo haya desaparecido, sino porque nuestra capacidad para hacerlo se ha multiplicado.
           </p>
 
           <p>
-            En mi caso, lo curioso es que, desde que trabajo con ella,
-            cada vez tengo más claro que mi profesión nunca consistió
-            realmente en hacer páginas web.
-            Pero durante muchos años pensé que sí.
+            Para mí, la IA no es un atajo. Es una nueva forma de trabajar.
           </p>
 
           <p>
-            En realidad, eso era solo lo que se veía.
-            Las páginas web eran el resultado, pero todo lo que pasaba
-            antes era el propósito.
-            Sentarse con alguien, escuchar, entender qué quiere contar…
-            y convertirlo.
+            Me permite desarrollar una idea desde el principio hasta el final sin dividirla entre departamentos. 
+            Puedo pensar la estrategia, diseñar la experiencia, construir la tecnología y cuidar el resultado 
+            manteniendo una misma mirada durante todo el proceso.
           </p>
 
           <p>
-            La tecnología siempre ha sido el idioma con el que doy forma a las
-            ideas.
-            Antes ese idioma era casi exclusivamente el código.
-            Hoy también incluye inteligencia artificial.
-            Mañana incluirá herramientas que todavía ni conocemos.
-            Lo importante es que el
-            idioma cambia, pero la conversación sigue siendo la misma.
+            Pero tener acceso a estas herramientas no basta.
           </p>
 
           <p>
-            Por eso creo que la IA ha venido a regalarnos algo muy valioso: tiempo.
-            El que antes dedicabamos a ejecutar y que ahora podemos dedicar a pensar
-            mejor, a hacer más preguntas, a cuidar más los detalles y a
-            diseñar proyectos con mucha más intención.
+            Se pueden utilizar de forma genérica para crear cosas genéricas. 
+            O se pueden aprender a dirigir para hacer realidad algo singular, 
+            coherente y profundamente propio.
+          </p>
+
+          <p>
+            Ahí sigue estando la diferencia.
+          </p>
+
+          <p>
+            La inteligencia artificial puede proponer, generar, analizar y acelerar. 
+            Pero no tiene una visión que defender. No sabe qué merece existir, qué emoción 
+            queremos provocar ni qué detalle convierte algo correcto en algo especial.
+          </p>
+
+          <p>
+            Las herramientas no aportan gusto. Amplifican el que ya existe.
+          </p>
+
+          <p>
+            Por eso creo que esta tecnología abre una posibilidad enorme para las personas creativas: 
+            permite que quienes tienen buenas ideas, criterio y sensibilidad puedan llevarlas mucho más lejos. 
+            Proyectos que antes habrían sido inviables (por tiempo, por presupuesto o por la estructura necesaria p
+            ara realizarlos) ahora pueden hacerse realidad.
+          </p>
+
+          <p>
+            Yo lo he vivido al crear 
+            <a href="http://www.brillabooks.com" target="_blank">Brilla Books </a>, 
+            mi editorial de libros.
+          </p>
+
+          <p>
+            Una idea así habría requerido, no hace tanto, reunir un equipo completo antes incluso de poder empezar:
+            dirección creativa, diseño, desarrollo, producción, comunicación y gestión.
+            Hoy puedo dirigir todas esas piezas desde una empresa de una sola persona, apoyándome en la 
+            inteligencia artificial allí donde amplía mis capacidades.
+          </p>
+
+          <p>
+            La visión creativa sigue siendo humana.
+          </p>
+
+          <p>
+            También lo son la intención, el criterio, la sensibilidad y la responsabilidad sobre el resultado. Ese alma artística no desaparece cuando aparece una herramienta nueva. Al contrario: encuentra más maneras de expresarse.
+          </p>
+
+          <p>
+            En Vecina Digital no hay una cadena de personas pasándose un proyecto de unas manos a otras. Hay una conversación directa entre quien tiene una idea y quien se responsabiliza de convertirla en algo real.
+          </p>
+
+          <p>
+            Soy quien escucha, quien hace las preguntas, quien marca la dirección, quien revisa, conecta y decide, y también quien responde por el resultado.
+            Eso es Vecina Digital: Una empresa pequeña por fuera, y enorme en posibilidades.
           </p>
 
           <p>
@@ -104,11 +135,6 @@ export default function UnaPreguntaMuyBuenaPage() {
             las ideas, el criterio y la capacidad de entender a las personas.
           </p>
 
-          <p>
-            Nunca me enamoré de las páginas web.
-            Me enamoré de las ideas y del propósito detrás de ellas.
-            La tecnología es solo el idioma que utilizo para darles forma.
-          </p>
         </div>
 
         <footer className="about-article__footer">
