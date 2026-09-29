@@ -22,32 +22,36 @@ export default function DetrasDeVecinaDigitalPage() {
              con inteligencia artificial todos los días.
             Investigo con ella, programo, pruebo ideas, busco caminos, diseño sistemas,
             automatizo cosas que no tiene ningún sentido hacer a mano y, muchas veces,
-            llego a lugares a los que sola habría tardado semanas en llegar.
+            llego a lugares a los que sola habría tardado mucho más tiempo en llegar.
           </p>
 
-          <p>Y creo que esto merece contarse, porque explica bastante bien cómo puedo hacer lo que hago.</p>
+          <p>Creo que esto merece contarse, porque explica bastante bien cómo puedo hacer lo que hago.</p>
 
           <p>
             Hasta hace muy poco, sacar adelante determinados proyectos significaba
             sí o sí reunir a varias personas alrededor de una mesa. Hacía falta
-            alguien para pensar la estrategia, alguien para diseñar, para programar,
-            escribir, comunicaar, dirigir, planificar, decidir... Hoy muchas de esas
-            capacidades pueden reunirse en unas mismas manos, si detrás hay una persona
-            que sabe qué quiere hacer con ellas. 
+            alguien para pensar la estrategia, para diseñar, programar,
+            escribir, comunicar, dirigir, planificar,... Hoy muchas de esas
+            capacidades pueden reunirse en unas mismas manos 
+            si detrás hay una persona que sabe qué quiere hacer con ellas. 
             En Vecina Digital, esas manos son las mías.</p>
 
           <p>
             Y esto es lo que más me fascina de la inteligencia artificial. 
-            No que haga el trabajo por mí, sino que me permite llegar mucho más lejos con
-            lo que sé hacer, con lo que he aprendido durante años y también con esa parte
+            Que nos permite llegar mucho más lejos con
+            lo que sabemos hacer, con lo que hemos aprendido durante años y también con esa parte
             menos fácil de poner en un currículum: la intuición, el gusto, la curiosidad,
             la obsesión por un detalle que quizá nadie más vea y esa sensación bastante
             física de saber cuándo algo todavía no está bien.
           </p>
 
-          <p><b>Tener las herramientas no basta.</b> Podemos pedirle a una 
+          <h2>Pero tener las herramientas no basta. </h2>
+
+          <p>Las herramientas no aportan gusto.
+            Amplifican el que ya existe.
+            Podemos pedirle a una 
             inteligencia artificial que haga mil cosas. 
-            Lo hará, pero sin saber exactamente nuestro porqué y para qué.
+            Lo hará, pero sin saber exactamente nuestro porqué o nuestro para qué.
             No conoce tanto a la persona que hay al otro lado como una misma.
             No sabe cuándo una palabra sobra, cuándo una página está
             técnicamente perfecta pero no transmite nada,
@@ -55,46 +59,42 @@ export default function DetrasDeVecinaDigitalPage() {
             o merece la pena que tiremos del hilo un poco más.
           </p>
 
-          <p>¡Eso sigue siendo nuestro!
-            Las herramientas no aportan gusto.
-            Amplifican el que ya existe.
-          </p>
-
-          <h3>Brilla Books, mi editorial</h3>
+          <h2>Este año creé mi propia editorial</h2>
 
           <p>
-            Lo he vivido de una forma muy clara creando{" "}
+            La IA amplifica nuestras capacidades. Lo he vivido 
+            de una forma muy clara creando{" "}
             <a href="https://www.brillabooks.com" target="_blank" rel="noopener noreferrer">
               Brilla Books
-            </a>. Hace no mucho, esa idea necesitaba contratar un
+            </a>.
+            Hace no mucho, esa idea necesitaba contratar un
             equipo antes incluso de poder empezar. Diseño, producción, desarrollo,
-            comunicación, gestión... y más. Hoy ese sueño se ha hecho realidad
-            y yo acompaño todo el camino de mis libros desde la primera idea hasta 
-            el último detalle, utilizando la inteligencia artificial solo allí donde
-            me ayuda a ampliar mis capacidades,
-            pero sin delegar nunca la dirección del proyecto, ni el criterio, ni la creatividad.
+            comunicación, gestión, publicidad,... y más.
+            Hoy eso es posible en una empresa de una sola persona,
+            gracias a poder acompañar todo el camino de mis libros desde 
+            la primera idea hasta el último detalle, utilizando la inteligencia 
+            artificial allí donde me ayuda a ampliar mis capacidades.
           </p>
 
-          <p>Y eso, para alguien como yo, ¡es una barbaridad! 
+          <p>Y eso, para alguien como yo,
+            se siente como un sueño hecho realidad. 
             El poder acompañar una idea sin tener que partirla en pedazos 
             y repartirla entre departamentos, sino poder cuidarla entera de princpio a fin.
           </p>
 
-          <p>Justo eso es Vecina Digital.</p>
+          <h2>Justo eso es Vecina Digital.</h2>
 
           <p>
-            Aquí no hay una cadena de personas pasándose un proyecto de unas manos a otras.
-            Si me cuentas una idea, soy yo quien te escucha. La que hace preguntas, la que
-            intenta entender qué necesitas de verdad (que no siempre es exactamente lo que
-            pensabas al principio), la que busca la manera de hacerlo posible, la que
-            construye, revisa, cambia de opinión, vuelve atrás si hace falta y responde
+            Si me cuentas una idea, soy yo quien te escucha.
+            La que hace preguntas, 
+            la que la que conecta con lo que necesitas de verdad,
+            la que busca la manera de hacerlo posible,
+            la que construye, revisa, cambia de opinión, 
+            vuelve atrás si hace falta y responde
             por el resultado.
           </p>
 
           <p>
-            Tengo herramientas extraordinarias a mi alrededor. Algunas, sinceramente,
-            todavía me parecen ciencia ficción. Pero vuelvo a lo que dije antes: 
-            tener las herramientas no basta. 
             Un piano no compone una canción porque alguien se siente delante. Una cámara
             maravillosa no convierte automáticamente una fotografía en algo que te emociona.
             Un pincel no sabe qué pintar. 
@@ -106,13 +106,14 @@ export default function DetrasDeVecinaDigitalPage() {
             parece todo lo que no puede poner ella: las ideas, el criterio, la sensibilidad
             y, sobre todo, la capacidad de mirar a otra persona y saber entender qué necesita.
           </p>
+
         </div>
 
         <footer className="about-article__footer">
           <p className="about-article__outro">
             La inteligencia artificial genera.
             <br />
-            <span>Una vecina escucha.</span>
+            <span>Una vecina escucha, conecta, y crea.</span>
           </p>
           <Link className="btn" href="/contact">
             Cuéntame tu idea
