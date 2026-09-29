@@ -15,7 +15,7 @@ export default function Header() {
     { href: "/", label: "Inicio" },
     { href: "/plans", label: "Caminos" },
     { href: "/sobre", label: "Sobre" },
-    { href: "/una-pregunta-muy-buena", label: "¿Y la IA?" },
+    { href: "/detras-de-vecina-digital", label: "Por dentro" },
     { href: "/contact", label: "Contacto" },
   ]
 
