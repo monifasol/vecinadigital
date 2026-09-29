@@ -45,7 +45,7 @@ export default function DetrasDeVecinaDigitalPage() {
             física de saber cuándo algo todavía no está bien.
           </p>
 
-          <h2>Pero tener las herramientas no basta. </h2>
+          <h3>Pero tener las herramientas no basta. </h3>
 
           <p>Las herramientas no aportan gusto.
             Amplifican el que ya existe.
@@ -59,7 +59,7 @@ export default function DetrasDeVecinaDigitalPage() {
             o merece la pena que tiremos del hilo un poco más.
           </p>
 
-          <h2>Este año creé mi propia editorial</h2>
+          <h3>Este año creé mi propia editorial</h3>
 
           <p>
             La IA amplifica nuestras capacidades. Lo he vivido 
@@ -82,7 +82,7 @@ export default function DetrasDeVecinaDigitalPage() {
             y repartirla entre departamentos, sino poder cuidarla entera de princpio a fin.
           </p>
 
-          <h2>Justo eso es Vecina Digital.</h2>
+          <h3>Justo eso es Vecina Digital.</h3>
 
           <p>
             Si me cuentas una idea, soy yo quien te escucha.
