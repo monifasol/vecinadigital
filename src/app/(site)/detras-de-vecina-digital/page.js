@@ -29,36 +29,38 @@ export default function DetrasDeVecinaDigitalPage() {
 
           <p>
             Hasta hace muy poco, sacar adelante determinados proyectos significaba
-            necesariamente reunir a varias personas alrededor de una mesa. Hacía falta
-            alguien para pensar la estrategia, alguien para diseñar, alguien para programar,
-            alguien para escribir, alguien para organizarlo todo. Hoy muchas de esas
+            sí o sí reunir a varias personas alrededor de una mesa. Hacía falta
+            alguien para pensar la estrategia, alguien para diseñar, para programar,
+            escribir, comunicaar, dirigir, planificar, decidir... Hoy muchas de esas
             capacidades pueden reunirse en unas mismas manos, si detrás hay una persona
-            que sabe qué quiere hacer con ellas.
-          </p>
-
-          <p>En este caso, esas manos son las mías.</p>
+            que sabe qué quiere hacer con ellas. 
+            En Vecina Digital, esas manos son las mías.</p>
 
           <p>
-            Y esto es lo que más me fascina de la inteligencia artificial:
-            no que haga el trabajo por mí, sino que me permite llegar mucho más lejos con
+            Y esto es lo que más me fascina de la inteligencia artificial. 
+            No que haga el trabajo por mí, sino que me permite llegar mucho más lejos con
             lo que sé hacer, con lo que he aprendido durante años y también con esa parte
             menos fácil de poner en un currículum: la intuición, el gusto, la curiosidad,
             la obsesión por un detalle que quizá nadie más vea y esa sensación bastante
             física de saber cuándo algo todavía no está bien.
           </p>
 
-          <p><b>Y es que tener las herramientas no basta.</b> Podemos pedirle a una inteligencia artificial que escriba un texto, que genere
-            una imagen, que proponga una estructura o que escriba código. Y lo hará. Pero
-            no sabe por qué estamos haciendo todo aquello. No conoce a la persona que hay
-            al otro lado. No sabe cuándo una palabra sobra, cuándo una página está
-            técnicamente perfecta pero no dice nada, cuándo una idea tiene algo especial
-            y merece que tiremos del hilo un poco más.
+          <p><b>Tener las herramientas no basta.</b> Podemos pedirle a una 
+            inteligencia artificial que haga mil cosas. 
+            Lo hará, pero sin saber exactamente nuestro porqué y para qué.
+            No conoce tanto a la persona que hay al otro lado como una misma.
+            No sabe cuándo una palabra sobra, cuándo una página está
+            técnicamente perfecta pero no transmite nada,
+            cuándo una idea tiene algo especial,
+            o merece la pena que tiremos del hilo un poco más.
           </p>
 
           <p>¡Eso sigue siendo nuestro! 
             <b>Las herramientas no aportan gusto.
             Amplifican el que ya existe.</b>
           </p>
+
+          <h3>Un ejemplo personal</h3>
 
           <p>
             Lo he vivido de una forma muy clara creando{" "}
@@ -75,7 +77,7 @@ export default function DetrasDeVecinaDigitalPage() {
           </p>
 
           <p>Y eso, para alguien como yo, ¡es una barbaridad! 
-            Amo poder acompañar una idea sin tener que partirla en pedazos 
+            El poder acompañar una idea sin tener que partirla en pedazos 
             y repartirla entre departamentos, sino poder cuidarla entera de princpio a fin.
           </p>
 
@@ -92,10 +94,8 @@ export default function DetrasDeVecinaDigitalPage() {
 
           <p>
             Tengo herramientas extraordinarias a mi alrededor. Algunas, sinceramente,
-            todavía me parecen ciencia ficción.
-          </p>
-
-          <p>Vuelvo a lo que dije antes: tener las herramientas no basta. 
+            todavía me parecen ciencia ficción. Pero vuelvo a lo que dije antes: 
+            tener las herramientas no basta. 
             Un piano no compone una canción porque alguien se siente delante. Una cámara
             maravillosa no convierte automáticamente una fotografía en algo que te emociona.
             Un pincel no sabe qué pintar. 
