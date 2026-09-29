@@ -55,19 +55,18 @@ export default function DetrasDeVecinaDigitalPage() {
             o merece la pena que tiremos del hilo un poco más.
           </p>
 
-          <p>¡Eso sigue siendo nuestro! 
-            <b>Las herramientas no aportan gusto.
-            Amplifican el que ya existe.</b>
+          <p>¡Eso sigue siendo nuestro!
+            Las herramientas no aportan gusto.
+            Amplifican el que ya existe.
           </p>
 
-          <h3>Un ejemplo personal</h3>
+          <h3>Brilla Books, mi editorial</h3>
 
           <p>
             Lo he vivido de una forma muy clara creando{" "}
             <a href="https://www.brillabooks.com" target="_blank" rel="noopener noreferrer">
               Brilla Books
-            </a>
-            , mi editorial. Hace no mucho, esa idea necesitaba contratar un
+            </a>. Hace no mucho, esa idea necesitaba contratar un
             equipo antes incluso de poder empezar. Diseño, producción, desarrollo,
             comunicación, gestión... y más. Hoy ese sueño se ha hecho realidad
             y yo acompaño todo el camino de mis libros desde la primera idea hasta 
@@ -99,11 +98,11 @@ export default function DetrasDeVecinaDigitalPage() {
             Un piano no compone una canción porque alguien se siente delante. Una cámara
             maravillosa no convierte automáticamente una fotografía en algo que te emociona.
             Un pincel no sabe qué pintar. 
-            <b>Hace falta alguien al otro lado.</b>
+            <b> Hace falta alguien al otro lado.</b>
           </p>
 
           <p>
-            Y quizá por eso, cuanto más capaz se vuelve la tecnología, más importante me
+            Y quizás por eso, cuanto más capaz se vuelve la tecnología, más importante me
             parece todo lo que no puede poner ella: las ideas, el criterio, la sensibilidad
             y, sobre todo, la capacidad de mirar a otra persona y saber entender qué necesita.
           </p>
