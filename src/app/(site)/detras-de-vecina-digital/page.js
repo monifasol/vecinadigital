@@ -31,7 +31,7 @@ export default function DetrasDeVecinaDigitalPage() {
             Hasta hace muy poco, sacar adelante determinados proyectos significaba
             sí o sí reunir a varias personas alrededor de una mesa. Hacía falta
             alguien para pensar la estrategia, para diseñar, programar,
-            escribir, comunicar, dirigir, planificar,... Hoy muchas de esas
+            escribir, comunicar, dirigir, planificar... Hoy muchas de esas
             capacidades pueden reunirse en unas mismas manos 
             si detrás hay una persona que sabe qué quiere hacer con ellas. 
             En Vecina Digital, esas manos son las mías.</p>
@@ -50,7 +50,7 @@ export default function DetrasDeVecinaDigitalPage() {
           <p>Podemos pedirle a una inteligencia artificial que haga mil cosas
             y lo hará muy bien. Pero sin conocer nuestro porqué o nuestro para qué.
             No conoce tanto a la persona que hay al otro lado, 
-            ni sabe cuándo una palabra sobra, cuándo algo es objetiamente 
+            ni sabe cuándo una palabra sobra, cuándo algo es objetivamente 
             perfecto pero en cambio no transmite nada,
             o cuándo una idea es tan especial que merece la pena seguir tirando del hilo.
           </p>
