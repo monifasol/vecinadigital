@@ -47,16 +47,12 @@ export default function DetrasDeVecinaDigitalPage() {
 
           <h3>Pero tener las herramientas no basta. </h3>
 
-          <p>Las herramientas no aportan gusto.
-            Amplifican el que ya existe.
-            Podemos pedirle a una 
-            inteligencia artificial que haga mil cosas. 
-            Lo hará, pero sin saber exactamente nuestro porqué o nuestro para qué.
-            No conoce tanto a la persona que hay al otro lado como una misma.
-            No sabe cuándo una palabra sobra, cuándo una página está
-            técnicamente perfecta pero no transmite nada,
-            cuándo una idea tiene algo especial,
-            o merece la pena que tiremos del hilo un poco más.
+          <p>Podemos pedirle a una inteligencia artificial que haga mil cosas
+            y lo hará muy bien. Pero sin conocer nuestro porqué o nuestro para qué.
+            No conoce tanto a la persona que hay al otro lado, 
+            ni sabe cuándo una palabra sobra, cuándo algo es objetiamente 
+            perfecto pero en cambio no transmite nada,
+            o cuándo una idea es tan especial que merece la pena seguir tirando del hilo.
           </p>
 
           <h3>Este año creé mi propia editorial</h3>
@@ -68,11 +64,10 @@ export default function DetrasDeVecinaDigitalPage() {
               Brilla Books
             </a>.
             Hace no mucho, esa idea necesitaba contratar un
-            equipo antes incluso de poder empezar. Diseño, producción, desarrollo,
-            comunicación, gestión, publicidad,... y más.
+            equipo antes incluso de poder empezar (diseño, producción, desarrollo...)
             Hoy eso es posible en una empresa de una sola persona,
             gracias a poder acompañar todo el camino de mis libros desde 
-            la primera idea hasta el último detalle, utilizando la inteligencia 
+            la primera idea hasta el último detalle, apoyándome en la inteligencia 
             artificial allí donde me ayuda a ampliar mis capacidades.
           </p>
 
@@ -87,7 +82,7 @@ export default function DetrasDeVecinaDigitalPage() {
           <p>
             Si me cuentas una idea, soy yo quien te escucha.
             La que hace preguntas, 
-            la que la que conecta con lo que necesitas de verdad,
+            la que conecta con lo que necesitas de verdad,
             la que busca la manera de hacerlo posible,
             la que construye, revisa, cambia de opinión, 
             vuelve atrás si hace falta y responde
@@ -113,7 +108,7 @@ export default function DetrasDeVecinaDigitalPage() {
           <p className="about-article__outro">
             La inteligencia artificial genera.
             <br />
-            <span>Una vecina escucha, conecta, y crea.</span>
+            <span>Una vecina escucha, conecta y crea.</span>
           </p>
 
           <Link className="btn" href="/contact">
