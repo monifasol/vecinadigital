@@ -50,7 +50,7 @@ export default function DetrasDeVecinaDigitalPage() {
           <p>Podemos pedirle a una inteligencia artificial que haga mil cosas
             y lo hará muy bien. Pero sin conocer nuestro porqué o nuestro para qué.
             No conoce tanto a la persona que hay al otro lado, 
-            ni sabe cuándo una palabra sobra, cuándo algo es objetivamente 
+            ni sabe cuándo una palabra sobra, cuándo algo es técnicamente 
             perfecto pero en cambio no transmite nada,
             o cuándo una idea es tan especial que merece la pena seguir tirando del hilo.
           </p>
