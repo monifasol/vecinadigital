@@ -78,8 +78,8 @@ export default function DetrasDeVecinaDigitalPage() {
 
           <p>Y eso, para alguien como yo,
             se siente como un sueño hecho realidad. 
-            El poder acompañar una idea sin tener que partirla en pedazos 
-            y repartirla entre departamentos, sino poder cuidarla entera de princpio a fin.
+            Poder acompañar una idea sin tener que partirla en pedazos 
+            y repartirla entre departamentos, sino poder cuidarla entera de principio a fin.
           </p>
 
           <h3>Justo eso es Vecina Digital.</h3>
@@ -115,6 +115,7 @@ export default function DetrasDeVecinaDigitalPage() {
             <br />
             <span>Una vecina escucha, conecta, y crea.</span>
           </p>
+
           <Link className="btn" href="/contact">
             Cuéntame tu idea
           </Link>
