@@ -246,7 +246,7 @@ export default function PlansPage() {
 
               <ul className="plan__list">
                 <li>Una página clara y bonita</li>
-                <li>Todo el texto y contenidos que necesites</li>
+                <li>Textos y contenidos necesarios para tu web</li>
                 <li>Adaptada a móvil</li>
                 <li>Contacto por WhatsApp o email</li>
                 <li>Posicionamiento en Google</li>
@@ -278,7 +278,7 @@ export default function PlansPage() {
 
               <p className="plan__note">
                 Dale otro aire a tu web con un rediseño visual. No hace falta
-                tirar lo que ya tienes para volver a enamorarte de tu web!
+                tirar lo que ya tienes para volver a enamorarte de tu web.
               </p>
 
               <p className="plan__price">350–500 €</p>
@@ -369,22 +369,9 @@ export default function PlansPage() {
             <h2 className="plans__block-title" id="store-title">
               Tu tienda online
             </h2>
-            <p className="plans__block-lead">
-              Si ahora vendes por Instagram o WhatsApp, podemos dar el siguiente
-              paso.
-            </p>
-            <p className="plans__block-lead">
-              No necesitas montar Amazon. Necesitas una tienda sencilla, fácil de
-              gestionar y preparada para que tus clientes puedan comprar
-              directamente.
-            </p>
-            <p className="plans__block-lead">
-              Para tiendas, artesanía, alimentación, regalos, productos locales
-              y otros pequeños negocios.
-            </p>
           </header>
 
-          <div className="plans__grid plans__grid--two">
+          <div className="plans__grid plans__grid--store">
             <article
               className="plan plan--store"
               id="tienda-completa"
@@ -446,6 +433,22 @@ export default function PlansPage() {
                 </Link>
               </div>
             </article>
+
+            <aside className="store-intro" aria-label="Sobre la tienda online">
+              <p className="store-intro__text">
+                Si ahora vendes por Instagram o WhatsApp, podemos dar el{" "}
+                <strong>siguiente paso</strong>.
+              </p>
+              <p className="store-intro__text">
+                No necesitas montar Amazon. Necesitas una tienda{" "}
+                <strong>sencilla</strong>, fácil de gestionar y preparada para
+                que tus clientes puedan <strong>comprar directamente</strong>.
+              </p>
+              <p className="store-intro__text store-intro__text--soft">
+                Para tiendas, artesanía, alimentación, regalos, productos
+                locales y otros pequeños negocios.
+              </p>
+            </aside>
           </div>
 
           <p className="plans__also">
