@@ -117,7 +117,7 @@ export default function Home() {
           <Link className="path-card path-card--quick" href="/servicios#soluciones-rapidas">
             <h3 className="path-card__title">Algo pequeño, ya</h3>
             <p className="path-card__text">
-              Google, WhatsApp, carta con QR, pack «Que me encuentren»…
+              Google, WhatsApp, carta con QR, página exprés…
               40–250 €. Sin necesidad de encargar una web completa.
             </p>
           </Link>
@@ -126,7 +126,7 @@ export default function Home() {
             <h3 className="path-card__title">Quiero una web</h3>
             <p className="path-card__text">
               Una página clara para explicar qué haces y recibir contactos.
-              Desde 600–900 €.
+              Desde 500–900 €.
             </p>
           </Link>
 

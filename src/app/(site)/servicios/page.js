@@ -36,6 +36,9 @@ const quickServices = [
     description:
       "Cambiar horarios, precios, fotografías, textos, botones, datos de contacto y lo que necesites actualizar.",
   },
+]
+
+const presenceServices = [
   {
     id: "carta-qr",
     title: "Menú o carta digital con QR",
@@ -44,21 +47,54 @@ const quickServices = [
       "Una página sencilla con carta o servicios y un QR listo para imprimir.",
   },
   {
+    id: "otro-aire",
+    title: "Rediseño",
+    price: "350–500 €",
+    description:
+      "Dale otro aire a tu web con un rediseño visual. No hace falta tirar lo que ya tienes para volver a enamorarte de tu web!",
+    highlight: true,
+  },
+  {
     id: "pagina-expres",
     title: "Página informativa exprés",
     price: "180 €",
     description:
-      "Quién eres, qué haces, horarios, ubicación, contacto y WhatsApp. Ideal si ahora solo tienes Facebook o Instagram.",
-  },
-  {
-    id: "pack-encuentren",
-    title: "Pack «Que me encuentren»",
-    price: "220 €",
-    description:
-      "Miniweb + ficha de Google puesta a punto. Misma información, mismo enlace, misma claridad: que quien te busque te encuentre de verdad.",
+      "Para que te encuentren, entiendan qué haces y puedan contactar contigo fácilmente.",
+    includes: [
+      "Una página sencilla",
+      "Horarios y ubicación",
+      "Botón de WhatsApp",
+      "Enlaces a redes",
+      "Puesta a punto básica de Google Business",
+    ],
     highlight: true,
   },
 ]
+
+function QuickCard({ service }) {
+  return (
+    <article
+      id={service.id}
+      className={`quick-card${service.highlight ? " quick-card--bridge" : ""}`}
+      aria-labelledby={`quick-${service.id}-title`}
+    >
+      <div className="quick-card__top">
+        <h3 className="quick-card__title" id={`quick-${service.id}-title`}>
+          {service.title}
+        </h3>
+        <p className="quick-card__price">{service.price}</p>
+      </div>
+      <p className="quick-card__text">{service.description}</p>
+      {service.includes ? (
+        <ul className="quick-card__includes">
+          {service.includes.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      ) : null}
+    </article>
+  )
+}
 
 export default function PlansPage() {
   return (
@@ -76,59 +112,56 @@ export default function PlansPage() {
         </header>
 
         <section className="glance" aria-labelledby="glance-title">
-          <h2 className="glance__title" id="glance-title">
-            De un vistazo
-          </h2>
+          <div className="glance__intro">
+            <p className="glance__kicker">Precios orientativos</p>
+            <h2 className="glance__title" id="glance-title">
+              De un vistazo
+            </h2>
+          </div>
 
           <ul className="glance__list">
             <li>
               <a className="glance__row" href="#soluciones-rapidas">
                 <span className="glance__label">Pequeñas soluciones</span>
-                <span className="glance__dots" aria-hidden="true" />
                 <span className="glance__price">40–250 €</span>
               </a>
             </li>
             <li>
               <a className="glance__row" href="#quiero-web">
-                <span className="glance__label">Tu web</span>
-                <span className="glance__dots" aria-hidden="true" />
-                <span className="glance__price">600–900 €</span>
+                <span className="glance__label">Tu primera web</span>
+                <span className="glance__price">500–900 €</span>
               </a>
             </li>
             <li>
               <a className="glance__row" href="#otro-aire">
                 <span className="glance__label">Rediseño web</span>
-                <span className="glance__dots" aria-hidden="true" />
                 <span className="glance__price">350–500 €</span>
               </a>
             </li>
             <li>
               <a className="glance__row" href="#tienda-online">
                 <span className="glance__label">Tu tienda online</span>
-                <span className="glance__dots" aria-hidden="true" />
                 <span className="glance__price">800–1.100 €</span>
               </a>
             </li>
             <li>
               <a className="glance__row" href="#acompanamiento">
                 <span className="glance__label">Acompañamiento</span>
-                <span className="glance__dots" aria-hidden="true" />
                 <span className="glance__price">20–70 €/mes</span>
               </a>
             </li>
             <li>
               <a className="glance__row" href="#proyecto-a-medida">
                 <span className="glance__label">Proyecto especial</span>
-                <span className="glance__dots" aria-hidden="true" />
                 <span className="glance__price">Presupuesto cerrado</span>
               </a>
             </li>
           </ul>
-
-          <p className="glance__vat">
-            A estos precios solo hay que sumarles el IVA.
-          </p>
         </section>
+
+        <p className="glance__vat">
+          A estos precios solo hay que sumarles el IVA.
+        </p>
 
         <p className="plans__explain">Te lo explico:</p>
 
@@ -141,7 +174,7 @@ export default function PlansPage() {
           <header className="plans__block-header">
             <p className="plans__block-kicker">1 · Desde 40 €</p>
             <h2 className="plans__block-title" id="quick-title">
-              También podemos empezar por algo pequeño
+              Podemos empezar por algo pequeño
             </h2>
             <p className="plans__block-lead">
               Servicios cerrados, comprensibles y con precio. Para negocios que
@@ -151,36 +184,28 @@ export default function PlansPage() {
 
           <div className="quick-grid">
             {quickServices.map((service) => (
-              <article
-                key={service.id}
-                className={`quick-card${service.highlight ? " quick-card--bridge" : ""}`}
-                aria-labelledby={`quick-${service.id}-title`}
-              >
-                <div className="quick-card__top">
-                  <h3
-                    className="quick-card__title"
-                    id={`quick-${service.id}-title`}
-                  >
-                    {service.title}
-                  </h3>
-                  <p className="quick-card__price">{service.price}</p>
-                </div>
-                <p className="quick-card__text">{service.description}</p>
-              </article>
+              <QuickCard key={service.id} service={service} />
             ))}
           </div>
 
-          <aside className="plans__bridge" aria-labelledby="bridge-title">
-            <h3 className="plans__bridge-title" id="bridge-title">
-              No hace falta empezar con una web de 900 €
-            </h3>
-            <p className="plans__bridge-text">
-              Si ahora mismo solo necesitas que cuando alguien te busque
-              encuentre horarios, servicios, ubicación y un botón de WhatsApp,
-              podemos empezar por el pack «Que me encuentren» (220 €): miniweb +
-              Google. Luego, cuando toque, lo convertimos en algo más grande.
-            </p>
-          </aside>
+          <div className="quick-grid">
+            {presenceServices.map((service) => (
+              <QuickCard key={service.id} service={service} />
+            ))}
+
+            <aside className="plans__nudge" aria-labelledby="bridge-title">
+              <p className="plans__nudge-kicker">Un apunte</p>
+              <h3 className="plans__nudge-title" id="bridge-title">
+                No hace falta empezar con una web de 900 €
+              </h3>
+              <p className="plans__nudge-text">
+                Si ahora mismo solo necesitas que cuando alguien te busque
+                encuentre horarios, qué haces y un botón de WhatsApp, podemos
+                empezar por la página informativa exprés. Luego, cuando toque,
+                la convertimos en algo más grande.
+              </p>
+            </aside>
+          </div>
 
           <p className="plans__also">
             También puedo ayudarte con correo profesional, carteles, fotografías
@@ -211,7 +236,7 @@ export default function PlansPage() {
             </p>
           </header>
 
-          <div className="plans__grid plans__grid--four">
+          <div className="plans__grid">
             <article
               className="plan plan--start"
               id="quiero-web"
@@ -220,7 +245,7 @@ export default function PlansPage() {
               <div className="plan__top">
                 <p className="plan__eyebrow">Quiero una web</p>
                 <h3 className="plan__title" id="plan-simple-title">
-                  Una web sencilla y clara
+                  Tu primera web
                 </h3>
                 <p className="plan__lead">
                   Para quien no tiene web o necesita una página clara para
@@ -236,41 +261,11 @@ export default function PlansPage() {
                 <li>Posicionamiento en Google</li>
               </ul>
 
-              <p className="plan__price">Desde 600–900 €</p>
+              <p className="plan__price">Desde 500–900 €</p>
 
               <div className="plan__cta">
                 <Link className="btn" href="/contact">
                   Cuéntame tu negocio
-                </Link>
-              </div>
-            </article>
-
-            <article
-              className="plan plan--refresh"
-              id="otro-aire"
-              aria-labelledby="plan-refresh-title"
-            >
-              <div className="plan__top">
-                <p className="plan__eyebrow">Ya tengo web</p>
-                <h3 className="plan__title" id="plan-refresh-title">
-                  Rediseño
-                </h3>
-                <p className="plan__lead">
-                  Dale otro aire a tu web con un rediseño visual de tu web
-                  actual.
-                </p>
-              </div>
-
-              <p className="plan__note">
-                No hace falta tirar lo que ya tienes para volver a enamorarte de
-                tu web.
-              </p>
-
-              <p className="plan__price">350–500 €</p>
-
-              <div className="plan__cta">
-                <Link className="btn" href="/contact">
-                  Quiero ver cómo quedaría
                 </Link>
               </div>
             </article>
@@ -350,14 +345,20 @@ export default function PlansPage() {
           aria-labelledby="store-title"
         >
           <header className="plans__block-header">
-            <p className="plans__block-kicker">Vender online</p>
+            <p className="plans__block-kicker">Quiero vender online</p>
             <h2 className="plans__block-title" id="store-title">
               Tu tienda online
             </h2>
             <p className="plans__block-lead">
+              Si ahora vendes por Instagram o WhatsApp, puedo dejarte una tienda
+              sencilla para que la gente compre directamente. No necesitas
+              montar Amazon. Necesitas una tienda que funcione, sea fácil de
+              gestionar y ayude a vender tus productos.
+            </p>
+            <p className="plans__block-lead">
               Para tiendas, artesanía, alimentación, regalos, productos locales,
-              floristerías… Si ahora vendes por Instagram o WhatsApp, puedo
-              dejarte una tienda sencilla para que la gente compre directamente.
+              floristerías… negocios que quieren empezar a vender sus productos
+              directamente desde su propia web.
             </p>
           </header>
 
@@ -373,15 +374,18 @@ export default function PlansPage() {
                   Tu tienda online
                 </h3>
                 <p className="plan__lead">
-                  Diseño, carrito, pagos, envíos básicos, páginas esenciales y
-                  puesta en marcha.
+                  Tienda clara, fácil de gestionar y lista para vender.
                 </p>
               </div>
 
-              <p className="plan__note">
-                No necesitas montar Amazon. Necesitas una tienda que funcione,
-                sea fácil de gestionar y ayude a vender tus productos.
-              </p>
+              <ul className="plan__list">
+                <li>Diseño de la tienda</li>
+                <li>Hasta 25 productos</li>
+                <li>Pagos online</li>
+                <li>Configuración básica de envíos</li>
+                <li>Adaptada a móvil</li>
+                <li>Formación para que puedas gestionarla tú</li>
+              </ul>
 
               <p className="plan__price">800 €</p>
 
@@ -403,10 +407,14 @@ export default function PlansPage() {
                   Tienda online ampliada
                 </h3>
                 <p className="plan__lead">
-                  Misma base clara y fácil de gestionar, preparada para un
-                  catálogo más amplio.
+                  Preparada para un catálogo más amplio.
                 </p>
               </div>
+
+              <ul className="plan__list">
+                <li>Todo lo anterior</li>
+                <li>Hasta 75 productos</li>
+              </ul>
 
               <p className="plan__price">1.100 €</p>
 
