@@ -1367,16 +1367,6 @@ a.emphasis:hover{
    PLANS / PACKS
    ========================= */
 
-.plans{
-  margin-top: 36px;
-}
-
-@media (max-width: 720px){
-  .plans{
-    margin-top: 0px;
-  }
-}
-
 /* Header */
 .plans__header{
   max-width: 720px;
@@ -1732,12 +1722,6 @@ a.emphasis:hover{
 
   .plans__grid--four{
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1200px){
-  .plans__grid--four{
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 

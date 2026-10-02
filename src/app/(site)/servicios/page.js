@@ -11,14 +11,14 @@ const quickServices = [
   {
     id: "google",
     title: "Puesta a punto de Google",
-    price: "Desde 60 €",
+    price: "60 €",
     description:
       "Revisar o crear tu ficha: horarios, teléfono, descripción, categorías, enlace, fotos básicas y WhatsApp.",
   },
   {
     id: "whatsapp",
     title: "WhatsApp Business bien montado",
-    price: "Desde 50 €",
+    price: "50 €",
     description:
       "Perfil, horarios, descripción, mensaje de bienvenida, respuestas rápidas y catálogo básico.",
   },
@@ -32,28 +32,20 @@ const quickServices = [
   {
     id: "cambios",
     title: "Pequeños cambios en tu web",
-    price: "Desde 40 €",
+    price: "40 €",
     description:
       "Cambiar horarios, precios, fotografías, textos, botones, datos de contacto y lo que necesites actualizar.",
+  },
+  {
+    id: "carta-qr",
+    title: "Menú o carta digital con QR",
+    price: "80 €",
+    description:
+      "Una página sencilla con carta o servicios y un QR listo para imprimir.",
   },
 ]
 
 const presenceServices = [
-  {
-    id: "carta-qr",
-    title: "Menú o carta digital con QR",
-    price: "Desde 80 €",
-    description:
-      "Una página sencilla con carta o servicios y un QR listo para imprimir.",
-  },
-  {
-    id: "otro-aire",
-    title: "Rediseño",
-    price: "350–500 €",
-    description:
-      "Dale otro aire a tu web con un rediseño visual. No hace falta tirar lo que ya tienes para volver a enamorarte de tu web!",
-    highlight: true,
-  },
   {
     id: "pagina-expres",
     title: "Página informativa exprés",
@@ -106,8 +98,7 @@ export default function PlansPage() {
           </h1>
           <p className="plans__intro">
             Puedo ayudarte con una web completa… o con algo pequeño que te
-            solucione el día a día. Elige lo que encaje ahora; luego ya veremos
-            si quieres más.
+            solucione el día a día. Empieza por lo que necesitas ahora.
           </p>
         </header>
 
@@ -172,7 +163,7 @@ export default function PlansPage() {
           aria-labelledby="quick-title"
         >
           <header className="plans__block-header">
-            <p className="plans__block-kicker">1 · Desde 40 €</p>
+            <p className="plans__block-kicker">1 · 40 €</p>
             <h2 className="plans__block-title" id="quick-title">
               Podemos empezar por algo pequeño
             </h2>
@@ -236,7 +227,7 @@ export default function PlansPage() {
             </p>
           </header>
 
-          <div className="plans__grid">
+          <div className="plans__grid plans__grid--four">
             <article
               className="plan plan--start"
               id="quiero-web"
@@ -261,11 +252,40 @@ export default function PlansPage() {
                 <li>Posicionamiento en Google</li>
               </ul>
 
-              <p className="plan__price">Desde 500–900 €</p>
+              <p className="plan__price">500–900 €</p>
 
               <div className="plan__cta">
                 <Link className="btn" href="/contact">
                   Cuéntame tu negocio
+                </Link>
+              </div>
+            </article>
+
+            <article
+              className="plan plan--refresh"
+              id="otro-aire"
+              aria-labelledby="plan-refresh-title"
+            >
+              <div className="plan__top">
+                <p className="plan__eyebrow">Ya tengo web</p>
+                <h3 className="plan__title" id="plan-refresh-title">
+                  Rediseño web
+                </h3>
+                <p className="plan__lead">
+                  Me gusta mi web y su contenido, pero quiero otro aire visual.
+                </p>
+              </div>
+
+              <p className="plan__note">
+                Dale otro aire a tu web con un rediseño visual. No hace falta
+                tirar lo que ya tienes para volver a enamorarte de tu web!
+              </p>
+
+              <p className="plan__price">350–500 €</p>
+
+              <div className="plan__cta">
+                <Link className="btn" href="/contact">
+                  Quiero ver cómo quedaría
                 </Link>
               </div>
             </article>
@@ -295,7 +315,7 @@ export default function PlansPage() {
                 <li>Para que te encuentren mejor en Google</li>
               </ul>
 
-              <p className="plan__price">Desde 500–1.200 €</p>
+              <p className="plan__price">500–1.200 €</p>
 
               <div className="plan__cta">
                 <Link className="btn" href="/contact">
@@ -327,7 +347,7 @@ export default function PlansPage() {
                 <li>Mantenimiento y tranquilidad técnica</li>
               </ul>
 
-              <p className="plan__price">Desde 20–70 €/mes</p>
+              <p className="plan__price">20–70 €/mes</p>
 
               <div className="plan__cta">
                 <Link className="btn" href="/contact">
@@ -350,15 +370,17 @@ export default function PlansPage() {
               Tu tienda online
             </h2>
             <p className="plans__block-lead">
-              Si ahora vendes por Instagram o WhatsApp, puedo dejarte una tienda
-              sencilla para que la gente compre directamente. No necesitas
-              montar Amazon. Necesitas una tienda que funcione, sea fácil de
-              gestionar y ayude a vender tus productos.
+              Si ahora vendes por Instagram o WhatsApp, podemos dar el siguiente
+              paso.
             </p>
             <p className="plans__block-lead">
-              Para tiendas, artesanía, alimentación, regalos, productos locales,
-              floristerías… negocios que quieren empezar a vender sus productos
-              directamente desde su propia web.
+              No necesitas montar Amazon. Necesitas una tienda sencilla, fácil de
+              gestionar y preparada para que tus clientes puedan comprar
+              directamente.
+            </p>
+            <p className="plans__block-lead">
+              Para tiendas, artesanía, alimentación, regalos, productos locales
+              y otros pequeños negocios.
             </p>
           </header>
 

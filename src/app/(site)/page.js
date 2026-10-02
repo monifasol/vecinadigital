@@ -126,7 +126,7 @@ export default function Home() {
             <h3 className="path-card__title">Quiero una web</h3>
             <p className="path-card__text">
               Una página clara para explicar qué haces y recibir contactos.
-              Desde 500–900 €.
+              500–900 €.
             </p>
           </Link>
 
@@ -134,7 +134,7 @@ export default function Home() {
             <h3 className="path-card__title">Ya tengo web</h3>
             <p className="path-card__text">
               No se entiende, se ve antigua o no consigue contactos.
-              Desde 500–1.200 €.
+              500–1.200 €.
             </p>
           </Link>
 
@@ -142,7 +142,7 @@ export default function Home() {
             <h3 className="path-card__title">Acompañamiento mensual</h3>
             <p className="path-card__text">
               Pequeños cambios, mantenimiento y ayuda digital continua.
-              Desde 20–70 €/mes.
+              20–70 €/mes.
             </p>
           </Link>
         </div>
