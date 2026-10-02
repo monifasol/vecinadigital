@@ -26,7 +26,10 @@ export default function ContactPage() {
           </div>
 
           <div className="contact__art" aria-hidden="true">
-            <img src="/assets/casita.png" alt="" />
+            <img
+              src="/assets/identidad-vecina-digital-acuarela/casa-acuarela.webp"
+              alt=""
+            />
           </div>
 
           <div className="contact__actions">

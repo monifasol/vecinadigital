@@ -13,10 +13,10 @@ export default function HolaPage() {
       <section className="hola-hero" aria-labelledby="hola-title">
         <div className="hola-hero__door" aria-hidden="true">
           <Image
-            src="/assets/door.png"
+            src="/assets/identidad-vecina-digital-acuarela/puerta-acuarela.webp"
             alt=""
-            width={220}
-            height={220}
+            width={1332}
+            height={1181}
             priority
           />
         </div>

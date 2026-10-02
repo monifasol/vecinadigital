@@ -49,7 +49,7 @@ export default function Header() {
       <Link className="brand" href="/" onClick={() => setIsOpen(false)}>
         <img
           className="brand__logo"
-          src="/assets/vecina-hero-logo.png"
+          src="/assets/identidad-vecina-digital-acuarela/logo-vecina-digital-acuarela.webp"
           alt="Vecina Digital"
         />
       </Link>

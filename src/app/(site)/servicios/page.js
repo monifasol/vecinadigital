@@ -7,6 +7,24 @@ export const metadata = {
     "Soluciones digitales para tu negocio: microtrabajos, webs, tienda online y acompañamiento. Empieza por lo que necesites ahora.",
 }
 
+const ART = "/assets/iconos-servicios-vecina-digital"
+
+const illustrations = {
+  google: `${ART}/01-google-business.webp`,
+  whatsapp: `${ART}/02-whatsapp-business.webp`,
+  revision: `${ART}/03-revision-presencia-online.webp`,
+  cambios: `${ART}/04-pequenos-cambios-web.webp`,
+  "carta-qr": `${ART}/05-menu-carta-qr.webp`,
+  "pagina-expres": `${ART}/06-pagina-informativa-expres.webp`,
+  "quiero-web": `${ART}/07-tu-primera-web.webp`,
+  "otro-aire": `${ART}/08-rediseno-web.webp`,
+  "mejorar-web": `${ART}/09-mejorar-web.webp`,
+  acompanamiento: `${ART}/10-acompanamiento.webp`,
+  "tienda-completa": `${ART}/11-tienda-online.webp`,
+  "tienda-ampliada": `${ART}/12-tienda-online-ampliada.webp`,
+  "proyecto-a-medida": `${ART}/13-proyecto-a-medida.webp`,
+}
+
 const quickServices = [
   {
     id: "google",
@@ -14,13 +32,15 @@ const quickServices = [
     price: "60 €",
     description:
       "Revisar o crear tu ficha: horarios, teléfono, descripción, categorías, enlace, fotos básicas y WhatsApp.",
+    illustration: illustrations.google,
   },
   {
     id: "whatsapp",
-    title: "WhatsApp Business bien montado",
+    title: "WhatsApp Business",
     price: "50 €",
     description:
       "Perfil, horarios, descripción, mensaje de bienvenida, respuestas rápidas y catálogo básico.",
+    illustration: illustrations.whatsapp,
   },
   {
     id: "revision",
@@ -28,6 +48,7 @@ const quickServices = [
     price: "45 €",
     description:
       "Te digo qué encuentra alguien cuando busca tu negocio y qué tres cosas cambiaría primero. Esos 45 € se descuentan si luego contratas otro servicio conmigo.",
+    illustration: illustrations.revision,
   },
   {
     id: "cambios",
@@ -35,6 +56,7 @@ const quickServices = [
     price: "40 €",
     description:
       "Cambiar horarios, precios, fotografías, textos, botones, datos de contacto y lo que necesites actualizar.",
+    illustration: illustrations.cambios,
   },
   {
     id: "carta-qr",
@@ -42,6 +64,7 @@ const quickServices = [
     price: "80 €",
     description:
       "Una página sencilla con carta o servicios y un QR listo para imprimir.",
+    illustration: illustrations["carta-qr"],
   },
 ]
 
@@ -60,30 +83,68 @@ const presenceServices = [
       "Puesta a punto básica de Google Business",
     ],
     highlight: true,
+    illustration: illustrations["pagina-expres"],
   },
 ]
 
-function QuickCard({ service }) {
+function ServiceArt({ src, size = "card", priority = false }) {
+  const dim = size === "plan" ? 440 : size === "band" ? 560 : 380
+
+  return (
+    <figure
+      className={`service-art service-art--${size}`}
+      aria-hidden="true"
+    >
+      <Image
+        src={src}
+        alt=""
+        width={dim}
+        height={dim}
+        sizes={
+          size === "plan"
+            ? "(max-width: 639px) 180px, 220px"
+            : size === "band"
+              ? "(max-width: 720px) 240px, 420px"
+              : "(max-width: 639px) 112px, 140px"
+        }
+        quality={85}
+        priority={priority}
+        className="service-art__img"
+      />
+    </figure>
+  )
+}
+
+function QuickCard({ service, priority = false }) {
   return (
     <article
       id={service.id}
       className={`quick-card${service.highlight ? " quick-card--bridge" : ""}`}
       aria-labelledby={`quick-${service.id}-title`}
     >
-      <div className="quick-card__top">
-        <h3 className="quick-card__title" id={`quick-${service.id}-title`}>
-          {service.title}
-        </h3>
-        <p className="quick-card__price">{service.price}</p>
-      </div>
-      <p className="quick-card__text">{service.description}</p>
-      {service.includes ? (
-        <ul className="quick-card__includes">
-          {service.includes.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+      {service.illustration ? (
+        <ServiceArt
+          src={service.illustration}
+          size="card"
+          priority={priority}
+        />
       ) : null}
+      <div className="quick-card__body">
+        <div className="quick-card__top">
+          <h3 className="quick-card__title" id={`quick-${service.id}-title`}>
+            {service.title}
+          </h3>
+          <p className="quick-card__price">{service.price}</p>
+        </div>
+        <p className="quick-card__text">{service.description}</p>
+        {service.includes ? (
+          <ul className="quick-card__includes">
+            {service.includes.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
     </article>
   )
 }
@@ -102,6 +163,7 @@ export default function PlansPage() {
           </p>
         </header>
 
+        {/*
         <section className="glance" aria-labelledby="glance-title">
           <div className="glance__intro">
             <p className="glance__kicker">Precios orientativos</p>
@@ -155,6 +217,7 @@ export default function PlansPage() {
         </p>
 
         <p className="plans__explain">Te lo explico:</p>
+        */}
 
         {/* 1. Soluciones rápidas */}
         <section
@@ -163,7 +226,6 @@ export default function PlansPage() {
           aria-labelledby="quick-title"
         >
           <header className="plans__block-header">
-            <p className="plans__block-kicker">1 · 40 €</p>
             <h2 className="plans__block-title" id="quick-title">
               Podemos empezar por algo pequeño
             </h2>
@@ -174,14 +236,12 @@ export default function PlansPage() {
           </header>
 
           <div className="quick-grid">
-            {quickServices.map((service) => (
-              <QuickCard key={service.id} service={service} />
-            ))}
-          </div>
-
-          <div className="quick-grid">
             {presenceServices.map((service) => (
-              <QuickCard key={service.id} service={service} />
+              <QuickCard
+                key={service.id}
+                service={service}
+                priority
+              />
             ))}
 
             <aside className="plans__nudge" aria-labelledby="bridge-title">
@@ -196,6 +256,16 @@ export default function PlansPage() {
                 la convertimos en algo más grande.
               </p>
             </aside>
+          </div>
+
+          <div className="quick-grid">
+            {quickServices.map((service, index) => (
+              <QuickCard
+                key={service.id}
+                service={service}
+                priority={index < 2}
+              />
+            ))}
           </div>
 
           <p className="plans__also">
@@ -220,7 +290,7 @@ export default function PlansPage() {
           <header className="plans__block-header">
             <p className="plans__block-kicker">Webs y cuidado</p>
             <h2 className="plans__block-title" id="paths-title">
-              Si lo que buscas es una web (o cuidarla)
+              Si lo que buscas es una web
             </h2>
             <p className="plans__block-lead">
               Elige el que más se parece a tu situación.
@@ -233,6 +303,7 @@ export default function PlansPage() {
               id="quiero-web"
               aria-labelledby="plan-simple-title"
             >
+              <ServiceArt src={illustrations["quiero-web"]} size="plan" />
               <div className="plan__top">
                 <p className="plan__eyebrow">Quiero una web</p>
                 <h3 className="plan__title" id="plan-simple-title">
@@ -266,20 +337,25 @@ export default function PlansPage() {
               id="otro-aire"
               aria-labelledby="plan-refresh-title"
             >
+              <ServiceArt src={illustrations["otro-aire"]} size="plan" />
               <div className="plan__top">
                 <p className="plan__eyebrow">Ya tengo web</p>
                 <h3 className="plan__title" id="plan-refresh-title">
                   Rediseño web
                 </h3>
                 <p className="plan__lead">
-                  Me gusta mi web y su contenido, pero quiero otro aire visual.
+                  Dale otro aire a tu web con un rediseño visual. No hace falta
+                  tirar lo que ya tienes para volver a enamorarte de tu web.
                 </p>
               </div>
 
-              <p className="plan__note">
-                Dale otro aire a tu web con un rediseño visual. No hace falta
-                tirar lo que ya tienes para volver a enamorarte de tu web.
-              </p>
+              <ul className="plan__list">
+                <li>Nuevo diseño visual</li>
+                <li>Conservas textos y estructura</li>
+                <li>Adaptada a móvil</li>
+                <li>Misma web, otra cara</li>
+                <li>Sin empezar de cero</li>
+              </ul>
 
               <p className="plan__price">350–500 €</p>
 
@@ -296,6 +372,7 @@ export default function PlansPage() {
               aria-labelledby="plan-fix-title"
             >
               <span className="plan__badge">La más elegida</span>
+              <ServiceArt src={illustrations["mejorar-web"]} size="plan" />
               <div className="plan__top">
                 <p className="plan__eyebrow">Ya tengo web</p>
                 <h3 className="plan__title" id="plan-fix-title">
@@ -329,6 +406,7 @@ export default function PlansPage() {
               id="acompanamiento"
               aria-labelledby="plan-monthly-title"
             >
+              <ServiceArt src={illustrations.acompanamiento} size="plan" />
               <div className="plan__top">
                 <p className="plan__eyebrow">Cada mes</p>
                 <h3 className="plan__title" id="plan-monthly-title">
@@ -377,6 +455,7 @@ export default function PlansPage() {
               id="tienda-completa"
               aria-labelledby="plan-store-title"
             >
+              <ServiceArt src={illustrations["tienda-completa"]} size="plan" />
               <div className="plan__top">
                 <p className="plan__eyebrow">Hasta 25 productos</p>
                 <h3 className="plan__title" id="plan-store-title">
@@ -410,6 +489,7 @@ export default function PlansPage() {
               id="tienda-ampliada"
               aria-labelledby="plan-store-plus-title"
             >
+              <ServiceArt src={illustrations["tienda-ampliada"]} size="plan" />
               <div className="plan__top">
                 <p className="plan__eyebrow">Hasta 75 productos</p>
                 <h3 className="plan__title" id="plan-store-plus-title">
@@ -459,20 +539,27 @@ export default function PlansPage() {
         {/* Proyecto a medida */}
         <div className="plans__bigger-wrap" id="proyecto-a-medida">
           <section className="plans__bigger" aria-labelledby="plans-bigger-title">
-            <p className="plans__block-kicker">A medida</p>
-            <h2 className="plans__bigger-title" id="plans-bigger-title">
-              ¿Tu proyecto es más grande?
-            </h2>
-            <p className="plans__bigger-text">
-              Si necesitas reservas, varias páginas, idiomas, formularios
-              complejos, un catálogo muy amplio o algo más a medida, lo vemos
-              juntos y te preparo un presupuesto claro.
-            </p>
-            <Link className="btn" href="/contact">
-              Cuéntame tu caso
-            </Link>
+            <div className="plans__bigger-copy">
+              <p className="plans__block-kicker">A medida</p>
+              <h2 className="plans__bigger-title" id="plans-bigger-title">
+                ¿Tu proyecto es más grande?
+              </h2>
+              <p className="plans__bigger-text">
+                Si necesitas reservas, varias páginas, idiomas, formularios
+                complejos, un catálogo muy amplio o algo más a medida, lo vemos
+                juntos y te preparo un presupuesto claro.
+              </p>
+              <Link className="btn" href="/contact">
+                Cuéntame tu caso
+              </Link>
+            </div>
+            <ServiceArt
+              src={illustrations["proyecto-a-medida"]}
+              size="band"
+            />
           </section>
 
+          {/*
           <figure className="plans__bigger-avatar" aria-hidden="true">
             <Image
               src="/assets/robot.png"
@@ -481,6 +568,7 @@ export default function PlansPage() {
               height={520}
             />
           </figure>
+          */}
         </div>
 
         <aside className="plans__help" aria-labelledby="plans-help-title">

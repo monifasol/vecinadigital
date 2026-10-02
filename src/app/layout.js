@@ -33,9 +33,9 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/assets/vecina-hero-logo.png",
-        width: 774,
-        height: 1032,
+        url: "/assets/identidad-vecina-digital-acuarela/logo-vecina-digital-acuarela.png",
+        width: 1086,
+        height: 1448,
         alt: "Vecina Digital",
       },
     ],
@@ -45,7 +45,9 @@ export const metadata = {
     title: "Vecina Digital",
     description:
       "Para que tu negocio se vea tan bien como lo cuidas cada día. Webs claras y humanas para pequeños negocios.",
-    images: ["/assets/vecina-hero-logo.png"],
+    images: [
+      "/assets/identidad-vecina-digital-acuarela/logo-vecina-digital-acuarela.png",
+    ],
   },
 }
 
