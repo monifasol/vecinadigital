@@ -20,10 +20,10 @@ function formatMessage(message) {
 /** Inline logo attachment for Resend (CID). */
 export function logoAttachment() {
   return {
-    filename: "logo-vecina-digital-email.png",
+    filename: "logo-vecina-digital-acuarela.png",
     path: path.join(
       process.cwd(),
-      "public/assets/logo-vecina-digital-email.png"
+      "public/assets/identidad-vecina-digital-acuarela/logo-vecina-digital-acuarela.png"
     ),
     contentId: LOGO_CONTENT_ID,
   };
@@ -32,8 +32,11 @@ export function logoAttachment() {
 /** Inline casita illustration for the visitor email. */
 export function casitaAttachment() {
   return {
-    filename: "casita-email.png",
-    path: path.join(process.cwd(), "public/assets/casita-email.png"),
+    filename: "casa-acuarela.png",
+    path: path.join(
+      process.cwd(),
+      "public/assets/identidad-vecina-digital-acuarela/casa-acuarela.png"
+    ),
     contentId: CASITA_CONTENT_ID,
   };
 }

@@ -45,10 +45,10 @@ export default function Home() {
         <div className="hero__visual" aria-hidden="true">
           <Image
             className="hero__image"
-            src="/assets/casita.png"
+            src="/assets/identidad-vecina-digital-acuarela/casa-acuarela.webp"
             alt=""
-            width={1122}
-            height={1002}
+            width={1327}
+            height={1185}
             priority
           />
         </div>
@@ -254,7 +254,10 @@ export default function Home() {
         </div>
 
         <div className="contact__art" aria-hidden="true">
-          <img src="assets/door.png" alt="" />
+          <img
+            src="/assets/identidad-vecina-digital-acuarela/puerta-acuarela.webp"
+            alt=""
+          />
         </div>
       </section>
 

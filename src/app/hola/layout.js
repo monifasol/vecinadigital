@@ -7,10 +7,10 @@ export default function HolaLayout({ children }) {
     <>
       <Link className="hola-brand" href="/" aria-label="Vecina Digital — ir a la web">
         <Image
-          src="/assets/vecina-hero-logo.png"
+          src="/assets/identidad-vecina-digital-acuarela/logo-vecina-digital-acuarela.webp"
           alt=""
-          width={120}
-          height={40}
+          width={1086}
+          height={1448}
           priority
         />
       </Link>
