@@ -13,7 +13,7 @@ export default function Header() {
 
   const navItems = [
     { href: "/", label: "Inicio" },
-    { href: "/plans", label: "Caminos" },
+    { href: "/servicios", label: "Servicios" },
     { href: "/sobre", label: "Sobre" },
     { href: "/detras-de-vecina-digital", label: "Por dentro" },
     { href: "/contact", label: "Contacto" },

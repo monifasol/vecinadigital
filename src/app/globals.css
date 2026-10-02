@@ -534,6 +534,16 @@ input:focus, textarea:focus{
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
   }
+
+  .paths-teaser__grid--four{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px){
+  .paths-teaser__grid--four{
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .path-card{
@@ -546,6 +556,15 @@ input:focus, textarea:focus{
   text-decoration: none;
   color: inherit;
   transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.path-card--quick{
+  background: linear-gradient(
+    180deg,
+    rgba(111,127,92,0.10),
+    rgba(255,255,255,0.18)
+  );
+  border-color: rgba(111,127,92,0.22);
 }
 
 .path-card:hover{
@@ -1378,11 +1397,164 @@ a.emphasis:hover{
   color: var(--muted);
 }
 
+/* Blocks within plans page */
+.plans__block{
+  margin-top: 48px;
+  scroll-margin-top: 24px;
+}
+
+.plans__block:first-of-type{
+  margin-top: 8px;
+}
+
+.plans__block-header{
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+
+.plans__block-kicker{
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--olive-ink);
+}
+
+.plans__block-title{
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 32px);
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.plans__block-lead{
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 58ch;
+}
+
+.plans__block-cta{
+  margin-top: 24px;
+}
+
+.plans__also{
+  margin: 20px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+/* Quick services grid */
+.quick-grid{
+  display: grid;
+  gap: 14px;
+}
+
+@media (min-width: 640px){
+  .quick-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px){
+  .quick-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+.quick-card{
+  padding: 18px 18px 20px;
+  border-radius: calc(var(--radius) + 4px);
+  background: rgba(255,255,255,0.28);
+  border: 1px solid rgba(43,38,34,0.09);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quick-card--bridge{
+  background: linear-gradient(
+    180deg,
+    rgba(111,127,92,0.10),
+    rgba(255,255,255,0.28)
+  );
+  border-color: rgba(111,127,92,0.22);
+}
+
+.quick-card__top{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 14px;
+}
+
+.quick-card__title{
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.quick-card__price{
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent-ink);
+  white-space: nowrap;
+}
+
+.quick-card__text{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Bridge callout — miniweb message */
+.plans__bridge{
+  margin-top: 28px;
+  padding: 22px 22px 24px;
+  max-width: 720px;
+  border-radius: calc(var(--radius) + 4px);
+  background: linear-gradient(
+    135deg,
+    rgba(197,106,58,0.10),
+    rgba(111,127,92,0.10)
+  );
+  border: 1px solid rgba(197,106,58,0.18);
+}
+
+.plans__bridge-title{
+  margin: 0 0 8px;
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.plans__bridge-text{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(43,38,34,0.82);
+  max-width: 58ch;
+}
+
 /* Grid */
 .plans__grid{
   display: grid;
   gap: 24px;
-  margin-top: 36px;
+  margin-top: 8px;
 }
 
 /* 👉 Desktop: 3 columns */
@@ -1400,6 +1572,7 @@ a.emphasis:hover{
   background: rgba(255,255,255,0.22);
   border: 1px solid rgba(43,38,34,0.10);
   box-shadow: 0 18px 45px rgba(0,0,0,0.05);
+  scroll-margin-top: 24px;
 
   display: flex;
   flex-direction: column;
@@ -1432,6 +1605,15 @@ a.emphasis:hover{
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.plan__eyebrow{
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--olive-ink);
 }
 
 .plan__title{
@@ -1547,6 +1729,10 @@ a.emphasis:hover{
   margin: 0 0 10px;
   font-family: var(--serif);
   font-size: 22px;
+}
+
+.plans__bigger .plans__block-kicker{
+  margin-bottom: 10px;
 }
 
 .plans__bigger-text{

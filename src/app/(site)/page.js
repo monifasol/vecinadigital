@@ -38,7 +38,7 @@ export default function Home() {
 
           <div className="hero__cta">
             <Link className="btn" href="/contact">Cuéntame tu negocio</Link>
-            <Link className="btn btn--ghost" href="/plans">Caminos</Link>
+            <Link className="btn btn--ghost" href="/servicios">Servicios</Link>
           </div>
         </div>
 
@@ -111,30 +111,38 @@ export default function Home() {
       </section>
 
       <section id="servicios" className="section paths-teaser" aria-labelledby="servicios-title">
-        <h2 id="servicios-title">¿Cuál te encaja?</h2>
+        <h2 id="servicios-title">¿Por dónde empezamos?</h2>
 
-        <div className="paths-teaser__grid">
-          <Link className="path-card" href="/plans">
-            <h3 className="path-card__title">Quiero una web sencilla</h3>
+        <div className="paths-teaser__grid paths-teaser__grid--four">
+          <Link className="path-card path-card--quick" href="/servicios#soluciones-rapidas">
+            <h3 className="path-card__title">Algo pequeño, ya</h3>
             <p className="path-card__text">
-              Para quien no tiene web o necesita una página clara para explicar qué hace
-              y recibir contactos.
+              Google, WhatsApp, carta con QR, miniweb… desde 40–250 €.
+              Sin necesidad de encargar una web completa.
             </p>
           </Link>
 
-          <Link className="path-card" href="/plans">
-            <h3 className="path-card__title">Ya tengo web, pero…</h3>
+          <Link className="path-card" href="/servicios#quiero-web">
+            <h3 className="path-card__title">Quiero una web</h3>
             <p className="path-card__text">
-              Para quien ya tiene web, pero no se entiende, se ve antigua, va lenta
-              o no consigue contactos.
+              Una página clara para explicar qué haces y recibir contactos.
+              Desde 600–900 €.
             </p>
           </Link>
 
-          <Link className="path-card" href="/plans">
-            <h3 className="path-card__title">Quiero que me acompañes cada mes</h3>
+          <Link className="path-card" href="/servicios#mejorar-web">
+            <h3 className="path-card__title">Ya tengo web</h3>
             <p className="path-card__text">
-              Para negocios que necesitan pequeños cambios, mantenimiento
-              o ayuda digital continua.
+              No se entiende, se ve antigua o no consigue contactos.
+              Desde 500–1.200 €.
+            </p>
+          </Link>
+
+          <Link className="path-card" href="/servicios#acompanamiento">
+            <h3 className="path-card__title">Acompañamiento mensual</h3>
+            <p className="path-card__text">
+              Pequeños cambios, mantenimiento y ayuda digital continua.
+              Desde 20–70 €/mes.
             </p>
           </Link>
         </div>
@@ -143,8 +151,8 @@ export default function Home() {
           <p className="paths-teaser__cta-text">
             ¿No sabes por dónde empezar?
           </p>
-          <Link className="btn" href="/plans">
-            Ver las opciones
+          <Link className="btn" href="/servicios">
+            Ver todos los servicios
           </Link>
         </div>
       </section>
@@ -199,7 +207,7 @@ export default function Home() {
 
             <div className="pro-band__cta">
               <Link className="btn" href="/contact">Cuéntame tu caso</Link>
-              <Link className="btn btn--ghost" href="/plans">
+              <Link className="btn btn--ghost" href="/servicios">
                 Lo vemos juntos
               </Link>
             </div>
