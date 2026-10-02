@@ -1022,7 +1022,6 @@ a.emphasis:hover{
   max-width: 200px;
   height: auto;
   display: block;
-  transform: scaleX(-1);
   filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.08));
 }
 
@@ -1190,7 +1189,7 @@ a.emphasis:hover{
   min-width: 0; /* evita desbordes raros en grid */
 }
 
-/* Contact page: texto a la izquierda, casita a la derecha */
+/* Contact page: texto a la izquierda, robot a la derecha */
 @media (min-width: 769px){
   .contact:not(:has(> .contact__art)) .contact__copy{
     display: grid;
@@ -1240,11 +1239,11 @@ a.emphasis:hover{
 }
 
 .contact__art img{
-  width: min(360px, 90%);
+  width: min(280px, 90%);
   height: auto;
   opacity: 0.95;
   filter: drop-shadow(0 18px 30px rgba(0,0,0,0.08));
-  /* transform: translateX(6px); */
+  transform: scaleX(-1);
 }
 
 .contact__aside{
@@ -1314,7 +1313,7 @@ a.emphasis:hover{
   }
 
   .contact__art img{
-    width: min(280px, 90%);
+    width: min(220px, 70%);
   }
 }
 

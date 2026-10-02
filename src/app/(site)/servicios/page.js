@@ -562,7 +562,7 @@ export default function PlansPage() {
           {/*
           <figure className="plans__bigger-avatar" aria-hidden="true">
             <Image
-              src="/assets/robot.png"
+              src="/assets/robots-vecina-digital/robot-corazon-version-2.webp"
               alt=""
               width={400}
               height={520}

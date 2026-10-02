@@ -1,12 +1,12 @@
 import Image from "next/image"
 
 export const metadata = {
-  title: "Sobre Vecina Digital",
+  title: "Tu vecina | Vecina Digital",
   description:
     "Quién soy, por qué existe Vecina Digital y desde dónde está hecho este proyecto.",
 }
 
-export default function SobrePage() {
+export default function TuVecinaPage() {
   return (
     <main>
       <article className="about-article">
@@ -35,10 +35,13 @@ export default function SobrePage() {
           <div className="about-reveal">
             <figure className="about-reveal__figure" aria-hidden="true">
               <Image
-                src="/assets/monica-behind-door.png"
+                src="/assets/robots-vecina-digital/robot-monica-version-2.webp"
                 alt=""
-                width={320}
-                height={400}
+                width={480}
+                height={640}
+                sizes="(max-width: 767px) 200px, 280px"
+                quality={85}
+                priority
               />
             </figure>
 
@@ -63,7 +66,7 @@ export default function SobrePage() {
           </p>
 
           <p>
-            Sensible por naturaleza, neurodiversa y apasionada, 
+            Sensible, neurodiversa y apasionada, 
             trabajo mejor cuando las cosas tienen sentido, 
             están bien pensadas y respetan a las personas que las usan.
           </p>
