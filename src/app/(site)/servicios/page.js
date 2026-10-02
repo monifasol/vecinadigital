@@ -4,7 +4,7 @@ import Link from "next/link"
 export const metadata = {
   title: "Servicios | Vecina Digital",
   description:
-    "Soluciones digitales para tu negocio: desde un arreglo rápido de 50 € hasta una web completa o acompañamiento mensual. Empieza por lo que necesites ahora.",
+    "Soluciones digitales para tu negocio: microtrabajos, webs, tienda online y acompañamiento. Empieza por lo que necesites ahora.",
 }
 
 const quickServices = [
@@ -46,24 +46,16 @@ const quickServices = [
   {
     id: "pagina-expres",
     title: "Página informativa exprés",
-    price: "Desde 180 €",
+    price: "180 €",
     description:
-      "Una página muy sencilla con quién eres, qué haces, horarios, ubicación y contacto. Ideal si ahora solo tienes Facebook o Instagram.",
+      "Quién eres, qué haces, horarios, ubicación, contacto y WhatsApp. Ideal si ahora solo tienes Facebook o Instagram.",
   },
   {
-    id: "miniweb",
-    title: "Miniweb «Estoy aquí»",
-    price: "150–200 €",
+    id: "pack-encuentren",
+    title: "Pack «Que me encuentren»",
+    price: "220 €",
     description:
-      "Horarios, servicios, ubicación y un botón de WhatsApp. Lo justo para que quien te busque sepa dónde estás y cómo contactarte.",
-    highlight: true,
-  },
-  {
-    id: "miniweb-google",
-    title: "Miniweb + Google Business",
-    price: "220–250 €",
-    description:
-      "La miniweb y tu ficha de Google alineadas: misma información, mismo enlace, misma claridad.",
+      "Miniweb + ficha de Google puesta a punto. Misma información, mismo enlace, misma claridad: que quien te busque te encuentre de verdad.",
     highlight: true,
   },
 ]
@@ -82,6 +74,63 @@ export default function PlansPage() {
             si quieres más.
           </p>
         </header>
+
+        <section className="glance" aria-labelledby="glance-title">
+          <h2 className="glance__title" id="glance-title">
+            De un vistazo
+          </h2>
+
+          <ul className="glance__list">
+            <li>
+              <a className="glance__row" href="#soluciones-rapidas">
+                <span className="glance__label">Pequeñas soluciones</span>
+                <span className="glance__dots" aria-hidden="true" />
+                <span className="glance__price">40–250 €</span>
+              </a>
+            </li>
+            <li>
+              <a className="glance__row" href="#quiero-web">
+                <span className="glance__label">Tu web</span>
+                <span className="glance__dots" aria-hidden="true" />
+                <span className="glance__price">600–900 €</span>
+              </a>
+            </li>
+            <li>
+              <a className="glance__row" href="#otro-aire">
+                <span className="glance__label">Rediseño web</span>
+                <span className="glance__dots" aria-hidden="true" />
+                <span className="glance__price">350–500 €</span>
+              </a>
+            </li>
+            <li>
+              <a className="glance__row" href="#tienda-online">
+                <span className="glance__label">Tu tienda online</span>
+                <span className="glance__dots" aria-hidden="true" />
+                <span className="glance__price">800–1.100 €</span>
+              </a>
+            </li>
+            <li>
+              <a className="glance__row" href="#acompanamiento">
+                <span className="glance__label">Acompañamiento</span>
+                <span className="glance__dots" aria-hidden="true" />
+                <span className="glance__price">20–70 €/mes</span>
+              </a>
+            </li>
+            <li>
+              <a className="glance__row" href="#proyecto-a-medida">
+                <span className="glance__label">Proyecto especial</span>
+                <span className="glance__dots" aria-hidden="true" />
+                <span className="glance__price">Presupuesto cerrado</span>
+              </a>
+            </li>
+          </ul>
+
+          <p className="glance__vat">
+            A estos precios solo hay que sumarles el IVA.
+          </p>
+        </section>
+
+        <p className="plans__explain">Te lo explico:</p>
 
         {/* 1. Soluciones rápidas */}
         <section
@@ -128,8 +177,8 @@ export default function PlansPage() {
             <p className="plans__bridge-text">
               Si ahora mismo solo necesitas que cuando alguien te busque
               encuentre horarios, servicios, ubicación y un botón de WhatsApp,
-              podemos empezar por una miniweb de 180 €. Luego, cuando toque,
-              la convertimos en algo más grande.
+              podemos empezar por el pack «Que me encuentren» (220 €): miniweb +
+              Google. Luego, cuando toque, lo convertimos en algo más grande.
             </p>
           </aside>
 
@@ -153,16 +202,16 @@ export default function PlansPage() {
           aria-labelledby="paths-title"
         >
           <header className="plans__block-header">
-            <p className="plans__block-kicker">2 · 3 · 4</p>
+            <p className="plans__block-kicker">Webs y cuidado</p>
             <h2 className="plans__block-title" id="paths-title">
               Si lo que buscas es una web (o cuidarla)
             </h2>
             <p className="plans__block-lead">
-              Tres caminos claros. Elige el que más se parece a tu situación.
+              Elige el que más se parece a tu situación.
             </p>
           </header>
 
-          <div className="plans__grid">
+          <div className="plans__grid plans__grid--four">
             <article
               className="plan plan--start"
               id="quiero-web"
@@ -192,6 +241,36 @@ export default function PlansPage() {
               <div className="plan__cta">
                 <Link className="btn" href="/contact">
                   Cuéntame tu negocio
+                </Link>
+              </div>
+            </article>
+
+            <article
+              className="plan plan--refresh"
+              id="otro-aire"
+              aria-labelledby="plan-refresh-title"
+            >
+              <div className="plan__top">
+                <p className="plan__eyebrow">Ya tengo web</p>
+                <h3 className="plan__title" id="plan-refresh-title">
+                  Rediseño
+                </h3>
+                <p className="plan__lead">
+                  Dale otro aire a tu web con un rediseño visual de tu web
+                  actual.
+                </p>
+              </div>
+
+              <p className="plan__note">
+                No hace falta tirar lo que ya tienes para volver a enamorarte de
+                tu web.
+              </p>
+
+              <p className="plan__price">350–500 €</p>
+
+              <div className="plan__cta">
+                <Link className="btn" href="/contact">
+                  Quiero ver cómo quedaría
                 </Link>
               </div>
             </article>
@@ -264,17 +343,97 @@ export default function PlansPage() {
           </div>
         </section>
 
-        {/* 5. Proyecto a medida */}
+        {/* Tienda online */}
+        <section
+          className="plans__block"
+          id="tienda-online"
+          aria-labelledby="store-title"
+        >
+          <header className="plans__block-header">
+            <p className="plans__block-kicker">Vender online</p>
+            <h2 className="plans__block-title" id="store-title">
+              Tu tienda online
+            </h2>
+            <p className="plans__block-lead">
+              Para tiendas, artesanía, alimentación, regalos, productos locales,
+              floristerías… Si ahora vendes por Instagram o WhatsApp, puedo
+              dejarte una tienda sencilla para que la gente compre directamente.
+            </p>
+          </header>
+
+          <div className="plans__grid plans__grid--two">
+            <article
+              className="plan plan--store"
+              id="tienda-completa"
+              aria-labelledby="plan-store-title"
+            >
+              <div className="plan__top">
+                <p className="plan__eyebrow">Hasta 25 productos</p>
+                <h3 className="plan__title" id="plan-store-title">
+                  Tu tienda online
+                </h3>
+                <p className="plan__lead">
+                  Diseño, carrito, pagos, envíos básicos, páginas esenciales y
+                  puesta en marcha.
+                </p>
+              </div>
+
+              <p className="plan__note">
+                No necesitas montar Amazon. Necesitas una tienda que funcione,
+                sea fácil de gestionar y ayude a vender tus productos.
+              </p>
+
+              <p className="plan__price">800 €</p>
+
+              <div className="plan__cta">
+                <Link className="btn" href="/contact">
+                  Cuéntame qué vendes
+                </Link>
+              </div>
+            </article>
+
+            <article
+              className="plan plan--store-mini"
+              id="tienda-ampliada"
+              aria-labelledby="plan-store-plus-title"
+            >
+              <div className="plan__top">
+                <p className="plan__eyebrow">Hasta 75 productos</p>
+                <h3 className="plan__title" id="plan-store-plus-title">
+                  Tienda online ampliada
+                </h3>
+                <p className="plan__lead">
+                  Misma base clara y fácil de gestionar, preparada para un
+                  catálogo más amplio.
+                </p>
+              </div>
+
+              <p className="plan__price">1.100 €</p>
+
+              <div className="plan__cta">
+                <Link className="btn" href="/contact">
+                  Lo vemos juntos
+                </Link>
+              </div>
+            </article>
+          </div>
+
+          <p className="plans__also">
+            Más de 75 productos — presupuesto cerrado.
+          </p>
+        </section>
+
+        {/* Proyecto a medida */}
         <div className="plans__bigger-wrap" id="proyecto-a-medida">
           <section className="plans__bigger" aria-labelledby="plans-bigger-title">
-            <p className="plans__block-kicker">5 · A medida</p>
+            <p className="plans__block-kicker">A medida</p>
             <h2 className="plans__bigger-title" id="plans-bigger-title">
               ¿Tu proyecto es más grande?
             </h2>
             <p className="plans__bigger-text">
-              Si necesitas tienda online, reservas, varias páginas, idiomas,
-              formularios complejos o algo más a medida, lo vemos juntos y te
-              preparo un presupuesto claro.
+              Si necesitas reservas, varias páginas, idiomas, formularios
+              complejos, un catálogo muy amplio o algo más a medida, lo vemos
+              juntos y te preparo un presupuesto claro.
             </p>
             <Link className="btn" href="/contact">
               Cuéntame tu caso
