@@ -54,21 +54,21 @@ export default function TuVecinaPage() {
                 Vivo en Villablino y ayudo a pequeños negocios a tener
                 una presencia online sencilla, bonita y útil, sin complicaciones ni tecnicismos.
               </p>
+
+              <p>
+                Sensible, neurodiversa y apasionada,
+                trabajo mejor cuando las cosas tienen sentido,
+                están bien pensadas y respetan a las personas que las usan.
+              </p>
             </div>
           </div>
 
+          <p>Mamá de Len y Dahlia.</p>
+
           <p>
-            Mamá de Len y Dahlia. <br />
             Amante de la calma, del café, de la naturaleza, de las personas, de la
             diversidad, de escuchar y aprender, y de una forma más humana de
             estar en el mundo.
-            <br />
-          </p>
-
-          <p>
-            Sensible, neurodiversa y apasionada, 
-            trabajo mejor cuando las cosas tienen sentido, 
-            están bien pensadas y respetan a las personas que las usan.
           </p>
 
           <p>
