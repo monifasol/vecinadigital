@@ -85,11 +85,9 @@ export default function Home() {
       </section>
 
       <section className="manifest" aria-labelledby="manifest-title">
-        <p className="manifest__kicker" id="manifest-title">
-          ¿Qué hace Vecina Digital?
-        </p>
-
-        <p className="manifest__lead">Abre puertas.</p>
+        <h2 className="manifest__lead" id="manifest-title">
+          No soy una agencia, soy tu vecina.
+        </h2>
 
         <figure className="manifest__door" aria-hidden="true">
           <Image
@@ -100,13 +98,19 @@ export default function Home() {
           />
         </figure>
 
-        <div className="manifest__lines">
-          <p>A tu negocio local.</p>
-          <p>A las personas.</p>
-          <p>A que Internet sea más fácil.</p>
-          <p>A quien te busca.</p>
-          <p>A quien tiene miedo de la tecnología.</p>
-          <p>A la confianza.</p>
+        <div className="manifest__body">
+          <p>
+            No vengo a vender sino a acompañar. Llevo más de veinte años
+            creando aplicaciones y ahora las hago para quien abre la persiana
+            cada mañana. Si tu negocio merece verse online y la tecnología te
+            abruma, aquí estoy: te escucho y te lo explico en claro.
+          </p>
+          <p>
+            Hay gente buscando lo que haces y no te ve. Hay negocios preciosos
+            que parecen invisibles en Internet. Yo estoy para cambiar eso:
+            una web clara, humana y hecha a tu medida, para que dejes de
+            sentir que “esto no es para ti”.
+          </p>
         </div>
       </section>
 
@@ -115,6 +119,16 @@ export default function Home() {
 
         <div className="paths-teaser__grid paths-teaser__grid--four">
           <Link className="path-card path-card--quick" href="/servicios#soluciones-rapidas">
+            <figure className="path-card__art" aria-hidden="true">
+              <Image
+                src="/assets/iconos-servicios-vecina-digital/06-pagina-informativa-expres.webp"
+                alt=""
+                width={220}
+                height={220}
+                sizes="(max-width: 768px) 140px, 160px"
+                quality={85}
+              />
+            </figure>
             <h3 className="path-card__title">Algo pequeño, ya</h3>
             <p className="path-card__text">
               Google, WhatsApp, carta con QR, página exprés…
@@ -123,6 +137,16 @@ export default function Home() {
           </Link>
 
           <Link className="path-card" href="/servicios#quiero-web">
+            <figure className="path-card__art" aria-hidden="true">
+              <Image
+                src="/assets/iconos-servicios-vecina-digital/07-tu-primera-web.webp"
+                alt=""
+                width={220}
+                height={220}
+                sizes="(max-width: 768px) 140px, 160px"
+                quality={85}
+              />
+            </figure>
             <h3 className="path-card__title">Quiero una web</h3>
             <p className="path-card__text">
               Una página clara para explicar qué haces y recibir contactos.
@@ -131,6 +155,16 @@ export default function Home() {
           </Link>
 
           <Link className="path-card" href="/servicios#mejorar-web">
+            <figure className="path-card__art" aria-hidden="true">
+              <Image
+                src="/assets/iconos-servicios-vecina-digital/09-mejorar-web.webp"
+                alt=""
+                width={220}
+                height={220}
+                sizes="(max-width: 768px) 140px, 160px"
+                quality={85}
+              />
+            </figure>
             <h3 className="path-card__title">Ya tengo web</h3>
             <p className="path-card__text">
               No se entiende, se ve antigua o no consigue contactos.
@@ -139,6 +173,16 @@ export default function Home() {
           </Link>
 
           <Link className="path-card" href="/servicios#acompanamiento">
+            <figure className="path-card__art" aria-hidden="true">
+              <Image
+                src="/assets/iconos-servicios-vecina-digital/10-acompanamiento.webp"
+                alt=""
+                width={220}
+                height={220}
+                sizes="(max-width: 768px) 140px, 160px"
+                quality={85}
+              />
+            </figure>
             <h3 className="path-card__title">Acompañamiento mensual</h3>
             <p className="path-card__text">
               Pequeños cambios, mantenimiento y ayuda digital continua.

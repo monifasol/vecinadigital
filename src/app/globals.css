@@ -547,8 +547,9 @@ input:focus, textarea:focus{
 }
 
 .path-card{
-  display: block;
-  padding: 20px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 18px 22px;
   border-radius: calc(var(--radius) + 4px);
   background: rgba(255,255,255,0.18);
   border: 1px solid rgba(43,38,34,0.10);
@@ -574,12 +575,55 @@ input:focus, textarea:focus{
   transform: translateY(-2px);
 }
 
+.path-card__art{
+  margin: 0 auto 12px;
+  width: 100%;
+  height: 132px;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  animation: serviceArtRise 700ms ease both;
+}
+
+.path-card__art img{
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 132px;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.paths-teaser__grid .path-card:nth-child(1) .path-card__art{ animation-delay: 40ms; }
+.paths-teaser__grid .path-card:nth-child(2) .path-card__art{ animation-delay: 100ms; }
+.paths-teaser__grid .path-card:nth-child(3) .path-card__art{ animation-delay: 160ms; }
+.paths-teaser__grid .path-card:nth-child(4) .path-card__art{ animation-delay: 220ms; }
+
+@media (min-width: 769px){
+  .path-card__art{
+    height: 148px;
+  }
+
+  .path-card__art img{
+    max-width: 148px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .path-card__art{
+    animation: none;
+  }
+}
+
 .path-card__title{
   margin: 0 0 8px;
   font-family: var(--serif);
   font-size: 20px;
   font-weight: 600;
   line-height: 1.25;
+  min-height: calc(1.25em * 2);
   color: rgba(43,38,34,0.92);
 }
 
@@ -762,35 +806,36 @@ input:focus, textarea:focus{
 }
 
 
-/* --- Manifest — qué hace Vecina Digital --- */
+/* --- Manifest — soy tu vecina --- */
 
 .manifest{
   margin: 40px auto 48px;
   padding: 44px 24px 48px;
-  max-width: 480px;
+  max-width: 560px;
   text-align: center;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
-.manifest__kicker{
-  margin: 0 0 16px;
-  font-size: 15px;
-  line-height: 1.5;
-  color: var(--muted);
-}
-
 .manifest__lead{
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(26px, 4vw, 34px);
+  font-size: clamp(22px, 3.6vw, 32px);
   font-weight: 600;
-  line-height: 1.15;
+  line-height: 1.2;
   color: rgba(43, 38, 34, 0.9);
+  white-space: nowrap;
+}
+
+@media (max-width: 380px){
+  .manifest__lead{
+    white-space: normal;
+    font-size: 21px;
+  }
 }
 
 .manifest__door{
-  margin: 14px auto 22px;
+  margin: 18px auto 26px;
   line-height: 0;
 }
 
@@ -802,23 +847,19 @@ input:focus, textarea:focus{
   opacity: 0.88;
 }
 
-.manifest__lines{
+.manifest__body{
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 1.1em;
+  text-align: left;
 }
 
-.manifest__lines p{
+.manifest__body p{
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(14px, 2vw, 16px);
-  line-height: 1.5;
-  color: rgba(43, 38, 34, 0.72);
-}
-
-.manifest__lines p:last-child{
-  color: rgba(43, 38, 34, 0.84);
-  font-weight: 500;
+  font-size: clamp(15px, 2vw, 17px);
+  line-height: 1.65;
+  color: rgba(43, 38, 34, 0.78);
 }
 
 /* --- Pro band (section for PRO services) --- */
