@@ -1,8 +1,16 @@
+import fs from "fs";
 import path from "path";
 
 const SITE_URL = "https://www.vecinadigital.com";
+const EMAIL_ASSETS = path.join(process.cwd(), "public/assets/email");
 export const LOGO_CONTENT_ID = "vecina-logo";
 export const CASITA_CONTENT_ID = "vecina-casita";
+
+/** Resend treats `path` as a public URL. Local files go in `content` (base64). */
+function inlinePng(filename, contentId) {
+  const content = fs.readFileSync(path.join(EMAIL_ASSETS, filename)).toString("base64");
+  return { filename, content, contentId };
+}
 
 function escapeHtml(value) {
   return String(value)
@@ -19,29 +27,15 @@ function formatMessage(message) {
 
 /** Inline logo attachment for Resend (CID). */
 export function logoAttachment() {
-  return {
-    filename: "logo-vecina-digital-acuarela.png",
-    path: path.join(
-      process.cwd(),
-      "public/assets/identidad-vecina-digital-acuarela/logo-vecina-digital-acuarela.png"
-    ),
-    contentId: LOGO_CONTENT_ID,
-  };
+  return inlinePng("logo-vecina-digital-email.png", LOGO_CONTENT_ID);
 }
 
 /** Inline casita illustration for the visitor email. */
 export function casitaAttachment() {
-  return {
-    filename: "casa-acuarela.png",
-    path: path.join(
-      process.cwd(),
-      "public/assets/identidad-vecina-digital-acuarela/casa-acuarela.png"
-    ),
-    contentId: CASITA_CONTENT_ID,
-  };
+  return inlinePng("casa-acuarela-email.png", CASITA_CONTENT_ID);
 }
 
-function logoBlock({ width = 220 } = {}) {
+function logoBlock({ width = 400 } = {}) {
   return `
               <a href="${SITE_URL}" style="display:inline-block;text-decoration:none;">
                 <img
@@ -86,7 +80,7 @@ export function visitorConfirmationEmail({ message }) {
           <tr>
             <td style="padding:36px 32px 28px;font-family:Georgia,'Times New Roman',serif;color:#2b2622;">
               <div style="margin:0 0 22px;">
-${logoBlock({ width: 220 })}
+${logoBlock({ width: 400 })}
               </div>
               <h1 style="margin:0 0 18px;font-size:28px;line-height:1.25;font-weight:600;color:#2b2622;">
                 Gracias por escribir
@@ -156,7 +150,7 @@ export function ownerNotificationEmail({ email, message }) {
           <tr>
             <td style="padding:32px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#2b2622;">
               <div style="margin:0 0 18px;">
-${logoBlock({ width: 180 })}
+${logoBlock({ width: 400 })}
               </div>
               <h1 style="margin:0 0 20px;font-family:Georgia,'Times New Roman',serif;font-size:24px;line-height:1.3;font-weight:600;">
                 Nuevo mensaje
