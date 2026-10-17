@@ -71,7 +71,7 @@ const quickServices = [
 const presenceServices = [
   {
     id: "pagina-expres",
-    title: "Página informativa exprés",
+    title: "Página de presentación",
     price: "180 €",
     description:
       "Para que te encuentren, entiendan qué haces y puedan contactar contigo fácilmente.",
@@ -252,7 +252,7 @@ export default function PlansPage() {
               <p className="plans__nudge-text">
                 Si ahora mismo solo necesitas que cuando alguien te busque
                 encuentre horarios, qué haces y un botón de WhatsApp, podemos
-                empezar por la página informativa exprés. Luego, cuando toque,
+                empezar por la página de presentación. Luego, cuando toque,
                 la convertimos en algo más grande.
               </p>
             </aside>
