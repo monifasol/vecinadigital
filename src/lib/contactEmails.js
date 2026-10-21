@@ -57,6 +57,28 @@ function casitaBlock({ width = 120 } = {}) {
                 />`;
 }
 
+/**
+ * 4px accent painted on the rounded card. A bar in its own row stays square
+ * unless the card clips it; the internal mail was missing that clip.
+ */
+function cardOpen(accentImage) {
+  return `
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:560px;border-collapse:separate;border-spacing:0;">
+          <tr>
+            <td style="padding:0;">
+              <div style="border-radius:18px;overflow:hidden;background-color:#fffcf8;background-image:${accentImage};background-repeat:no-repeat;background-position:top center;background-size:100% 4px;border:1px solid rgba(43,38,34,0.08);">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">`;
+}
+
+function cardClose() {
+  return `
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>`;
+}
+
 /** Confirmation email sent to the visitor. */
 export function visitorConfirmationEmail({ message }) {
   const safeMessage = formatMessage(message);
@@ -73,12 +95,9 @@ export function visitorConfirmationEmail({ message }) {
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f6f1e8;">
     <tr>
       <td align="center" style="padding:40px 20px;">
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:560px;background-color:#fffcf8;border-radius:18px;border:1px solid rgba(43,38,34,0.08);overflow:hidden;">
+${cardOpen("linear-gradient(90deg,#c56a3a,#e6b59b,#6f7f5c)")}
           <tr>
-            <td style="height:4px;background:linear-gradient(90deg,#c56a3a,#e6b59b,#6f7f5c);font-size:0;line-height:0;">&nbsp;</td>
-          </tr>
-          <tr>
-            <td style="padding:36px 32px 28px;font-family:Georgia,'Times New Roman',serif;color:#2b2622;">
+            <td style="padding:40px 32px 28px;font-family:Georgia,'Times New Roman',serif;color:#2b2622;">
               <div style="margin:0 0 22px;">
 ${logoBlock({ width: 400 })}
               </div>
@@ -117,7 +136,7 @@ ${casitaBlock({ width: 140 })}
               </p>
             </td>
           </tr>
-        </table>
+${cardClose()}
       </td>
     </tr>
   </table>
@@ -143,12 +162,9 @@ export function ownerNotificationEmail({ email, message }) {
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f6f1e8;">
     <tr>
       <td align="center" style="padding:40px 20px;">
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:560px;background-color:#fffcf8;border-radius:18px;border:1px solid rgba(43,38,34,0.08);">
+${cardOpen("linear-gradient(#6f7f5c,#6f7f5c)")}
           <tr>
-            <td style="height:4px;background:#6f7f5c;font-size:0;line-height:0;">&nbsp;</td>
-          </tr>
-          <tr>
-            <td style="padding:32px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#2b2622;">
+            <td style="padding:36px 32px 32px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#2b2622;">
               <div style="margin:0 0 18px;">
 ${logoBlock({ width: 400 })}
               </div>
@@ -168,7 +184,7 @@ ${logoBlock({ width: 400 })}
               </table>
             </td>
           </tr>
-        </table>
+${cardClose()}
       </td>
     </tr>
   </table>
