@@ -1,17 +1,35 @@
-import { DM_Sans, Cormorant_Garamond } from "next/font/google"
+import localFont from "next/font/local"
 import "./globals.css"
 
-const sans = DM_Sans({
-  subsets: ["latin"],
+const sans = localFont({
+  src: "../fonts/dm-sans-latin-wght-normal.woff2",
+  weight: "100 1000",
   variable: "--font-sans",
   display: "swap",
+  adjustFontFallback: "Arial",
 })
 
-const serif = Cormorant_Garamond({
-  subsets: ["latin"],
+const serif = localFont({
+  src: [
+    {
+      path: "../fonts/cormorant-garamond-latin-400-normal.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/cormorant-garamond-latin-500-normal.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/cormorant-garamond-latin-600-normal.woff2",
+      weight: "600",
+      style: "normal",
+    },
+  ],
   variable: "--font-serif",
-  weight: ["400", "500", "600"],
   display: "swap",
+  adjustFontFallback: "Times New Roman",
 })
 
 export const metadata = {
