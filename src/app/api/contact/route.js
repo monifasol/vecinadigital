@@ -1,4 +1,4 @@
-import { Resend } from "resend";
+import { sendEmail } from "@/lib/forwardEmail";
 import {
   visitorConfirmationEmail,
   ownerNotificationEmail,
@@ -6,12 +6,10 @@ import {
   casitaAttachment,
 } from "@/lib/contactEmails";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request) {
   try {
-    if (!process.env.RESEND_API_KEY) {
-      console.error("RESEND_API_KEY is missing");
+    if (!process.env.FORWARDEMAIL_API_TOKEN) {
+      console.error("FORWARDEMAIL_API_TOKEN is missing");
       return Response.json(
         { success: false, error: "not_configured" },
         { status: 500 }
@@ -36,8 +34,7 @@ export async function POST(request) {
     const logo = logoAttachment();
     const casita = casitaAttachment();
 
-    // 1. Email para mí
-    const toMe = await resend.emails.send({
+    const toMe = await sendEmail({
       from,
       to,
       replyTo: email,
@@ -46,13 +43,12 @@ export async function POST(request) {
       attachments: [logo],
     });
 
-    if (toMe.error) {
-      console.error("Resend error (to me):", toMe.error);
-      return Response.json({ success: false, error: toMe.error }, { status: 502 });
+    if (!toMe.ok) {
+      console.error("Forward Email error (to me):", toMe.status, toMe.detail);
+      return Response.json({ success: false, error: "send_failed" }, { status: 502 });
     }
 
-    // 2. Copia para quien escribe
-    const toUser = await resend.emails.send({
+    const toUser = await sendEmail({
       from,
       to: email,
       replyTo: to,
@@ -61,15 +57,15 @@ export async function POST(request) {
       attachments: [logo, casita],
     });
 
-    if (toUser.error) {
-      console.error("Resend error (to user):", toUser.error);
+    if (!toUser.ok) {
+      console.error("Forward Email error (to user):", toUser.status, toUser.detail);
       return Response.json(
-        { success: false, error: toUser.error },
+        { success: false, error: "send_failed" },
         { status: 502 }
       );
     }
 
-    return Response.json({ success: true, id: toMe.data?.id });
+    return Response.json({ success: true, id: toMe.id });
   } catch (error) {
     console.error("Contact API error:", error);
     return Response.json(
