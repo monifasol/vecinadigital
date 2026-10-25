@@ -1,6 +1,6 @@
 /**
  * Versiones pequeñas de la acuarela para incrustar en el correo.
- * El formulario las lee y las manda a Resend como contenido en base64.
+ * El formulario las lee y las manda a Forward Email como contenido en base64.
  *
  * Desde la raíz del proyecto:
  *   npm run generate-email-images

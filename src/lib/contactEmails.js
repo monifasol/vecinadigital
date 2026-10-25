@@ -6,10 +6,17 @@ const EMAIL_ASSETS = path.join(process.cwd(), "public/assets/email");
 export const LOGO_CONTENT_ID = "vecina-logo";
 export const CASITA_CONTENT_ID = "vecina-casita";
 
-/** Resend treats `path` as a public URL. Local files go in `content` (base64). */
-function inlinePng(filename, contentId) {
+/** Forward Email disables file and URL attachments. Local files go in `content` (base64). */
+function inlinePng(filename, cid) {
   const content = fs.readFileSync(path.join(EMAIL_ASSETS, filename)).toString("base64");
-  return { filename, content, contentId };
+  return {
+    filename,
+    content,
+    encoding: "base64",
+    cid,
+    contentType: "image/png",
+    contentDisposition: "inline",
+  };
 }
 
 function escapeHtml(value) {
@@ -25,7 +32,7 @@ function formatMessage(message) {
   return escapeHtml(message).replaceAll("\n", "<br>");
 }
 
-/** Inline logo attachment for Resend (CID). */
+/** Inline logo attachment (CID). */
 export function logoAttachment() {
   return inlinePng("logo-vecina-digital-email.png", LOGO_CONTENT_ID);
 }
