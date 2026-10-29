@@ -141,10 +141,10 @@
   border: 1px solid var(--accent-ink);
   background: var(--accent-main);
   color: #fff;
-  font-family: var(--sans);
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
   line-height: 1;
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
   -webkit-print-color-adjust: exact;
@@ -152,8 +152,8 @@
 }
 
 .valueLabel {
-  font-family: var(--sans);
-  font-weight: 600;
+  font-family: var(--serif);
+  font-weight: 500;
 }
 
 .value strong {
@@ -287,5 +287,10 @@
     page-break-after: avoid;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+  }
+
+  .value {
+    box-shadow: none;
+    filter: none;
   }
 }
