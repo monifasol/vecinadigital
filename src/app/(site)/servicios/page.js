@@ -441,21 +441,20 @@ export default function PlansPage() {
             </h2>
           </header>
 
-          <div className="plans__grid plans__grid--paired">
-            <article
-              className="plan plan--appointments"
-              aria-labelledby="plan-appointments-title"
-            >
-              <ServiceArt src={illustrations["citas-online"]} size="plan" />
-              <div className="plan__top">
-                <h3 className="plan__title" id="plan-appointments-title">
-                  Web con citas online
-                </h3>
-                <p className="plan__lead">
-                  Que tus clientes puedan reservar mientras tú sigues
-                  atendiendo.
-                </p>
-              </div>
+          <article
+            className="plan plan--appointments"
+            aria-labelledby="appointments-title"
+          >
+            <ServiceArt src={illustrations["citas-online"]} size="plan" />
+
+            <div className="plan__body">
+              <p className="plan__lead">
+                Que tus clientes puedan reservar mientras tú sigues atendiendo.
+              </p>
+              <p className="plan__hint">
+                Para peluquerías, barberías, talleres, academias y otros
+                negocios que trabajan con cita previa.
+              </p>
 
               <ul className="plan__list">
                 <li>Una página con secciones y la información de tu negocio</li>
@@ -466,6 +465,9 @@ export default function PlansPage() {
                 <li>Puesta en marcha y formación para aprender a utilizarla</li>
               </ul>
 
+              <p className="plan__hint">
+                Incluye una agenda para un profesional. Si sois varios, lo hablamos.
+              </p>
               <p className="plan__price">550 € + 30 €/mes de mantenimiento</p>
 
               <div className="plan__cta">
@@ -473,32 +475,8 @@ export default function PlansPage() {
                   Lo vemos para tu negocio
                 </Link>
               </div>
-            </article>
-
-            <aside className="store-intro" aria-label="Sobre las citas online">
-              <p className="store-intro__text">
-                Una página con la información de tu negocio, tus servicios y
-                una agenda donde tus clientes puedan elegir una cita
-                disponible. Preparada para ti y fácil de gestionar desde el
-                móvil.
-              </p>
-              <p className="store-intro__text">
-                El precio incluye una agenda para un único profesional. Si
-                necesitas varios profesionales o una configuración especial,
-                te preparo un presupuesto cerrado.
-              </p>
-              <p className="store-intro__text">
-                La cuota mensual incluye alojamiento, mantenimiento técnico,
-                comprobación del funcionamiento de las reservas y soporte para
-                dudas de uso. Las nuevas funcionalidades y los cambios de
-                mayor alcance se presupuestan aparte.
-              </p>
-              <p className="store-intro__text store-intro__text--soft">
-                Para peluquerías, barberías, centros de estética y otros
-                negocios que trabajan con cita previa.
-              </p>
-            </aside>
-          </div>
+            </div>
+          </article>
         </section>
 
         {/* Tienda online */}
@@ -522,7 +500,7 @@ export default function PlansPage() {
             >
               <ServiceArt src={illustrations["tienda-completa"]} size="plan" />
               <div className="plan__top">
-                <p className="plan__eyebrow">Hasta 25 productos</p>
+                <p className="plan__eyebrow">Hasta 50 productos</p>
                 <h3 className="plan__title" id="plan-store-title">
                   Tu tienda online
                 </h3>
@@ -533,7 +511,7 @@ export default function PlansPage() {
 
               <ul className="plan__list">
                 <li>Diseño de la tienda</li>
-                <li>Hasta 25 productos</li>
+                <li>Hasta 50 productos</li>
                 <li>Pagos online</li>
                 <li>Configuración básica de envíos</li>
                 <li>Adaptada a móvil</li>
@@ -556,7 +534,7 @@ export default function PlansPage() {
             >
               <ServiceArt src={illustrations["tienda-ampliada"]} size="plan" />
               <div className="plan__top">
-                <p className="plan__eyebrow">Hasta 75 productos</p>
+                <p className="plan__eyebrow">Hasta 125 productos</p>
                 <h3 className="plan__title" id="plan-store-plus-title">
                   Tienda online ampliada
                 </h3>
@@ -567,7 +545,7 @@ export default function PlansPage() {
 
               <ul className="plan__list">
                 <li>Todo lo anterior</li>
-                <li>Hasta 75 productos</li>
+                <li>Hasta 125 productos</li>
               </ul>
 
               <p className="plan__price">1.100 €</p>
@@ -597,7 +575,7 @@ export default function PlansPage() {
           </div>
 
           <p className="plans__also">
-            Más de 75 productos — presupuesto cerrado.
+            Más de 125 productos — presupuesto cerrado.
           </p>
         </section>
 

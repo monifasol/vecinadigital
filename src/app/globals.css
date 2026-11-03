@@ -35,11 +35,23 @@ body{
   line-height: 1.5;
 }
 
+/* Páginas cortas: el footer se queda en el borde inferior */
+body:has(> .site-footer){
+  display: flex;
+  flex-direction: column;
+}
+
+body:has(> .site-footer) > main{
+  flex: 1 0 auto;
+}
+
 a{ color: inherit; text-decoration: none; }
 a:hover{ text-decoration: underline; }
 
 .site-header{
   position: relative;
+  flex-shrink: 0;
+  width: 100%;
   max-width: 1120px;
   margin: 0 auto;
   padding: 16px 18px;
@@ -543,15 +555,23 @@ input:focus, textarea:focus{
 
 /* Footer */
 .site-footer{
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 36px 24px 40px;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 36px max(24px, calc((100% - 1120px) / 2)) 40px;
   color: var(--muted);
   border-top: 1px solid var(--line);
 }
 
-main:has(> .contact:last-child) + .site-footer{
+main:has(> .contact:has(> .contact__art):last-child) + .site-footer{
   border-top: none;
+}
+
+/* Tu vecina y Por dentro: la firma sigue el borde del artículo, no la columna ancha */
+main:has(> .about-article) + .site-footer{
+  padding-left: max(24px, calc((100% - 760px) / 2 + 24px));
+  padding-right: max(24px, calc((100% - 760px) / 2 + 24px));
 }
 
 .site-footer__meta{
@@ -1001,6 +1021,10 @@ a.emphasis:hover{
   max-width: none;
   margin: 36px 0 0;
   padding: 48px max(24px, calc((100% - 1120px) / 2)) 52px;
+}
+
+/* El lavado solo en la home, donde la ilustración es hermana del texto */
+.contact:has(> .contact__art){
   background: linear-gradient(
     180deg,
     rgba(111,127,92,0.08),
@@ -1226,6 +1250,16 @@ a.emphasis:hover{
 /* =========================
    PLANS / PACKS
    ========================= */
+
+/* Misma columna que el footer: el 24 px solo es el margen mínimo en pantallas estrechas */
+.plans{
+  width: 100%;
+  max-width: none;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: max(24px, calc((100% - 1120px) / 2));
+  padding-left: max(24px, calc((100% - 1120px) / 2));
+}
 
 /* Header */
 .plans__header{
@@ -1698,10 +1732,6 @@ a.emphasis:hover{
     align-items: stretch;
   }
 
-  .plans__grid--paired{
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
-    align-items: stretch;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px){
@@ -1790,11 +1820,61 @@ a.emphasis:hover{
 }
 
 .plan--appointments{
+  display: grid;
+  grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
+  align-items: center;
+  gap: 12px 36px;
+  width: 100%;
   background: linear-gradient(
     180deg,
     rgba(111,127,92,0.10),
     rgba(255,255,255,0.22)
   );
+}
+
+.plan--appointments .plan__lead{
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 600;
+  color: rgba(43,38,34,0.9);
+}
+
+.plan--appointments .service-art{
+  margin: 0;
+}
+
+.plan--appointments .service-art__img{
+  max-width: 270px;
+}
+
+.plan__body{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.plan__hint{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.plan--appointments .plan__cta{
+  margin-top: 0;
+}
+
+@media (max-width: 720px){
+  .plan--appointments{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .plan--appointments .plan__body{
+    width: 100%;
+  }
 }
 
 .plan--store{
