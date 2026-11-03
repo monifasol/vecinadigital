@@ -1255,15 +1255,17 @@ a.emphasis:hover{
 .plans{
   width: 100%;
   max-width: none;
+  margin-top: 8px;
   margin-right: 0;
   margin-left: 0;
+  padding-top: 12px;
   padding-right: max(24px, calc((100% - 1120px) / 2));
   padding-left: max(24px, calc((100% - 1120px) / 2));
 }
 
 /* Header */
 .plans__header{
-  max-width: 720px;
+  max-width: 790px;
   margin-bottom: 36px;
 }
 
@@ -1420,7 +1422,7 @@ a.emphasis:hover{
 }
 
 .plans__block-header{
-  max-width: 720px;
+  max-width: 790px;
   margin-bottom: 24px;
 }
 
@@ -1446,7 +1448,6 @@ a.emphasis:hover{
   font-size: 16px;
   line-height: 1.6;
   color: var(--muted);
-  max-width: 58ch;
 }
 
 .plans__block-lead + .plans__block-lead{
@@ -1463,6 +1464,10 @@ a.emphasis:hover{
   line-height: 1.6;
   color: var(--muted);
   max-width: 62ch;
+}
+
+.plans__also--line{
+  max-width: none;
 }
 
 /* Quick services grid */

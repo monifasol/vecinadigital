@@ -150,8 +150,8 @@ export default function PlansPage() {
             ¿Por dónde empezamos?
           </h1>
           <p className="plans__intro">
-            Puedo ayudarte con una web completa… o con algo pequeño que te
-            solucione el día a día. Empieza por lo que necesitas ahora.
+            Una web, una agenda de citas o poner al día la información de tu
+            negocio. Cuéntame qué te vendría bien y lo vemos juntos.
           </p>
         </header>
 
@@ -218,12 +218,14 @@ export default function PlansPage() {
           aria-labelledby="quick-title"
         >
           <header className="plans__block-header">
+            <p className="plans__block-kicker">Para el día a día</p>
             <h2 className="plans__block-title" id="quick-title">
-              Podemos empezar por algo pequeño
+              Pequeñas soluciones
             </h2>
             <p className="plans__block-lead">
-              Servicios cerrados, comprensibles y con precio. Para negocios que
-              necesitan algo concreto ya — aunque no quieran una web todavía.
+              A veces basta con que tus horarios estén bien en Google o que tu
+              carta pueda consultarse desde el móvil. Cosas sencillas que te
+              quitan trabajo, con el precio claro desde el principio.
             </p>
           </header>
 
@@ -237,15 +239,15 @@ export default function PlansPage() {
             ))}
 
             <aside className="plans__nudge" aria-labelledby="bridge-title">
-              <p className="plans__nudge-kicker">Un apunte</p>
+              <p className="plans__nudge-kicker">¿Qué es?</p>
               <h3 className="plans__nudge-title" id="bridge-title">
-                No hace falta empezar con una web de 450 €
+                Lo esencial para que te encuentren
               </h3>
               <p className="plans__nudge-text">
-                Si ahora mismo solo necesitas que cuando alguien te busque
-                encuentre horarios, qué haces y un botón de WhatsApp, podemos
-                empezar por la página de presentación. Luego, cuando toque,
-                la convertimos en algo más grande.
+                Tus horarios, lo que haces y una forma fácil de contactar
+                contigo. Si eso es lo que necesitas ahora, la página de
+                presentación puede ser suficiente. Y si más adelante necesitas
+                ampliar, podemos hacerlo.
               </p>
             </aside>
           </div>
@@ -280,9 +282,9 @@ export default function PlansPage() {
           aria-labelledby="paths-title"
         >
           <header className="plans__block-header">
-            <p className="plans__block-kicker">Webs y cuidado</p>
+            <p className="plans__block-kicker">Quiero dar a conocer mi negocio</p>
             <h2 className="plans__block-title" id="paths-title">
-              Si lo que buscas es una web
+              Tu página web
             </h2>
             <p className="plans__block-lead">
               Elige el que más se parece a tu situación.
@@ -435,9 +437,9 @@ export default function PlansPage() {
           aria-labelledby="appointments-title"
         >
           <header className="plans__block-header">
-            <p className="plans__block-kicker">Quiero recibir reservas</p>
+            <p className="plans__block-kicker">Quiero organizar mis citas</p>
             <h2 className="plans__block-title" id="appointments-title">
-              Web con citas online
+              Tu web con citas online
             </h2>
           </header>
 
@@ -462,7 +464,6 @@ export default function PlansPage() {
                 <li>Reservas online según disponibilidad</li>
                 <li>Agenda para consultar y gestionar las citas</li>
                 <li>Diseño adaptado a móvil</li>
-                <li>Puesta en marcha y formación para aprender a utilizarla</li>
               </ul>
 
               <p className="plan__hint">
@@ -505,7 +506,7 @@ export default function PlansPage() {
                   Tu tienda online
                 </h3>
                 <p className="plan__lead">
-                  Tienda clara, fácil de gestionar y lista para vender.
+                  Tienda fácil de gestionar y lista para vender.
                 </p>
               </div>
 
@@ -574,8 +575,8 @@ export default function PlansPage() {
             </aside>
           </div>
 
-          <p className="plans__also">
-            Más de 125 productos — presupuesto cerrado.
+          <p className="plans__also plans__also--line">
+            ¿Tienes más de 125 productos? Cuéntame qué necesitas y te preparo una propuesta a medida.
           </p>
         </section>
 
