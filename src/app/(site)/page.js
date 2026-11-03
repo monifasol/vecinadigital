@@ -59,28 +59,25 @@ export default function Home() {
           No soy una agencia, soy tu vecina.
         </h2>
 
-        <figure className="manifest__door" aria-hidden="true">
-          <Image
-            src="/assets/vecina-micro-mark.png"
-            alt=""
-            width={56}
-            height={56}
-          />
-        </figure>
-
         <div className="manifest__body">
           <p>
-            No vengo a vender sino a acompañar. Llevo más de veinte años
-            creando aplicaciones y ahora las hago para quien abre la persiana
-            cada mañana. Si tu negocio merece verse online y la tecnología te
-            abruma, aquí estoy: te escucho y te lo explico en claro.
+            Soy Mónica. Vivo en Villablino y llevo casi veinte años creando
+            webs y aplicaciones. Con Vecina Digital quiero acercar lo que sé
+            hacer a los negocios que tengo cerca: sitios con personas detrás,
+            mucho trabajo y una historia que merece contarse.
           </p>
           <p>
-            Hay gente buscando lo que haces y no te ve. Hay negocios preciosos
-            que parecen invisibles en Internet. Yo estoy para cambiar eso:
-            una web clara, humana y hecha a tu medida, para que dejes de
-            sentir que “esto no es para ti”.
+            <strong>Si trabajamos juntos, hablarás conmigo.</strong> Me ocuparé
+            de entender qué necesitas, te explicaré las cosas con palabras
+            normales y cuidaré tu web con las mismas ganas con las que tú
+            cuidas lo tuyo.
           </p>
+          <p>
+            Me hace ilusión que los negocios de aquí se vean, se conozcan y
+            sigan llenando de vida nuestros pueblos. Esta es mi forma de
+            aportar.
+          </p>
+          <p className="manifest__sign">Mónica</p>
         </div>
       </section>
 
