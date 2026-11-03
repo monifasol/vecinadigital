@@ -176,16 +176,19 @@ export default function Home() {
             Estás en casa. Escríbeme y lo vemos.
           </p>
 
-          <div className="contact__aside">
+          <a
+            className="wa-link wa-link--button"
+            href="https://wa.me/34622210151"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="wa-link__icon" aria-hidden="true">
+              <img src="/assets/icons/icon-whatsapp.png" alt="" />
+            </span>
+            <span className="wa-link__label">Escríbeme por WhatsApp</span>
+          </a>
 
-            <a className="wa-link" href="https://wa.me/34622210151" target="_blank" rel="noopener">
-              <span className="wa-link__icon" aria-hidden="true">
-                <img src="/assets/icons/icon-whatsapp.png" alt="" />
-              </span>
-              <span className="wa-link__label">Escríbeme por WhatsApp</span>
-            </a>
-            <p className="contact__tiny">Si lo prefieres, también puedes usar el formulario.</p>
-          </div>
+          <p className="contact__switch">O déjame un mensaje por aquí:</p>
 
           <ContactForm />
 
