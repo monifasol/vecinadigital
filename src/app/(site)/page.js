@@ -54,36 +54,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="work-title">
-        <h2 id="work-title">Cómo trabajo</h2>
-
-        <ol className="workline">
-          <li className="workline__item">
-            <span className="workline__dot" aria-hidden="true"></span>
-            <div className="workline__content">
-              <h3>Me cuentas</h3>
-              <p>Qué haces, para quién y qué necesitas.</p>
-            </div>
-          </li>
-
-          <li className="workline__item">
-            <span className="workline__dot" aria-hidden="true"></span>
-            <div className="workline__content">
-              <h3>Te propongo</h3>
-              <p>Estructura + diseño + una primera versión lista para enseñar.</p>
-            </div>
-          </li>
-
-          <li className="workline__item">
-            <span className="workline__dot" aria-hidden="true"></span>
-            <div className="workline__content">
-              <h3>Lo dejamos vivo</h3>
-              <p>Publicamos y te enseño a cuidarlo sin líos.</p>
-            </div>
-          </li>
-        </ol>
-      </section>
-
       <section className="manifest" aria-labelledby="manifest-title">
         <h2 className="manifest__lead" id="manifest-title">
           No soy una agencia, soy tu vecina.
@@ -132,7 +102,7 @@ export default function Home() {
             <h3 className="path-card__title">Algo pequeño, ya</h3>
             <p className="path-card__text">
               Google, WhatsApp, carta con QR, página exprés…
-              40–250 €. Sin necesidad de encargar una web completa.
+              40–180 €. Sin necesidad de encargar una web completa.
             </p>
           </Link>
 
@@ -149,15 +119,15 @@ export default function Home() {
             </figure>
             <h3 className="path-card__title">Quiero una web</h3>
             <p className="path-card__text">
-              Una página clara para explicar qué haces y recibir contactos.
-              500–900 €.
+              Una página con secciones para explicar qué haces y que te contacten.
+              450 €.
             </p>
           </Link>
 
-          <Link className="path-card" href="/servicios#mejorar-web">
+          <Link className="path-card" href="/servicios#citas-online">
             <figure className="path-card__art" aria-hidden="true">
               <Image
-                src="/assets/iconos-servicios-vecina-digital/09-mejorar-web.webp"
+                src="/assets/iconos-servicios-vecina-digital/citas-online.webp"
                 alt=""
                 width={220}
                 height={220}
@@ -165,10 +135,10 @@ export default function Home() {
                 quality={85}
               />
             </figure>
-            <h3 className="path-card__title">Ya tengo web</h3>
+            <h3 className="path-card__title">Web con citas online</h3>
             <p className="path-card__text">
-              No se entiende, se ve antigua o no consigue contactos.
-              500–1.200 €.
+              Que tus clientes puedan reservar mientras tú sigues atendiendo.
+              550 € + 30 €/mes de mantenimiento.
             </p>
           </Link>
 
@@ -198,79 +168,6 @@ export default function Home() {
           <Link className="btn" href="/servicios">
             Ver todos los servicios
           </Link>
-        </div>
-      </section>
-
-      <section className="pro-band" aria-labelledby="pro-title">
-        <h2 id="pro-title">Para proyectos más complejos</h2>
-
-        <div className="pro-band__inner">
-          <div className="pro-band__copy">
-            <p className="pro-band__text">
-              No todos los proyectos son iguales, hay proyectos que necesitan algo más.
-              <br/>
-              Algunos necesitan una base técnica sólida: estructura clara, que vaya bien de verdad y cero parches.
-            </p>
-
-            <p className="pro-band__text pro-band__text--soft">
-              Aquí es donde aporto más experiencia. Te ayudo con un enfoque más avanzado,
-              pero igual de humano. 
-              Construimos bien desde abajo para que tu web sea 
-              rápida, estable y fácil de mantener. 
-            </p>
-
-            <ul className="pro-band__list">
-              <li>
-                <strong>Que cargue rápido:</strong> una experiencia fluida, sin esperas innecesarias
-              </li>
-
-              <li>
-                <strong>Para que te encuentren en Google:</strong> estructura clara, textos entendibles y una base sólida
-              </li>
-
-              <li>
-                <strong>En el móvil y en el ordenador:</strong> se ve y se lee bien en cualquier pantalla
-              </li>
-
-              <li>
-                <strong>Que sea fácil de entender y usar:</strong> flujos claros, jerarquía y decisiones cuidadas
-              </li>
-
-              <li>
-                <strong>Funcionalidades avanzadas:</strong> formularios complejos, tienda online, áreas privadas o integraciones
-              </li>
-
-              <li>
-                <strong>Calidad técnica:</strong> orden, accesibilidad y detalles bien rematados
-              </li>
-
-              <li>
-                <strong>Mantenimiento sencillo:</strong> incluso en proyectos complejos, puedes actualizarla tú misma
-              </li>
-            </ul>
-
-            <div className="pro-band__cta">
-              <Link className="btn" href="/contact">Cuéntame tu caso</Link>
-              <Link className="btn btn--ghost" href="/servicios">
-                Lo vemos juntos
-              </Link>
-            </div>
-
-          </div>
-
-          <div className="pro-band__aside" aria-hidden="true">
-            <p className="pro-band__aside-title">¿Te suena?</p>
-
-            <div className="worries">
-              <span className="worry worry--left">“Mi web va lenta”</span>
-              <span className="worry worry--right">“En el móvil se ve regular”</span>
-              <span className="worry worry--left">“Google no me encuentra”</span>
-              <span className="worry worry--right">“Mi web no me representa”</span>
-              <span className="worry worry--left">“Me da miedo tocar algo y romperlo”</span>
-              <span className="worry worry--right">“La tecnología no es para mí”</span>
-            </div>
-
-          </div>
         </div>
       </section>
 
