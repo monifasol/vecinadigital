@@ -479,6 +479,15 @@ a:hover{ text-decoration: underline; }
   display: grid;
   gap: 12px;
   text-align: left;
+  position: relative;
+}
+
+.form__trap{
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .field{
