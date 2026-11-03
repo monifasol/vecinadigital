@@ -5,10 +5,28 @@ import {
   logoAttachment,
   casitaAttachment,
 } from "@/lib/contactEmails";
+import { decideContactPost, signFormToken } from "@/lib/contactGate";
+
+export async function GET() {
+  const secret = process.env.FORWARDEMAIL_API_TOKEN;
+  if (!secret) {
+    console.error("FORWARDEMAIL_API_TOKEN is missing");
+    return Response.json(
+      { success: false, error: "not_configured" },
+      { status: 500 }
+    );
+  }
+
+  return Response.json(
+    { token: signFormToken(secret) },
+    { headers: { "Cache-Control": "no-store" } }
+  );
+}
 
 export async function POST(request) {
   try {
-    if (!process.env.FORWARDEMAIL_API_TOKEN) {
+    const secret = process.env.FORWARDEMAIL_API_TOKEN;
+    if (!secret) {
       console.error("FORWARDEMAIL_API_TOKEN is missing");
       return Response.json(
         { success: false, error: "not_configured" },
@@ -17,15 +35,17 @@ export async function POST(request) {
     }
 
     const body = await request.json();
-    const email = String(body?.email || "").trim();
-    const message = String(body?.message || "").trim();
+    const decision = decideContactPost(body, secret);
 
-    if (!email || !message) {
+    if (!decision.send) {
+      if (decision.reason) console.info("Contact rejected:", decision.reason);
       return Response.json(
-        { success: false, error: "invalid_input" },
-        { status: 400 }
+        { success: false, error: decision.error },
+        { status: decision.status }
       );
     }
+
+    const { email, message } = decision;
 
     const to = process.env.CONTACT_TO_EMAIL || "monism@gmail.com";
     const from =

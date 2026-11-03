@@ -1,9 +1,30 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function ContactForm() {
   const [status, setStatus] = useState("idle")
+  const tokenRequest = useRef(null)
+
+  function loadToken() {
+    if (!tokenRequest.current) {
+      tokenRequest.current = fetch("/api/contact", { cache: "no-store" })
+        .then((res) => (res.ok ? res.json() : null))
+        .then((data) => {
+          if (!data?.token) tokenRequest.current = null
+          return data?.token || ""
+        })
+        .catch(() => {
+          tokenRequest.current = null
+          return ""
+        })
+    }
+    return tokenRequest.current
+  }
+
+  useEffect(() => {
+    loadToken()
+  }, [])
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -13,9 +34,14 @@ export default function ContactForm() {
 
     try {
         const formData = new FormData(form)
+        const formToken = await loadToken()
+        if (!formToken) throw new Error("Failed")
+
         const data = {
             email: formData.get("email"),
             message: formData.get("message"),
+            vd_hp: formData.get("vd_hp"),
+            formToken,
         }
 
         const res = await fetch("/api/contact", {
@@ -35,6 +61,10 @@ export default function ContactForm() {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
+        <div className="form__trap" aria-hidden="true">
+            <input type="text" name="vd_hp" tabIndex={-1} autoComplete="off" defaultValue="" />
+        </div>
+
         <label className="field">
             <input type="email" name="email" autoComplete="email" placeholder=" " required />
             <span>Tu email</span>
