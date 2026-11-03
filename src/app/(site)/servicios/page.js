@@ -4,7 +4,7 @@ import Link from "next/link"
 export const metadata = {
   title: "Servicios | Vecina Digital",
   description:
-    "Soluciones digitales para tu negocio: microtrabajos, webs, tienda online y acompañamiento. Empieza por lo que necesites ahora.",
+    "Soluciones digitales para tu negocio: microtrabajos, webs, citas online, tienda y acompañamiento. Empieza por lo que necesites ahora.",
 }
 
 const ART = "/assets/iconos-servicios-vecina-digital"
@@ -12,7 +12,6 @@ const ART = "/assets/iconos-servicios-vecina-digital"
 const illustrations = {
   google: `${ART}/01-google-business.webp`,
   whatsapp: `${ART}/02-whatsapp-business.webp`,
-  revision: `${ART}/03-revision-presencia-online.webp`,
   cambios: `${ART}/04-pequenos-cambios-web.webp`,
   "carta-qr": `${ART}/05-menu-carta-qr.webp`,
   "pagina-expres": `${ART}/06-pagina-informativa-expres.webp`,
@@ -20,6 +19,7 @@ const illustrations = {
   "otro-aire": `${ART}/08-rediseno-web.webp`,
   "mejorar-web": `${ART}/09-mejorar-web.webp`,
   acompanamiento: `${ART}/10-acompanamiento.webp`,
+  "citas-online": `${ART}/citas-online.webp`,
   "tienda-completa": `${ART}/11-tienda-online.webp`,
   "tienda-ampliada": `${ART}/12-tienda-online-ampliada.webp`,
   "proyecto-a-medida": `${ART}/13-proyecto-a-medida.webp`,
@@ -41,14 +41,6 @@ const quickServices = [
     description:
       "Perfil, horarios, descripción, mensaje de bienvenida, respuestas rápidas y catálogo básico.",
     illustration: illustrations.whatsapp,
-  },
-  {
-    id: "revision",
-    title: "Revisión de presencia online",
-    price: "45 €",
-    description:
-      "Te digo qué encuentra alguien cuando busca tu negocio y qué tres cosas cambiaría primero. Esos 45 € se descuentan si luego contratas otro servicio conmigo.",
-    illustration: illustrations.revision,
   },
   {
     id: "cambios",
@@ -158,8 +150,8 @@ export default function PlansPage() {
             ¿Por dónde empezamos?
           </h1>
           <p className="plans__intro">
-            Puedo ayudarte con una web completa… o con algo pequeño que te
-            solucione el día a día. Empieza por lo que necesitas ahora.
+            Una web, una agenda de citas o poner al día la información de tu
+            negocio. Cuéntame qué te vendría bien y lo vemos juntos.
           </p>
         </header>
 
@@ -176,13 +168,13 @@ export default function PlansPage() {
             <li>
               <a className="glance__row" href="#soluciones-rapidas">
                 <span className="glance__label">Pequeñas soluciones</span>
-                <span className="glance__price">40–250 €</span>
+                <span className="glance__price">40–180 €</span>
               </a>
             </li>
             <li>
               <a className="glance__row" href="#quiero-web">
                 <span className="glance__label">Tu primera web</span>
-                <span className="glance__price">500–900 €</span>
+                <span className="glance__price">450 €</span>
               </a>
             </li>
             <li>
@@ -226,12 +218,14 @@ export default function PlansPage() {
           aria-labelledby="quick-title"
         >
           <header className="plans__block-header">
+            <p className="plans__block-kicker">Para el día a día</p>
             <h2 className="plans__block-title" id="quick-title">
-              Podemos empezar por algo pequeño
+              Pequeñas soluciones
             </h2>
             <p className="plans__block-lead">
-              Servicios cerrados, comprensibles y con precio. Para negocios que
-              necesitan algo concreto ya — aunque no quieran una web todavía.
+              A veces basta con que tus horarios estén bien en Google o que tu
+              carta pueda consultarse desde el móvil. Cosas sencillas que te
+              quitan trabajo, con el precio claro desde el principio.
             </p>
           </header>
 
@@ -245,15 +239,15 @@ export default function PlansPage() {
             ))}
 
             <aside className="plans__nudge" aria-labelledby="bridge-title">
-              <p className="plans__nudge-kicker">Un apunte</p>
+              <p className="plans__nudge-kicker">¿Qué es?</p>
               <h3 className="plans__nudge-title" id="bridge-title">
-                No hace falta empezar con una web de 900 €
+                Lo esencial para que te encuentren
               </h3>
               <p className="plans__nudge-text">
-                Si ahora mismo solo necesitas que cuando alguien te busque
-                encuentre horarios, qué haces y un botón de WhatsApp, podemos
-                empezar por la página de presentación. Luego, cuando toque,
-                la convertimos en algo más grande.
+                Tus horarios, lo que haces y una forma fácil de contactar
+                contigo. Si eso es lo que necesitas ahora, la página de
+                presentación puede ser suficiente. Y si más adelante necesitas
+                ampliar, podemos hacerlo.
               </p>
             </aside>
           </div>
@@ -288,9 +282,9 @@ export default function PlansPage() {
           aria-labelledby="paths-title"
         >
           <header className="plans__block-header">
-            <p className="plans__block-kicker">Webs y cuidado</p>
+            <p className="plans__block-kicker">Quiero dar a conocer mi negocio</p>
             <h2 className="plans__block-title" id="paths-title">
-              Si lo que buscas es una web
+              Tu página web
             </h2>
             <p className="plans__block-lead">
               Elige el que más se parece a tu situación.
@@ -310,20 +304,20 @@ export default function PlansPage() {
                   Tu primera web
                 </h3>
                 <p className="plan__lead">
-                  Para quien no tiene web o necesita una página clara para
-                  explicar qué hace y recibir contactos.
+                  Para quien no tiene web o necesita una página con secciones
+                  para explicar qué hace y recibir contactos.
                 </p>
               </div>
 
               <ul className="plan__list">
-                <li>Una página clara y bonita</li>
-                <li>Textos y contenidos necesarios para tu web</li>
-                <li>Adaptada a móvil</li>
+                <li>Una página con secciones</li>
+                <li>Diseño personalizado</li>
+                <li>Contenido de tu negocio</li>
                 <li>Contacto por WhatsApp o email</li>
-                <li>Posicionamiento en Google</li>
+                <li>Adaptada a móvil</li>
               </ul>
 
-              <p className="plan__price">500–900 €</p>
+              <p className="plan__price">450 €</p>
 
               <div className="plan__cta">
                 <Link className="btn" href="/contact">
@@ -436,6 +430,56 @@ export default function PlansPage() {
           </div>
         </section>
 
+        {/* Citas online */}
+        <section
+          className="plans__block"
+          id="citas-online"
+          aria-labelledby="appointments-title"
+        >
+          <header className="plans__block-header">
+            <p className="plans__block-kicker">Quiero organizar mis citas</p>
+            <h2 className="plans__block-title" id="appointments-title">
+              Tu web con citas online
+            </h2>
+          </header>
+
+          <article
+            className="plan plan--appointments"
+            aria-labelledby="appointments-title"
+          >
+            <ServiceArt src={illustrations["citas-online"]} size="plan" />
+
+            <div className="plan__body">
+              <p className="plan__lead">
+                Que tus clientes puedan reservar mientras tú sigues atendiendo.
+              </p>
+              <p className="plan__hint">
+                Para peluquerías, barberías, talleres, academias y otros
+                negocios que trabajan con cita previa.
+              </p>
+
+              <ul className="plan__list">
+                <li>Una página con secciones y la información de tu negocio</li>
+                <li>Configuración de servicios, duración de las citas y horarios</li>
+                <li>Reservas online según disponibilidad</li>
+                <li>Agenda para consultar y gestionar las citas</li>
+                <li>Diseño adaptado a móvil</li>
+              </ul>
+
+              <p className="plan__hint">
+                Incluye una agenda para un profesional. Si sois varios, lo hablamos.
+              </p>
+              <p className="plan__price">550 € + 30 €/mes de mantenimiento</p>
+
+              <div className="plan__cta">
+                <Link className="btn" href="/contact">
+                  Lo vemos para tu negocio
+                </Link>
+              </div>
+            </div>
+          </article>
+        </section>
+
         {/* Tienda online */}
         <section
           className="plans__block"
@@ -457,18 +501,18 @@ export default function PlansPage() {
             >
               <ServiceArt src={illustrations["tienda-completa"]} size="plan" />
               <div className="plan__top">
-                <p className="plan__eyebrow">Hasta 25 productos</p>
+                <p className="plan__eyebrow">Hasta 50 productos</p>
                 <h3 className="plan__title" id="plan-store-title">
                   Tu tienda online
                 </h3>
                 <p className="plan__lead">
-                  Tienda clara, fácil de gestionar y lista para vender.
+                  Tienda fácil de gestionar y lista para vender.
                 </p>
               </div>
 
               <ul className="plan__list">
                 <li>Diseño de la tienda</li>
-                <li>Hasta 25 productos</li>
+                <li>Hasta 50 productos</li>
                 <li>Pagos online</li>
                 <li>Configuración básica de envíos</li>
                 <li>Adaptada a móvil</li>
@@ -491,7 +535,7 @@ export default function PlansPage() {
             >
               <ServiceArt src={illustrations["tienda-ampliada"]} size="plan" />
               <div className="plan__top">
-                <p className="plan__eyebrow">Hasta 75 productos</p>
+                <p className="plan__eyebrow">Hasta 125 productos</p>
                 <h3 className="plan__title" id="plan-store-plus-title">
                   Tienda online ampliada
                 </h3>
@@ -502,7 +546,7 @@ export default function PlansPage() {
 
               <ul className="plan__list">
                 <li>Todo lo anterior</li>
-                <li>Hasta 75 productos</li>
+                <li>Hasta 125 productos</li>
               </ul>
 
               <p className="plan__price">1.100 €</p>
@@ -531,8 +575,8 @@ export default function PlansPage() {
             </aside>
           </div>
 
-          <p className="plans__also">
-            Más de 75 productos — presupuesto cerrado.
+          <p className="plans__also plans__also--line">
+            ¿Tienes más de 125 productos? Cuéntame qué necesitas y te preparo una propuesta a medida.
           </p>
         </section>
 
@@ -545,9 +589,10 @@ export default function PlansPage() {
                 ¿Tu proyecto es más grande?
               </h2>
               <p className="plans__bigger-text">
-                Si necesitas reservas, varias páginas, idiomas, formularios
-                complejos, un catálogo muy amplio o algo más a medida, lo vemos
-                juntos y te preparo un presupuesto claro.
+                Si necesitas un sistema de reservas más complejo, varias
+                páginas, idiomas, formularios especiales, un catálogo muy
+                amplio o algo más a medida, lo vemos juntos y te preparo un
+                presupuesto claro.
               </p>
               <Link className="btn" href="/contact">
                 Cuéntame tu caso

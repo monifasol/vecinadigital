@@ -35,18 +35,18 @@ export default function ContactForm() {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-        <label>
-            Tu email
-            <input type="email" name="email" autoComplete="email" required />
+        <label className="field">
+            <input type="email" name="email" autoComplete="email" placeholder=" " required />
+            <span>Tu email</span>
         </label>
 
-        <label>
-            Cuéntame (2-3 líneas)
-            <textarea name="message" rows={4} required />
+        <label className="field">
+            <textarea name="message" rows={4} placeholder=" " required />
+            <span>Cuéntame qué tienes en mente</span>
         </label>
 
         <button className="btn" type="submit" disabled={status === "loading"}>
-            {status === "loading" ? "Enviando..." : "Escríbeme"}
+            {status === "loading" ? "Enviando..." : "Enviar mensaje"}
         </button>
 
         {status === "success" && (
