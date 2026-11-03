@@ -18,14 +18,14 @@ export default function DetrasDeVecinaDigitalPage() {
           <p><b>Vecina Digital es una empresa de una persona.</b> ¡Pero no es una empresa sin equipo!</p>
 
           <p>
-            Soy <b>ingeniera informática</b> desde hace más de 20 años y desde hace 3 trabajo
-             con inteligencia artificial todos los días.
+            Soy ingeniera informática, llevo casi 20 años trabajando en desarrollo web, 
+            y desde hace 3 trabajo con inteligencia artificial todos los días.
             Investigo con ella, programo, pruebo ideas, busco caminos, diseño sistemas,
             automatizo cosas que no tiene ningún sentido hacer a mano y, muchas veces,
             llego a lugares a los que sola habría tardado mucho más tiempo en llegar.
           </p>
 
-          <p>Creo que esto merece contarse, porque explica bastante bien cómo puedo hacer lo que hago.</p>
+          <p>Esto explica bastante bien cómo puedo hacer lo que hago.</p>
 
           <p>
             Hasta hace muy poco, sacar adelante determinados proyectos significaba
@@ -55,25 +55,14 @@ export default function DetrasDeVecinaDigitalPage() {
             o cuándo una idea es tan especial que merece la pena seguir tirando del hilo.
           </p>
 
-          <h3>Este año creé mi propia editorial</h3>
-
           <p>
-            La IA amplifica nuestras capacidades. Lo he vivido 
-            de una forma muy clara creando{" "}
-            <a href="https://www.brillabooks.com" target="_blank" rel="noopener noreferrer">
-              Brilla Books
-            </a>.
-            Hace no mucho, esa idea necesitaba contratar un
+            La IA amplifica nuestras capacidades. 
+            Hace no mucho, cualquier idea necesitaba contratar un
             equipo antes incluso de poder empezar (diseño, producción, desarrollo...)
-            Hoy eso es posible en una empresa de una sola persona,
-            gracias a poder acompañar todo el camino de mis libros desde 
-            la primera idea hasta el último detalle, apoyándome en la inteligencia 
-            artificial allí donde me ayuda a ampliar mis capacidades.
+            Hoy eso es necesario, y las empresas de una sola persona son una realidad, a mi parecer, preciosa.
           </p>
 
-          <p>Y eso, para alguien como yo,
-            se siente como un sueño hecho realidad. 
-            Poder acompañar una idea sin tener que partirla en pedazos 
+          <p>Poder acompañar una idea sin tener que partirla en pedazos 
             y repartirla entre departamentos, sino poder cuidarla entera de principio a fin.
           </p>
 
