@@ -42,26 +42,24 @@ export function casitaAttachment() {
   return inlinePng("casa-acuarela-email.png", CASITA_CONTENT_ID);
 }
 
+/**
+ * Gmail's inbox snippet treats a newline inside a tag as the end of the tag
+ * and prints the remaining attributes as preview text. Keep each <img> on one line.
+ */
 function logoBlock({ width = 400 } = {}) {
   return `
-              <a href="${SITE_URL}" style="display:inline-block;text-decoration:none;">
-                <img
-                  src="cid:${LOGO_CONTENT_ID}"
-                  alt="Vecina Digital"
-                  width="${width}"
-                  style="display:block;width:${width}px;max-width:100%;height:auto;border:0;outline:none;"
-                />
-              </a>`;
+              <a href="${SITE_URL}" style="display:inline-block;text-decoration:none;"><img src="cid:${LOGO_CONTENT_ID}" alt="Vecina Digital" width="${width}" style="display:block;width:${width}px;max-width:100%;height:auto;border:0;outline:none;" /></a>`;
 }
 
 function casitaBlock({ width = 120 } = {}) {
   return `
-                <img
-                  src="cid:${CASITA_CONTENT_ID}"
-                  alt=""
-                  width="${width}"
-                  style="display:block;margin:0 auto;width:${width}px;max-width:100%;height:auto;border:0;outline:none;"
-                />`;
+                <img src="cid:${CASITA_CONTENT_ID}" alt="" width="${width}" style="display:block;margin:0 auto;width:${width}px;max-width:100%;height:auto;border:0;outline:none;" />`;
+}
+
+/** First thing in the body, so Gmail previews this instead of the logo markup. */
+function inboxPreview(text) {
+  const filler = "&nbsp;&zwnj;".repeat(120);
+  return `<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;color:#f6f1e8;">${text}${filler}</div>`;
 }
 
 /**
@@ -99,6 +97,7 @@ export function visitorConfirmationEmail({ message }) {
   <title>He recibido tu mensaje</title>
 </head>
 <body style="margin:0;padding:0;background-color:#f6f1e8;">
+  ${inboxPreview("He recibido tu mensaje. Te respondo lo antes posible.")}
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f6f1e8;">
     <tr>
       <td align="center" style="padding:40px 20px;">
@@ -166,6 +165,7 @@ export function ownerNotificationEmail({ email, message }) {
   <title>Nuevo mensaje desde Vecina Digital</title>
 </head>
 <body style="margin:0;padding:0;background-color:#f6f1e8;">
+  ${inboxPreview(`Nuevo mensaje de ${safeEmail}`)}
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f6f1e8;">
     <tr>
       <td align="center" style="padding:40px 20px;">

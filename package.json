@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test src/lib/contactGate.test.js",
+    "test": "node --test src/lib/contactGate.test.js src/lib/contactEmails.test.js",
     "generate-qr": "node monscripts/generate-qr.js",
     "generate-email-images": "node monscripts/generate-email-images.js"
   },
