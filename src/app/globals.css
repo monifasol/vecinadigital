@@ -744,12 +744,13 @@ main:has(> .contact:last-child) + .site-footer{
 }
 
 .manifest__body p.manifest__sign{
-  margin-top: 6px;
-  font-family: "Bradley Hand", "Segoe Script", "Snell Roundhand", cursive;
-  font-size: 26px;
-  font-weight: 400;
+  margin: 10px -0.14em 0 0;
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 600;
   line-height: 1;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--accent-main);
   text-align: right;
 }
