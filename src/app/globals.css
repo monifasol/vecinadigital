@@ -785,7 +785,7 @@ main:has(> .about-article) + .site-footer{
 /* --- Manifest — soy tu vecina --- */
 
 .manifest{
-  margin: 40px auto 48px;
+  margin: 0 auto 48px;
   padding: 44px 24px 48px;
   max-width: 620px;
   text-align: center;
@@ -835,11 +835,11 @@ main:has(> .about-article) + .site-footer{
   text-align: right;
 }
 
-/* --- Pueblo — pausa entre el manifiesto y los servicios --- */
+/* --- Pueblo — pausa entre el hero y el manifiesto --- */
 
 .pueblo{
   margin: 0 auto;
-  padding: 88px 28px 96px;
+  padding: 88px 28px 0;
   max-width: 680px;
   text-align: center;
 }
@@ -847,8 +847,12 @@ main:has(> .about-article) + .site-footer{
 .pueblo__mark{
   display: flex;
   justify-content: center;
-  margin: 0 0 22px;
-  color: rgba(43, 38, 34, 0.42);
+  margin: 36px 0 12px;
+}
+
+.pueblo__plant{
+  width: 104px;
+  height: auto;
 }
 
 .pueblo__title{
@@ -879,7 +883,7 @@ main:has(> .about-article) + .site-footer{
 
 @media (max-width: 768px){
   .pueblo{
-    padding: 64px 22px 72px;
+    padding: 64px 22px 0;
   }
 }
 
