@@ -27,13 +27,12 @@ export default function Home() {
           </p>
 
           <p className="hero__lead">
-            Ayudo a pequeños negocios
-            a tener una web clara y útil,
-            sin complicaciones ni tecnicismos.
+            Ayudo a pequeños negocios y profesionales a tener una presencia
+            digital clara, útil y cuidada, sin complicaciones ni tecnicismos.
           </p>
 
           <p className="hero__lead">
-            Webs, identidad digital y lo que tu negocio necesite para crecer.
+            Webs, tiendas online y soluciones adaptadas a lo que necesitas.
           </p>
 
           <div className="hero__cta">
@@ -50,6 +49,35 @@ export default function Home() {
             width={1327}
             height={1185}
             priority
+          />
+        </div>
+      </section>
+
+      <section className="pueblo" aria-labelledby="pueblo-title">
+        <h2 className="pueblo__title" id="pueblo-title">
+          La tecnología también puede hacer pueblo.
+        </h2>
+
+        <div className="pueblo__body">
+          <p>
+            Con Vecina Digital quiero ayudar a que los pequeños negocios de
+            nuestros pueblos tengan más oportunidades, lleguen a más personas
+            y puedan seguir creciendo, sin quedarse atrás en un mundo cada vez
+            más digital.
+          </p>
+          <p>
+            Es mi forma de contribuir al desarrollo rural y ayudar a mantener
+            vivos nuestros pueblos.
+          </p>
+        </div>
+
+        <div className="pueblo__mark" aria-hidden="true">
+          <Image
+            className="pueblo__plant"
+            src="/assets/identidad-vecina-digital-acuarela/planta-mano.webp"
+            alt=""
+            width={304}
+            height={351}
           />
         </div>
       </section>
@@ -72,11 +100,6 @@ export default function Home() {
             normales y cuidaré tu web con las mismas ganas con las que tú
             cuidas lo tuyo.
           </p>
-          <p>
-            Me hace ilusión que los negocios de aquí se vean, se conozcan y
-            sigan llenando de vida nuestros pueblos. Esta es mi forma de
-            aportar.
-          </p>
           <p className="manifest__sign">Mónica</p>
         </div>
       </section>
@@ -96,7 +119,7 @@ export default function Home() {
                 quality={85}
               />
             </figure>
-            <h3 className="path-card__title">Algo pequeño, ya</h3>
+            <h3 className="path-card__title">Pequeñas soluciones digitales</h3>
             <p className="path-card__text">
               Google, WhatsApp, carta con QR, página exprés…
               40–180 €. Sin necesidad de encargar una web completa.

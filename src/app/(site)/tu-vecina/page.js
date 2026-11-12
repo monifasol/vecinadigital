@@ -115,18 +115,20 @@ export default function TuVecinaPage() {
           </p>
                       
           <h2 className="about-article__subtitle">
-            El "para qué"
+            El «para qué»
           </h2>
 
           <p>
             Quiero abrir puertas para que el talento de nuestros pueblos pueda ser encontrado.
           </p>
           <p>
-            Así que estoy aquí para ayudarte a que tu negocio sea encontrado,
-            crezca y siga formando parte de la vida de tu comunidad.
+            Después de tantos años trabajando en tecnología, me hace feliz poder utilizar lo que sé para ayudar a los negocios y profesionales que tengo cerca.
           </p>
           <p>
-            ¡Y estoy deseando conocerte y conocer tu proyecto!
+            Quiero que una pequeña tienda, una artesana o alguien que acaba de emprender también tenga la oportunidad de darse a conocer en internet. Que la tecnología sea una oportunidad, no una barrera, y que ningún negocio se quede atrás en un mundo cada vez más digital.
+          </p>
+          <p>
+            Porque para mí, Vecina Digital también es una forma de contribuir al desarrollo rural y ayudar a mantener vivos nuestros pueblos.
           </p>
         </div>
       </article>
