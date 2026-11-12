@@ -847,7 +847,7 @@ main:has(> .about-article) + .site-footer{
 .pueblo__mark{
   display: flex;
   justify-content: center;
-  margin: 36px 0 12px;
+  margin: 36px 0 40px;
 }
 
 .pueblo__plant{
