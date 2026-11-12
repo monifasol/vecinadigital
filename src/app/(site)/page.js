@@ -81,6 +81,31 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="pueblo" aria-labelledby="pueblo-title">
+        <div className="pueblo__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 20.2s-6.6-4.1-6.6-8.7C5.4 8.4 7.2 6.6 9.4 6.6c1.2 0 2.3.6 2.6 1.6.3-1 1.4-1.6 2.6-1.6 2.2 0 4 1.8 4 4.9 0 4.6-6.6 8.7-6.6 8.7z" />
+          </svg>
+        </div>
+
+        <h2 className="pueblo__title" id="pueblo-title">
+          La tecnología también puede hacer pueblo.
+        </h2>
+
+        <div className="pueblo__body">
+          <p>
+            Con Vecina Digital quiero ayudar a que los pequeños negocios de
+            nuestros pueblos tengan más oportunidades, lleguen a más personas
+            y puedan seguir creciendo, sin quedarse atrás en un mundo cada vez
+            más digital.
+          </p>
+          <p>
+            Es mi forma de aportar al desarrollo rural y contribuir a mantener
+            vivos nuestros pueblos.
+          </p>
+        </div>
+      </section>
+
       <section id="servicios" className="section paths-teaser" aria-labelledby="servicios-title">
         <h2 id="servicios-title">¿Por dónde empezamos?</h2>
 

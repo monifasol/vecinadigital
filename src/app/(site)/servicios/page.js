@@ -149,10 +149,17 @@ export default function PlansPage() {
           <h1 className="plans__title" id="plans-title">
             ¿Por dónde empezamos?
           </h1>
-          <p className="plans__intro">
-            Una web, una agenda de citas o poner al día la información de tu
-            negocio. Cuéntame qué te vendría bien y lo vemos juntos.
-          </p>
+          <div className="plans__intro">
+            <p>
+              No todos los negocios necesitan lo mismo, ni tienen el mismo
+              presupuesto. Por eso me gusta empezar escuchando, entender qué
+              necesitas y encontrar una solución que tenga sentido para ti.
+            </p>
+            <p>
+              Porque tener presencia en internet debería ser una oportunidad
+              para cualquier negocio, por pequeño que sea.
+            </p>
+          </div>
         </header>
 
         {/*

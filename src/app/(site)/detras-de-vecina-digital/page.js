@@ -59,7 +59,7 @@ export default function DetrasDeVecinaDigitalPage() {
             La IA amplifica nuestras capacidades. 
             Hace no mucho, cualquier idea necesitaba contratar un
             equipo antes incluso de poder empezar (diseño, producción, desarrollo...)
-            Hoy eso es necesario, y las empresas de una sola persona son una realidad, a mi parecer, preciosa.
+            Hoy eso ya no siempre es necesario, y las empresas de una sola persona son una realidad, a mi parecer, preciosa.
           </p>
 
           <p>Poder acompañar una idea sin tener que partirla en pedazos 
