@@ -44,8 +44,8 @@ test("the visible card is unchanged", () => {
   const visitor = visitorConfirmationEmail({ message: "Quiero una página." });
 
   assert.match(owner, /Nuevo mensaje/);
-  assert.match(owner, /width="400"/);
-  assert.match(owner, /width:400px;max-width:100%/);
+  assert.match(owner, /width="260"/);
+  assert.match(owner, /width:260px;max-width:100%/);
   assert.match(owner, /border-radius:18px;overflow:hidden/);
   assert.match(owner, /Quiero una página\./);
 
