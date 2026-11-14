@@ -19,7 +19,7 @@ const IMAGES = [
   {
     source: "logo-vecina-digital-horizontal.png",
     output: "logo-vecina-digital-email.png",
-    width: 800,
+    width: 520,
   },
   {
     source: "casa-acuarela.png",
