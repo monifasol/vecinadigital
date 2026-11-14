@@ -11,37 +11,26 @@ const trabajos = [
   {
     name: "Fotima",
     text: "Un espacio para fotógrafos y su obra. Una presencia digital cuidada, sin publicidad, pensada para mostrar el trabajo y que quien entra se quede mirando.",
-    href: "https://fotima.art",
-    label: "fotima.art",
     shot: "/assets/trabajos/fotima.webp",
-    shotPosition: "center",
   },
   {
     name: "Brilla Books",
     text: "Un sello editorial independiente: libros para descubrir, imaginar, aprender y crecer.",
-    href: "https://www.brillabooks.com",
-    label: "brillabooks.com",
     shot: "/assets/trabajos/brillabooks.webp",
   },
   {
     name: "Phersaiz",
     text: "El espacio de Fernando Saiz, fotógrafo. Siempre observando la luz.",
-    href: "https://phersaiz.com",
-    label: "phersaiz.com",
-    shot: "/assets/trabajos/phersaiz-colecciones.webp",
+    shot: "/assets/trabajos/phersaiz.webp",
   },
   {
     name: "Fred Hush",
     text: "La web de Fred Hush, DJ de la escena techno belga.",
-    href: "https://www.fredhush.com",
-    label: "fredhush.com",
-    shot: "/assets/trabajos/fredhush-portada.webp",
+    shot: "/assets/trabajos/fredhush.webp",
   },
   {
     name: "Le Bon Samaritain",
     text: "La web del complejo hospitalario y universitario Le Bon Samaritain, en Yamena.",
-    href: "https://chu-lebonsamaritain.org",
-    label: "chu-lebonsamaritain.org",
     shot: "/assets/trabajos/samaritain.webp",
   },
 ]
@@ -58,44 +47,24 @@ export default function TrabajosPage() {
             hechos juntos
           </h1>
           <p className="works__lead">
-            Cada uno tiene a alguien detrás. Aquí están contados en corto:
-            qué son, y dónde puedes entrar a verlos.
+            Cada uno tiene a alguien detrás. Aquí están, contados en corto.
           </p>
         </header>
 
         <ol className="works__list">
           {trabajos.map((trabajo) => (
-            <li className="work" key={trabajo.href}>
-              <a
-                className="work__shot"
-                href={trabajo.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Ver la portada de ${trabajo.name} (se abre en una pestaña nueva)`}
-              >
+            <li className="work" key={trabajo.shot}>
+              <figure className="work__shot">
                 <Image
                   src={trabajo.shot}
                   alt=""
-                  fill
-                  sizes="(max-width: 799px) 100vw, 480px"
-                  className={
-                    trabajo.shotPosition === "center"
-                      ? "work__shot-img work__shot-img--center"
-                      : "work__shot-img"
-                  }
+                  width={1280}
+                  height={1920}
+                  sizes="(max-width: 799px) 100vw, 50vw"
                 />
-              </a>
+              </figure>
               <h2 className="work__name">{trabajo.name}</h2>
               <p className="work__text">{trabajo.text}</p>
-              <a
-                className="work__link"
-                href={trabajo.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {trabajo.label}
-                <span className="sr-only"> (se abre en una pestaña nueva)</span>
-              </a>
             </li>
           ))}
         </ol>
