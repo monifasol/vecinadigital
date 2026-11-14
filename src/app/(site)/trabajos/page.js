@@ -4,19 +4,19 @@ import Link from "next/link"
 export const metadata = {
   title: "Trabajos | Vecina Digital",
   description:
-    "Historias de trabajos hechos juntos: Fotima, Brilla Books, Phersaiz, Fred Hush, Le Bon Samaritain y Pielesia.",
+    "Historias de trabajos hechos juntos: Brilla Books, Fotima, Phersaiz, Fred Hush, Pielesia y ¿Puedo ver la Luna hoy?",
 }
 
 const trabajos = [
   {
-    name: "Fotima",
-    text: "Un espacio para fotógrafos y su obra. Una presencia digital cuidada, sin publicidad, pensada para mostrar el trabajo y que quien entra se quede mirando.",
-    shot: "/assets/trabajos/fotima.webp",
-  },
-  {
     name: "Brilla Books",
     text: "Un sello editorial independiente: libros para descubrir, imaginar, aprender y crecer.",
     shot: "/assets/trabajos/brillabooks.webp",
+  },
+  {
+    name: "Fotima",
+    text: "Un espacio para fotógrafos y su obra. Una presencia digital cuidada, sin publicidad, pensada para mostrar el trabajo y que quien entra se quede mirando.",
+    shot: "/assets/trabajos/fotima.webp",
   },
   {
     name: "Phersaiz",
@@ -29,14 +29,14 @@ const trabajos = [
     shot: "/assets/trabajos/fredhush.webp",
   },
   {
-    name: "Le Bon Samaritain",
-    text: "La web del complejo hospitalario y universitario Le Bon Samaritain, en Yamena.",
-    shot: "/assets/trabajos/samaritain.webp",
-  },
-  {
     name: "Pielesia",
     text: "Una evaluación cosmética honesta: entender tu piel antes de comprar nada.",
     shot: "/assets/trabajos/pielesia.webp",
+  },
+  {
+    name: "¿Puedo ver la Luna hoy?",
+    text: "Para saber si la Luna se ve esta noche en tu cielo.",
+    shot: "/assets/trabajos/luna.webp",
   },
 ]
 
