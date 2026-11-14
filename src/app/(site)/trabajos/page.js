@@ -4,7 +4,7 @@ import Link from "next/link"
 export const metadata = {
   title: "Trabajos | Vecina Digital",
   description:
-    "Historias de trabajos hechos juntos: Fotima, Brilla Books, Phersaiz, Fred Hush y Le Bon Samaritain.",
+    "Historias de trabajos hechos juntos: Fotima, Brilla Books, Phersaiz, Fred Hush, Le Bon Samaritain y Pielesia.",
 }
 
 const trabajos = [
@@ -32,6 +32,11 @@ const trabajos = [
     name: "Le Bon Samaritain",
     text: "La web del complejo hospitalario y universitario Le Bon Samaritain, en Yamena.",
     shot: "/assets/trabajos/samaritain.webp",
+  },
+  {
+    name: "Pielesia",
+    text: "Una evaluación cosmética honesta: entender tu piel antes de comprar nada.",
+    shot: "/assets/trabajos/pielesia.webp",
   },
 ]
 
