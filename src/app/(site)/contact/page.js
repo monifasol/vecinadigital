@@ -25,13 +25,6 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="contact__art" aria-hidden="true">
-            <img
-              src="/assets/robots-vecina-digital/robot-corazon-version-2.webp"
-              alt=""
-            />
-          </div>
-
           <div className="contact__actions">
             <a
               className="wa-link wa-link--button"
@@ -48,6 +41,13 @@ export default function ContactPage() {
             <p className="contact__switch">O déjame un mensaje por aquí:</p>
 
             <ContactForm />
+          </div>
+
+          <div className="contact__art" aria-hidden="true">
+            <img
+              src="/assets/robots-vecina-digital/robot-corazon-version-2.webp"
+              alt=""
+            />
           </div>
         </div>
       </section>

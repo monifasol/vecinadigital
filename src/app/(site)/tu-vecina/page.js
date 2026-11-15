@@ -12,9 +12,7 @@ export default function TuVecinaPage() {
       <article className="about-article">
         <header className="about-article__header">
           <h1 className="about-article__title">
-            Detrás de esta puerta
-            <br />
-            hay una persona.
+            Detrás de esta puerta<span className="title-break"></span>hay una persona.
           </h1>
         </header>
 
