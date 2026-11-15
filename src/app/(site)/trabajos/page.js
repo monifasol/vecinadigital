@@ -15,7 +15,7 @@ const trabajos = [
   },
   {
     name: "Fotima",
-    text: "Un espacio para fotógrafos y su obra. Una presencia digital cuidada, sin publicidad, pensada para mostrar el trabajo y que quien entra se quede mirando.",
+    text: "Cada fotógrafo tiene su propio espacio. Para quedarse mirando, y para comprar la fotografía.",
     shot: "/assets/trabajos/fotima.webp",
   },
   {
@@ -64,8 +64,8 @@ export default function TrabajosPage() {
                   src={trabajo.shot}
                   alt=""
                   width={1280}
-                  height={1920}
-                  sizes="(max-width: 799px) 100vw, 50vw"
+                  height={1600}
+                  sizes="280px"
                 />
               </figure>
               <h2 className="work__name">{trabajo.name}</h2>
@@ -75,8 +75,7 @@ export default function TrabajosPage() {
         </ol>
 
         <p className="works__soon">
-          Hay algo más en camino. Cuando esté listo para enseñarse,
-          tendrá su sitio aquí.
+          Mucho más en camino. Se irá asomando por aquí, sin un orden.
         </p>
 
         <div className="works__cta">
