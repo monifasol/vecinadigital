@@ -65,7 +65,7 @@ export default function TrabajosPage() {
                   alt=""
                   width={1280}
                   height={1600}
-                  sizes="280px"
+                  sizes="(max-width: 328px) calc(100vw - 48px), 280px"
                 />
               </figure>
               <h2 className="work__name">{trabajo.name}</h2>

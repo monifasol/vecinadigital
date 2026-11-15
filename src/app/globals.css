@@ -1122,9 +1122,21 @@ a.emphasis:hover{
   padding: 0;
   list-style: none;
   display: grid;
+  container: works / inline-size;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--work-size)), var(--work-size)));
   justify-content: start;
   gap: 64px 56px;
+}
+
+/* Una sola lámina: menos ancho que dos fichas más el aire entre ellas. */
+@container works (max-width: 615px){
+  .works__list{
+    justify-content: center;
+  }
+
+  .work{
+    text-align: center;
+  }
 }
 
 .work{
