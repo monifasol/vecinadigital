@@ -47,9 +47,7 @@ export default function TrabajosPage() {
         <header className="works__header">
           <p className="works__kicker">Trabajos</p>
           <h1 className="works__title">
-            Historias de trabajos
-            <br />
-            hechos juntos
+            Historias de trabajos<span className="title-break"></span>hechos juntos
           </h1>
           <p className="works__lead">
             Cada uno tiene a alguien detrás. Aquí están, contados en corto.
@@ -65,7 +63,7 @@ export default function TrabajosPage() {
                   alt=""
                   width={1280}
                   height={1600}
-                  sizes="280px"
+                  sizes="(max-width: 328px) calc(100vw - 48px), 280px"
                 />
               </figure>
               <h2 className="work__name">{trabajo.name}</h2>
