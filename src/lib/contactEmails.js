@@ -68,7 +68,7 @@ function inboxPreview(text) {
  */
 function cardOpen(accentImage) {
   return `
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:560px;border-collapse:separate;border-spacing:0;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:680px;border-collapse:separate;border-spacing:0;">
           <tr>
             <td style="padding:0;">
               <div style="border-radius:18px;overflow:hidden;background-color:#fffcf8;background-image:${accentImage};background-repeat:no-repeat;background-position:top center;background-size:100% 4px;border:1px solid rgba(43,38,34,0.08);">

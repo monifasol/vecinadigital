@@ -46,11 +46,13 @@ test("the visible card is unchanged", () => {
   assert.match(owner, /Nuevo mensaje/);
   assert.match(owner, /width="260"/);
   assert.match(owner, /width:260px;max-width:100%/);
+  assert.match(owner, /max-width:680px/);
   assert.match(owner, /border-radius:18px;overflow:hidden/);
   assert.match(owner, /Quiero una página\./);
 
   assert.match(visitor, /Gracias por escribir/);
   assert.match(visitor, /Estás en casa!/);
   assert.match(visitor, /width="140"/);
+  assert.match(visitor, /max-width:680px/);
   assert.match(visitor, /linear-gradient\(90deg,#c56a3a,#e6b59b,#6f7f5c\)/);
 });
