@@ -17,6 +17,7 @@ Las imágenes de estas plantillas están recortadas al tamaño al que se ven. Si
 - https://www.vecinadigital.com/assets/email/logo-carta.png
 - https://www.vecinadigital.com/assets/email/logo-correo.png
 - https://www.vecinadigital.com/assets/email/casa-firma.png
+- https://www.vecinadigital.com/assets/email/franja.png
 
 El texto del enlace dice `vecinadigital.com`. El destino es `https://www.vecinadigital.com`, que es la dirección canónica: la otra redirige ahí.
 
@@ -74,6 +75,6 @@ Envía la copia de la carta a otra cuenta tuya, y un mensaje corto con la firma.
 
 ## Qué Mail no va a conservar siempre
 
-Al pegar, Mail se queda con tablas, colores de fondo, imágenes remotas y enlaces. Puede ignorar la esquina redondeada, el recorte de la franja o la consulta de pantalla estrecha del `<style>`. Por eso la franja es una fila de tres celdas con color sólido, no el degradado CSS del aviso automático, y los textos usan Georgia y las tipografías de sistema, que no hace falta descargar.
+Al pegar, Mail se queda con tablas, colores de fondo, imágenes remotas y enlaces. Puede ignorar la esquina redondeada o la consulta de pantalla estrecha del `<style>`. La franja es una imagen de 680×5 px: si fuera un espacio forzado a 5px, Mail lo agranda al pegar. Los textos usan Georgia y las tipografías de sistema, que no hace falta descargar.
 
 El texto nuevo a veces hereda la letra predeterminada de Mail. Si pasa, selecciona solo ese párrafo y vuelve a escribir encima del texto que ya tenía el estilo, en lugar de borrar la celda entera.
