@@ -4,41 +4,115 @@ import Link from "next/link"
 export const metadata = {
   title: "Trabajos | Vecina Digital",
   description:
-    "Historias de trabajos hechos juntos: Brilla Books, Fotima, Phersaiz, Fred Hush, Pielesia y ¿Puedo ver la Luna hoy?",
+    "Cada proyecto, una historia diferente. Brilla Books, Fotima, Phersaiz, Pielesia, Fred Hush y ¿Puedo ver la Luna hoy?",
 }
 
-const trabajos = [
-  {
+const trabajos = {
+  brilla: {
+    id: "work-brilla",
     name: "Brilla Books",
-    text: "Un sello editorial independiente: libros para descubrir, imaginar, aprender y crecer.",
-    shot: "/assets/trabajos/brillabooks.webp",
+    text: "Una editorial infantil que invita a descubrir, imaginar y aprender. Una web para dar vida a sus libros y colecciones.",
+    href: "https://www.brillabooks.com",
+    label: "Visitar Brilla Books",
+    shot: "/assets/trabajos/brillabooks-frame.webp",
+    width: 1280,
+    height: 820,
   },
-  {
+  fotima: {
+    id: "work-fotima",
     name: "Fotima",
-    text: "Cada fotógrafo tiene su propio espacio. Para quedarse mirando, y para comprar la fotografía.",
-    shot: "/assets/trabajos/fotima.webp",
+    text: "Un espacio para mirar la fotografía con calma, descubrir cada imagen y encontrar obras que merecen quedarse.",
+    href: "https://fotima.art",
+    label: "Visitar Fotima",
+    shot: "/assets/trabajos/fotima-frame.webp",
+    width: 1280,
+    height: 780,
   },
-  {
+  phersaiz: {
+    id: "work-phersaiz",
     name: "Phersaiz",
-    text: "El espacio de Fernando Saiz, fotógrafo. Siempre observando la luz.",
-    shot: "/assets/trabajos/phersaiz.webp",
+    text: "El universo fotográfico de Fernando Saiz. Naturaleza, viajes y momentos que merecen ser observados.",
+    href: "https://phersaiz.com",
+    label: "Visitar Phersaiz",
+    shot: "/assets/trabajos/phersaiz-frame.webp",
+    width: 1280,
+    height: 800,
   },
-  {
-    name: "Fred Hush",
-    text: "La web de Fred Hush, DJ de la escena techno belga.",
-    shot: "/assets/trabajos/fredhush.webp",
-  },
-  {
+  pielesia: {
+    id: "work-pielesia",
     name: "Pielesia",
-    text: "Una evaluación cosmética honesta: entender tu piel antes de comprar nada.",
-    shot: "/assets/trabajos/pielesia.webp",
+    text: "Una herramienta para conocer mejor tu piel y tomar decisiones más informadas sobre su cuidado.",
+    href: "https://www.pielesia.com",
+    label: "Visitar Pielesia",
+    shot: "/assets/trabajos/pielesia-wide.webp",
+    width: 1280,
+    height: 820,
   },
-  {
+  fred: {
+    id: "work-fred",
+    name: "Fred Hush",
+    text: "La casa digital de Fred Hush, DJ de la escena techno belga. Música, trayectoria y nuevos proyectos.",
+    href: "https://www.fredhush.com",
+    label: "Visitar Fred Hush",
+    shot: "/assets/trabajos/fredhush-frame.webp",
+    width: 1280,
+    height: 720,
+  },
+  luna: {
+    id: "work-luna",
     name: "¿Puedo ver la Luna hoy?",
-    text: "Para saber si la Luna se ve esta noche en tu cielo.",
-    shot: "/assets/trabajos/luna.webp",
+    text: "Una pequeña herramienta para descubrir si esta noche podrás ver la Luna desde donde estás.",
+    href: "https://caniseethemoontoday.com",
+    label: "Visitar la Luna",
+    shot: "/assets/trabajos/luna-wide.webp",
+    width: 1280,
+    height: 720,
   },
-]
+}
+
+function WorkShot({ trabajo, sizes, priority = false }) {
+  return (
+    <a
+      className="work__shot"
+      href={trabajo.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${trabajo.label} (se abre en una pestaña nueva)`}
+    >
+      <Image
+        src={trabajo.shot}
+        alt=""
+        width={trabajo.width}
+        height={trabajo.height}
+        sizes={sizes}
+        priority={priority}
+      />
+    </a>
+  )
+}
+
+function WorkCopy({ trabajo }) {
+  return (
+    <div className="work__copy">
+      <h2 className="work__name" id={trabajo.id}>
+        {trabajo.name}
+      </h2>
+      <p className="work__text">{trabajo.text}</p>
+      <a
+        className="work__link"
+        href={trabajo.href}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {trabajo.label}
+        <span className="work__link-arrow" aria-hidden="true">
+          →
+        </span>
+        <span className="sr-only"> (se abre en una pestaña nueva)</span>
+      </a>
+    </div>
+  )
+}
 
 export default function TrabajosPage() {
   return (
@@ -47,40 +121,99 @@ export default function TrabajosPage() {
         <header className="works__header">
           <p className="works__kicker">Trabajos</p>
           <h1 className="works__title">
-            Historias de trabajos<span className="title-break"></span>hechos juntos
+            Cada proyecto, una historia diferente.
           </h1>
           <p className="works__lead">
-            Cada uno tiene a alguien detrás. Aquí están, contados en corto.
+            No hay dos personas ni dos negocios iguales. Por eso tampoco
+            deberían serlo sus webs. Aquí puedes conocer algunas de las que he
+            creado.
           </p>
         </header>
 
-        <ol className="works__list">
-          {trabajos.map((trabajo) => (
-            <li className="work" key={trabajo.shot}>
-              <figure className="work__shot">
-                <Image
-                  src={trabajo.shot}
-                  alt=""
-                  width={1280}
-                  height={1600}
-                  sizes="(max-width: 328px) calc(100vw - 48px), 280px"
-                />
-              </figure>
-              <h2 className="work__name">{trabajo.name}</h2>
-              <p className="work__text">{trabajo.text}</p>
-            </li>
-          ))}
-        </ol>
+        <div className="works__stage">
+          <section
+            className="work work--feature"
+            aria-labelledby={trabajos.brilla.id}
+          >
+            <WorkShot
+              trabajo={trabajos.brilla}
+              sizes="(max-width: 900px) calc(100vw - 48px), min(640px, 58vw)"
+              priority
+            />
+            <WorkCopy trabajo={trabajos.brilla} />
+          </section>
 
-        <p className="works__soon">
-          Mucho más en camino. Se irá asomando por aquí, sin un orden.
-        </p>
+          <div className="works__pair">
+            <section
+              className="work work--pair"
+              aria-labelledby={trabajos.fotima.id}
+            >
+              <WorkShot
+                trabajo={trabajos.fotima}
+                sizes="(max-width: 760px) calc(100vw - 48px), min(480px, 44vw)"
+              />
+              <WorkCopy trabajo={trabajos.fotima} />
+            </section>
 
-        <div className="works__cta">
-          <Link className="btn" href="/contact">
-            Cuéntame el tuyo
-          </Link>
+            <section
+              className="work work--pair"
+              aria-labelledby={trabajos.phersaiz.id}
+            >
+              <WorkShot
+                trabajo={trabajos.phersaiz}
+                sizes="(max-width: 760px) calc(100vw - 48px), min(480px, 44vw)"
+              />
+              <WorkCopy trabajo={trabajos.phersaiz} />
+            </section>
+          </div>
+
+          <section
+            className="work work--feature work--feature-reverse"
+            aria-labelledby={trabajos.pielesia.id}
+          >
+            <WorkCopy trabajo={trabajos.pielesia} />
+            <WorkShot
+              trabajo={trabajos.pielesia}
+              sizes="(max-width: 900px) calc(100vw - 48px), min(640px, 58vw)"
+            />
+          </section>
+
+          <div className="works__pair">
+            <section
+              className="work work--pair"
+              aria-labelledby={trabajos.fred.id}
+            >
+              <WorkShot
+                trabajo={trabajos.fred}
+                sizes="(max-width: 760px) calc(100vw - 48px), min(480px, 44vw)"
+              />
+              <WorkCopy trabajo={trabajos.fred} />
+            </section>
+
+            <section
+              className="work work--pair"
+              aria-labelledby={trabajos.luna.id}
+            >
+              <WorkShot
+                trabajo={trabajos.luna}
+                sizes="(max-width: 760px) calc(100vw - 48px), min(480px, 44vw)"
+              />
+              <WorkCopy trabajo={trabajos.luna} />
+            </section>
+          </div>
         </div>
+
+        <aside className="works__invite" aria-labelledby="works-invite-title">
+          <h2 className="works__invite-title" id="works-invite-title">
+            ¿Y si el próximo proyecto fuera el tuyo?
+          </h2>
+          <p className="works__invite-text">
+            Cuéntame qué tienes en mente. Podemos darle forma juntas.
+          </p>
+          <Link className="btn" href="/contact">
+            Hablemos de tu idea
+          </Link>
+        </aside>
       </article>
     </main>
   )
