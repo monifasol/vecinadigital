@@ -21,8 +21,8 @@ const trabajos = {
   fotima: {
     id: "work-fotima",
     name: "Fotima",
-    text: "Un espacio para mirar la fotografía con calma, descubrir cada imagen y encontrar obras que merecen quedarse.",
-    href: "https://fotima.art",
+    text: "Un espacio para fotógrafos y su obra: una presencia digital cuidada, pensada para mostrar el trabajo y quedarse mirando.",
+    href: "https://www.fotima.art",
     label: "Visitar Fotima",
     shot: "/assets/trabajos/fotima-frame.webp",
     width: 1280,
