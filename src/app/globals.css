@@ -245,7 +245,7 @@ a:hover{ text-decoration: underline; }
 }
 
 /* Compact strip: keep one-line nav, shrink logo */
-@media (max-width: 1180px) and (min-width: 1025px){
+@media (max-width: 1180px) and (min-width: 901px){
   .brand__logo{
     width: 128px;
   }
@@ -264,7 +264,7 @@ a:hover{ text-decoration: underline; }
 }
 
 /* --- Collapsed: hamburger + paper drawer --- */
-@media (max-width: 1024px){
+@media (max-width: 900px){
   .site-header{
     padding: 10px 18px 6px;
   }

@@ -123,7 +123,7 @@ export default function Header() {
   }, [isOpen])
 
   useEffect(() => {
-    const mq = window.matchMedia("(max-width: 1024px)")
+    const mq = window.matchMedia("(max-width: 900px)")
 
     function onBreakpointChange(e) {
       if (!e.matches) setIsOpen(false)
