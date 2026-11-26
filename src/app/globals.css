@@ -230,8 +230,8 @@ a:hover{ text-decoration: underline; }
 .site-nav__ig-icon{
   display: block;
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   color: var(--olive-brand);
 }
 
@@ -345,8 +345,8 @@ a:hover{ text-decoration: underline; }
   }
 
   .site-nav__ig-icon{
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     color: var(--olive-brand);
   }
 
