@@ -1,12 +1,13 @@
 import Image from "next/image"
-import Link from "next/link";
-import ContactForm from "./contact/ContactForm";
+import Link from "next/link"
+import ContactForm from "./contact/ContactForm"
+import { SITE_DESCRIPTION, SITE_NAME, buildPageMetadata } from "@/lib/pageMetadata"
 
-export const metadata = {
-  title: "Vecina Digital",
-  description:
-    "Para que tu negocio se vea tan bien como lo cuidas cada día. Webs claras y humanas para pequeños negocios.",
-}
+export const metadata = buildPageMetadata({
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
+  path: "/",
+})
 
 export default function Home() {
   return (

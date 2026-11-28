@@ -1,11 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
+import { buildPageMetadata } from "@/lib/pageMetadata"
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "Servicios | Vecina Digital",
   description:
     "Soluciones digitales para tu negocio: microtrabajos, webs, citas online, tienda y acompañamiento. Empieza por lo que necesites ahora.",
-}
+  path: "/servicios",
+})
 
 const ART = "/assets/iconos-servicios-vecina-digital"
 

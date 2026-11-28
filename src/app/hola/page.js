@@ -1,11 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
+import { buildPageMetadata } from "@/lib/pageMetadata"
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "¡Hola! · Vecina Digital",
   description:
     "Qué alegría que hayas entrado. Gracias por guardar esta tarjeta.",
-}
+  path: "/hola",
+})
 
 export default function HolaPage() {
   return (

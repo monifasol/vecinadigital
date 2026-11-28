@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test src/lib/contactGate.test.js src/lib/contactEmails.test.js",
+    "test": "node --test src/lib/contactGate.test.js src/lib/contactEmails.test.js src/lib/pageMetadata.test.js",
     "generate-qr": "node monscripts/generate-qr.js",
-    "generate-email-images": "node monscripts/generate-email-images.js"
+    "generate-email-images": "node monscripts/generate-email-images.js",
+    "generate-og-image": "node monscripts/generate-og-image.js"
   },
   "dependencies": {
     "next": "16.1.6",
