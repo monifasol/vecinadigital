@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { buildPageMetadata } from "@/lib/pageMetadata"
 import PrintButton from "./PrintButton"
 import styles from "./page.module.css"
 
@@ -20,12 +21,13 @@ const vale = {
   web: "www.vecinadigital.com",
 }
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "Vale regalo · Vecina Digital",
   description:
     "Un vale para una página de presentación: la información del negocio, los servicios y el contacto.",
+  path: "/vale-pagina-sencilla",
   robots: { index: false, follow: false },
-}
+})
 
 export default function ValePaginaSencillaPage() {
   return (

@@ -1,11 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
+import { buildPageMetadata } from "@/lib/pageMetadata"
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "Trabajos | Vecina Digital",
   description:
     "Cada proyecto, una historia diferente. Brilla Books, Fotima, Phersaiz, Pielesia, Fred Hush y ¿Puedo ver la Luna hoy?",
-}
+  path: "/trabajos",
+})
 
 const trabajos = {
   brilla: {

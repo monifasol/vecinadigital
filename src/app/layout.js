@@ -1,39 +1,22 @@
 import "./globals.css"
+import {
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  buildPageMetadata,
+} from "@/lib/pageMetadata"
+
+const share = buildPageMetadata({
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
+  path: "/",
+})
 
 export const metadata = {
   metadataBase: new URL("https://www.vecinadigital.com"),
-  title: "Vecina Digital",
-  description:
-    "Para que tu negocio se vea tan bien como lo cuidas cada día. Webs claras y humanas para pequeños negocios.",
+  ...share,
   icons: {
     icon: "/assets/vecina-micro-mark.png",
     apple: "/assets/vecina-micro-mark.png",
-  },
-  openGraph: {
-    title: "Vecina Digital",
-    description:
-      "Para que tu negocio se vea tan bien como lo cuidas cada día. Webs claras y humanas para pequeños negocios.",
-    url: "https://www.vecinadigital.com",
-    siteName: "Vecina Digital",
-    locale: "es_ES",
-    type: "website",
-    images: [
-      {
-        url: "/assets/identidad-vecina-digital-acuarela/logo-vecina-digital-acuarela.png",
-        width: 1086,
-        height: 1448,
-        alt: "Vecina Digital",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Vecina Digital",
-    description:
-      "Para que tu negocio se vea tan bien como lo cuidas cada día. Webs claras y humanas para pequeños negocios.",
-    images: [
-      "/assets/identidad-vecina-digital-acuarela/logo-vecina-digital-acuarela.png",
-    ],
   },
 }
 

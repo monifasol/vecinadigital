@@ -1,10 +1,12 @@
 import Link from "next/link"
+import { buildPageMetadata } from "@/lib/pageMetadata"
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "Detrás de Vecina Digital | Vecina Digital",
   description:
     "Cómo trabajo con inteligencia artificial en Vecina Digital: una empresa de una persona que escucha, crea y cuida cada proyecto.",
-}
+  path: "/detras-de-vecina-digital",
+})
 
 export default function DetrasDeVecinaDigitalPage() {
   return (

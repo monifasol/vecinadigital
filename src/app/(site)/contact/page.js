@@ -1,9 +1,11 @@
 import ContactForm from "./ContactForm"
+import { buildPageMetadata } from "@/lib/pageMetadata"
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "Contacto · Vecina Digital",
   description: "Estás en casa. Escríbeme y lo vemos juntos.",
-}
+  path: "/contact",
+})
 
 export default function ContactPage() {
 

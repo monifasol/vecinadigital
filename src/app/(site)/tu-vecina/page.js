@@ -1,10 +1,12 @@
 import Image from "next/image"
+import { buildPageMetadata } from "@/lib/pageMetadata"
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "Tu vecina | Vecina Digital",
   description:
     "Quién soy, por qué existe Vecina Digital y desde dónde está hecho este proyecto.",
-}
+  path: "/tu-vecina",
+})
 
 export default function TuVecinaPage() {
   return (
