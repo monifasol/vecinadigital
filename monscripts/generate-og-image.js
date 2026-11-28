@@ -1,5 +1,5 @@
 /**
- * Tarjeta Open Graph 1200×630: papel, logo horizontal y casa acuarela.
+ * Tarjeta Open Graph 1200×630: papel, logo horizontal centrado y claim.
  *
  * Desde la raíz del proyecto:
  *   npm run generate-og-image
@@ -17,6 +17,9 @@ const OUT_FILE = path.join(OUT_DIR, "vecina-digital-og.png")
 const WIDTH = 1200
 const HEIGHT = 630
 const PAPER = { r: 246, g: 241, b: 232, alpha: 1 }
+const TAGLINE = "Presencia digital humana y cercana"
+const TAGLINE_WIDTH = 720
+const TAGLINE_HEIGHT = 48
 
 async function main() {
   await fs.mkdir(OUT_DIR, { recursive: true })
@@ -36,35 +39,30 @@ async function main() {
   `)
 
   const logo = await sharp(path.join(SOURCE, "logo-vecina-digital-horizontal.png"))
-    .resize({ width: 520, withoutEnlargement: true })
+    .resize({ width: 760, withoutEnlargement: true })
     .png()
     .toBuffer()
 
   const logoMeta = await sharp(logo).metadata()
-  const logoLeft = 72
-  const logoTop = Math.round((HEIGHT - logoMeta.height) / 2) - 24
+  const stackGap = 18
+  const stackHeight = logoMeta.height + stackGap + TAGLINE_HEIGHT
+  const stackTop = Math.round((HEIGHT - stackHeight) / 2)
+  const logoLeft = Math.round((WIDTH - logoMeta.width) / 2)
+  const logoTop = stackTop
 
   const tagline = Buffer.from(`
-    <svg xmlns="http://www.w3.org/2000/svg" width="520" height="48">
+    <svg xmlns="http://www.w3.org/2000/svg" width="${TAGLINE_WIDTH}" height="${TAGLINE_HEIGHT}">
       <text
-        x="0"
+        x="50%"
         y="30"
+        text-anchor="middle"
         font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', Palatino, serif"
-        font-size="26"
+        font-size="28"
         fill="#2b2622"
         fill-opacity="0.72"
-      >Webs claras y humanas</text>
+      >${TAGLINE}</text>
     </svg>
   `)
-
-  const house = await sharp(path.join(SOURCE, "casa-acuarela.png"))
-    .resize({ height: 520, withoutEnlargement: true })
-    .png()
-    .toBuffer()
-
-  const houseMeta = await sharp(house).metadata()
-  const houseLeft = WIDTH - houseMeta.width - 36
-  const houseTop = HEIGHT - houseMeta.height + 18
 
   await sharp({
     create: {
@@ -76,12 +74,11 @@ async function main() {
   })
     .composite([
       { input: backdrop, left: 0, top: 0 },
-      { input: house, left: houseLeft, top: houseTop },
       { input: logo, left: logoLeft, top: logoTop },
       {
         input: tagline,
-        left: logoLeft + 8,
-        top: logoTop + logoMeta.height + 4,
+        left: Math.round((WIDTH - TAGLINE_WIDTH) / 2),
+        top: logoTop + logoMeta.height + stackGap,
       },
     ])
     .png({ compressionLevel: 9 })
